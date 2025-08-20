@@ -1,0 +1,100 @@
+---  
+title: 贡献者沟通指南  
+description: Model Context Protocol（MCP）社区的沟通策略与框架  
+---  
+
+本文档阐述了如何在Model Context Protocol（MCP）项目中进行沟通与协作。  
+
+## 沟通渠道  
+
+简而言之：  
+
+- **[Discord][discord-join]**：用于实时或临时讨论。  
+- **[GitHub Discussions](https://github.com/modelcontextprotocol/modelcontextprotocol/discussions)**：用于结构化、长篇幅的讨论。  
+- **[GitHub Issues](https://github.com/modelcontextprotocol/modelcontextprotocol/issues)**：用于可执行的任务、错误报告和功能请求。  
+- **涉及安全问题**：请遵循[SECURITY.md](https://github.com/modelcontextprotocol/modelcontextprotocol/blob/main/SECURITY.md)中的流程。  
+
+所有沟通均受[行为准则](https://github.com/modelcontextprotocol/modelcontextprotocol/blob/main/CODE_OF_CONDUCT.md)约束。我们要求所有参与者在所有渠道中保持尊重、专业且包容的互动。  
+
+### Discord  
+
+用于贡献者实时讨论与协作。该服务器专为**MCP贡献者**设计，不适用于一般MCP技术支持。  
+
+Discord服务器将包含公开和私密频道。  
+
+[点击加入Discord服务器][discord-join]。  
+
+#### 公开频道（默认）  
+
+- **目的**：开放社区互动、协作开发及透明的项目协调。  
+- 主要用途：  
+  - **公开SDK与工具开发**：从构思到发布计划，所有开发均在公开频道进行（如`#typescript-sdk-dev`、`#inspector-dev`）。  
+  - **工作组与兴趣组讨论**（如`#client-implementors`、`#agents-wg`等）  
+    - **工作组**：围绕特定目标或项目（如SDK、检查器、注册表、服务器身份、负载均衡等）。  
+    - **兴趣组**：抽象的话题集合，可能涉及各类主题。部分可能以一次性任务处理，另一些可能发展为工作组。  
+  - **社区入门**与贡献指引。  
+  - **社区反馈**与协作头脑风暴。  
+  - 公开**办公时间**与**维护者答疑**。  
+- 避免：  
+  - MCP用户支持：参与者应阅读官方文档，并在GitHub Discussions中发起新话题提问或寻求支持。  
+  - 服务或产品推广：此Discord的互动需保持供应商中立，不得用于品牌宣传或销售。除非作为示例或对规范相关讨论的回应，否则不鼓励提及品牌或产品。
+#### 私有频道（例外情况）
+
+- **目的**：用于机密协调和敏感事务讨论，这些内容无法公开进行。仅限指定维护者访问。
+- **严格使用标准**：
+  - **安全事件**（如CVE漏洞、协议安全问题）。
+  - **人员相关事务**（维护者内部讨论、行为准则政策）。
+  - 部分频道将设为**只读模式**，例如用于维护者决策过程。
+  - 需要**即时响应**或**限定范围集中讨论**的协调事务。
+- **透明度要求**：
+  - **所有影响社区的技术和治理决策**必须在GitHub Discussions或Issues中记录，并标注`notes`标签。
+  - **涉及个别贡献者的事务**在适当时可保持私密（如个人情况、纪律处分等敏感事项）。
+  - 私有频道仅作为**临时"应急讨论室"**，不可用于常规开发。
+
+任何在Discord上可能形成决议或提案的重要讨论，必须转移到GitHub Discussion或Issue中形成可追溯的永久记录。提案将视情况升级为正式PR并关联相关工作项（GitHub Issues）。
+
+### GitHub Discussions
+
+用于结构化、长周期的项目方向讨论，包括功能规划、改进建议和社区议题。
+
+适用场景：
+- 项目路线图规划与里程碑讨论
+- 公告发布与版本通讯
+- 社区投票与共识形成流程
+- 附带背景说明的功能请求
+  - 若某仓库未启用GitHub Discussions功能，可直接创建GitHub Issue替代
+
+### GitHub Issues
+
+用于缺陷报告、功能追踪和可执行开发任务。
+
+适用场景：
+- 提交SEP提案（遵循[SEP指南](./sep-guidelines)）
+- 附带重现步骤的缺陷报告
+- 有明确范围的文档改进
+- CI/CD问题与基础设施故障
+- 版本任务与里程碑追踪
+
+### 安全问题
+
+**严禁公开披露安全问题**，处理流程如下：
+1. 使用私有安全报告流程。协议级安全问题请遵循[modelcontextprotocol仓库的SECURITY.md](https://github.com/modelcontextprotocol/modelcontextprotocol/blob/main/SECURITY.md)流程
+2. 直接联系项目负责人或[核心维护者](./governance#current-core-maintainers)
+3. 遵循负责任的漏洞披露准则
+
+## 决策记录
+
+所有MCP决策均通过公开渠道记录存档：
+- **技术决策**：[GitHub Issues](https://github.com/modelcontextprotocol/modelcontextprotocol/issues)与SEP文档
+- **规范变更**：[Model Context Protocol官网](https://modelcontextprotocol.io/specification/draft/changelog)
+- **流程变更**：[社区文档](https://modelcontextprotocol.io/community/governance)
+- **治理决策与更新**：[GitHub Issues](https://github.com/modelcontextprotocol/modelcontextprotocol/issues)与SEP文档
+
+决策文档需包含完整上下文：
+- 决策者信息
+- 背景与动机说明
+- 已考虑的备选方案
+- 最终方案的选定依据
+- 具体实施步骤
+
+[discord-join]: https://discord.gg/6CSzBmMkjX

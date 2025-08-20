@@ -1,0 +1,466 @@
+<Tab title="Node">
+
+## 系统要求
+
+开始前请确保系统满足以下要求：
+
+- Mac 或 Windows 电脑
+- 已安装 Node.js 16 或更高版本
+- npm（随 Node.js 附带）
+
+## 环境搭建
+
+首先创建一个新的 Node.js 项目：
+
+```bash
+# 创建项目目录
+mkdir mcp-client
+cd mcp-client
+
+# 初始化 npm 项目
+npm init -y
+
+# 安装依赖项
+npm install @modelcontextprotocol/sdk @anthropic-ai/sdk dotenv
+npm install -D typescript @types/node
+
+# 创建 TypeScript 配置
+npx tsc --init
+
+# 创建必要文件
+mkdir src
+touch src/client.ts
+touch .env
+```
+
+更新 `package.json` 添加必要配置：
+
+```json
+{
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "start": "node build/client.js"
+  }
+}
+```
+
+更新 `tsconfig.json` 配置：
+
+```json
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "Node16",
+    "moduleResolution": "Node16",
+    "outDir": "./build",
+    "rootDir": "./src",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true
+  },
+  "include": ["src/**/*"]
+}
+```
+
+## 设置 API 密钥
+
+需要从 [Anthropic 控制台](https://console.anthropic.com/settings/keys) 获取 Anthropic API 密钥。
+
+创建 `.env` 文件：
+
+```bash
+ANTHROPIC_API_KEY=your_key_here
+```
+
+将 `.env` 加入 `.gitignore`：
+
+```bash
+echo ".env" >> .gitignore
+```
+
+## 创建客户端
+
+首先在 `src/client.ts` 中设置导入并创建基础客户端类：
+
+```typescript
+import { Client } from "@modelcontextprotocol/sdk/client/index.js";
+import { StdioClientTransport } from "@modelcontextprotocol/sdk/client/stdio.js";
+import Anthropic from "@anthropic-ai/sdk";
+import dotenv from "dotenv";
+import {
+  CallToolResultSchema,
+  ListToolsResultSchema,
+} from "@modelcontextprotocol/sdk/types.js";
+import * as readline from "node:readline";
+
+dotenv.config();
+
+interface MCPClientConfig {
+  name?: string;
+  version?: string;
+}
+
+class MCPClient {
+  private client: Client | null = null;
+  private anthropic: Anthropic;
+  private transport: StdioClientTransport | null = null;
+
+  constructor(config: MCPClientConfig = {}) {
+    this.anthropic = new Anthropic();
+  }
+
+  // 方法将在此处实现
+}
+```
+
+## 服务器连接管理
+
+接下来实现连接 MCP 服务器的方法：
+
+```typescript
+  async connectToServer(serverScriptPath: string): Promise<void> {
+    const isPython = serverScriptPath.endsWith(".py");
+    const isJs = serverScriptPath.endsWith(".js");
+
+    if (!isPython && !isJs) {
+      throw new Error("服务器脚本必须是 .py 或 .js 文件");
+    }
+
+    const command = isPython ? "python" : "node";
+
+    this.transport = new StdioClientTransport({
+      command,
+      args: [serverScriptPath],
+    });
+
+    this.client = new Client(
+      {
+        name: "mcp-client",
+        version: "1.0.0",
+      },
+      {
+        capabilities: {},
+      }
+    );
+
+    await this.client.connect(this.transport);
+
+    // 列出可用工具
+    const response = await this.client.request(
+      { method: "tools/list" },
+      ListToolsResultSchema
+    );
+
+    console.log(
+      "\n已连接服务器，可用工具：",
+      response.tools.map((tool: any) => tool.name)
+    );
+  }
+```
+## 查询处理逻辑
+
+现在添加处理查询和工具调用的核心功能：
+
+```typescript
+  async processQuery(query: string): Promise<string> {
+    if (!this.client) {
+      throw new Error("客户端未连接");
+    }
+
+    // 初始化消息数组，包含用户查询
+    let messages: Anthropic.MessageParam[] = [
+      {
+        role: "user",
+        content: query,
+      },
+    ];
+
+    // 获取可用工具
+    const toolsResponse = await this.client.request(
+      { method: "tools/list" },
+      ListToolsResultSchema
+    );
+
+    const availableTools = toolsResponse.tools.map((tool: any) => ({
+      name: tool.name,
+      description: tool.description,
+      input_schema: tool.inputSchema,
+    }));
+
+    const finalText: string[] = [];
+    let currentResponse = await this.anthropic.messages.create({
+      model: "claude-3-5-sonnet-20241022",
+      max_tokens: 1000,
+      messages,
+      tools: availableTools,
+    });
+
+    // 处理响应和任何工具调用
+    while (true) {
+      // 将Claude的响应添加到最终文本和消息中
+      for (const content of currentResponse.content) {
+        if (content.type === "text") {
+          finalText.push(content.text);
+        } else if (content.type === "tool_use") {
+          const toolName = content.name;
+          const toolArgs = content.input;
+
+          // 执行工具调用
+          const result = await this.client.request(
+            {
+              method: "tools/call",
+              params: {
+                name: toolName,
+                arguments: toolArgs,
+              },
+            },
+            CallToolResultSchema
+          );
+
+          finalText.push(
+            `[调用工具 ${toolName}，参数为 ${JSON.stringify(toolArgs)}]`
+          );
+
+          // 将Claude的响应（包含工具使用）添加到消息中
+          messages.push({
+            role: "assistant",
+            content: currentResponse.content,
+          });
+
+          // 将工具结果添加到消息中
+          messages.push({
+            role: "user",
+            content: [
+              {
+                type: "tool_result",
+                tool_use_id: content.id,
+                content: [
+                  { type: "text", text: JSON.stringify(result.content) },
+                ],
+              },
+            ],
+          });
+
+          // 获取Claude对工具结果的响应
+          currentResponse = await this.anthropic.messages.create({
+            model: "claude-3-5-sonnet-20241022",
+            max_tokens: 1000,
+            messages,
+            tools: availableTools,
+          });
+
+          // 将Claude对工具结果的解释添加到最终文本
+          if (currentResponse.content[0]?.type === "text") {
+            finalText.push(currentResponse.content[0].text);
+          }
+
+          // 继续循环处理其他可能的工具调用
+          continue;
+        }
+      }
+
+      // 如果执行到这里，说明响应中没有工具调用
+      break;
+    }
+
+    return finalText.join("\n");
+  }
+
+```
+## 交互式聊天界面
+
+添加聊天循环和清理功能：
+
+```typescript
+  async chatLoop(): Promise<void> {
+    console.log("\nMCP客户端已启动！");
+    console.log("输入查询内容或输入'quit'退出");
+
+    // 使用Node的readline模块处理控制台输入
+    const rl = readline.createInterface({
+      input: process.stdin,
+      output: process.stdout,
+    });
+
+    const askQuestion = () => {
+      rl.question("\n查询：", async (query: string) => {
+        try {
+          if (query.toLowerCase() === "quit") {
+            await this.cleanup();
+            rl.close();
+            return;
+          }
+
+          const response = await this.processQuery(query);
+          console.log("\n" + response);
+          askQuestion();
+        } catch (error) {
+          console.error("\n错误：", error);
+          askQuestion();
+        }
+      });
+    };
+
+    askQuestion();
+  }
+
+  async cleanup(): Promise<void> {
+    if (this.transport) {
+      await this.transport.close();
+    }
+  }
+```
+
+## 主入口点
+
+最后在类外部添加主执行逻辑：
+
+```typescript
+// 主执行函数
+async function main() {
+  if (process.argv.length < 3) {
+    console.log("用法：ts-node client.ts <服务端脚本路径>");
+    process.exit(1);
+  }
+
+  const client = new MCPClient();
+  try {
+    await client.connectToServer(process.argv[2]);
+    await client.chatLoop();
+  } catch (error) {
+    console.error("错误：", error);
+    await client.cleanup();
+    process.exit(1);
+  }
+}
+
+// 如果是主模块则运行main函数
+if (import.meta.url === new URL(process.argv[1], "file:").href) {
+  main();
+}
+
+export default MCPClient;
+```
+
+## 运行客户端
+
+要运行客户端连接任意MCP服务器：
+
+```bash
+# 编译TypeScript代码。每次更新client.ts后请重新运行！
+npm run build
+
+# 运行客户端
+node build/client.js path/to/server.py  # 连接Python服务端
+node build/client.js path/to/server.js  # 连接Node.js服务端
+```
+
+客户端将：
+1. 连接到指定服务器
+2. 列出可用工具
+3. 启动交互式会话，您可以：
+   - 输入查询
+   - 查看工具执行情况
+   - 获取Claude的响应
+
+## 核心组件说明
+
+#### 1. 客户端初始化
+- `MCPClient`类初始化会话管理和API客户端
+- 配置MCP客户端基础能力
+- 设置Anthropic客户端用于与Claude交互
+
+#### 2. 服务端连接
+- 支持Python和Node.js服务端
+- 验证服务端脚本类型
+- 建立通信通道
+- 连接后列出可用工具
+
+#### 3. 查询处理
+- 维护会话上下文
+- 处理Claude响应和工具调用
+- 管理Claude与工具间的消息流
+- 将结果整合为连贯响应
+
+#### 4. 交互界面
+- 提供简洁命令行界面
+- 处理用户输入并显示响应
+- 包含基础错误处理
+- 支持优雅退出
+
+#### 5. 资源管理
+- 正确清理资源
+- 处理连接错误
+- 优雅关闭流程
+
+### 常见定制点
+
+1. **工具处理**
+   - 修改`processQuery()`处理特定工具类型
+   - 添加工具调用的自定义错误处理
+   - 实现工具特定的响应格式化
+
+2. **响应处理**
+   - 自定义工具结果格式化方式
+   - 添加响应过滤或转换
+   - 实现自定义日志记录
+
+3. **用户界面**
+   - 添加GUI或网页界面
+   - 实现丰富的控制台输出
+   - 添加命令历史或自动补全
+### 最佳实践
+
+1. **错误处理**
+   - 始终用 try-catch 块包裹工具调用
+   - 提供有意义的错误信息
+   - 优雅处理连接问题
+
+2. **资源管理**
+   - 使用正确的清理方法
+   - 完成后关闭连接
+   - 处理服务器断开情况
+
+3. **安全性**
+   - 将 API 密钥安全存储在 `.env` 文件中
+   - 验证服务器响应
+   - 谨慎管理工具权限
+
+### 故障排查
+
+#### 服务器路径问题
+
+- 仔细检查服务器脚本的路径
+- 如果相对路径无效，改用绝对路径
+- Windows 用户请使用正斜杠(/)或转义反斜杠(\\)
+- 确认服务器文件扩展名正确(.py 或 .js)
+
+正确路径使用示例：
+
+```bash
+# 相对路径
+node build/client.js ./server/weather.js
+
+# 绝对路径
+node build/client.js /Users/username/projects/mcp-server/weather.js
+
+# Windows路径（两种格式均可）
+node build/client.js C:/projects/mcp-server/weather.js
+node build/client.js C:\\projects\\mcp-server\\weather.js
+```
+
+#### 连接问题
+
+- 确认服务器脚本存在且权限正确
+- 检查服务器脚本是否可执行
+- 确保服务器脚本的依赖项已安装
+- 直接运行服务器脚本以检查错误
+
+#### 工具执行问题
+
+- 查看服务器日志中的错误信息
+- 验证工具输入参数是否符合模式
+- 确保工具依赖项可用
+- 添加调试日志追踪执行流程

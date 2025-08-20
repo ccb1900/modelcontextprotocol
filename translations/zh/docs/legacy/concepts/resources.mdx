@@ -1,0 +1,259 @@
+---  
+标题: "资源"  
+描述: "将服务器上的数据和内容暴露给大语言模型(LLM)"  
+
+资源是模型上下文协议(MCP)中的核心原语，它允许服务器暴露可被客户端读取的数据和内容，作为LLM交互的上下文。  
+
+<Note>  
+
+资源设计为**应用可控**，意味着客户端应用可以决定资源的使用方式和时机。  
+不同的MCP客户端可能以不同方式处理资源。例如：  
+
+- Claude桌面版目前要求用户必须显式选择资源后才能使用  
+- 其他客户端可能基于启发式规则自动选择资源  
+- 某些实现甚至允许AI模型自行决定使用哪些资源  
+
+服务器开发者在实现资源支持时，应准备好处理所有这些交互模式。若需自动向模型暴露数据，开发者应使用**模型可控**的原语如[工具](./tools)。  
+
+</Note>  
+
+## 概述  
+
+资源代表MCP服务器希望提供给客户端的任何类型数据，包括：  
+
+- 文件内容  
+- 数据库记录  
+- API响应  
+- 实时系统数据  
+- 屏幕截图与图像  
+- 日志文件  
+- 及其他  
+
+每个资源通过唯一URI标识，可包含文本或二进制数据。  
+
+## 资源URI  
+
+资源采用以下格式的URI进行标识：  
+
+```  
+[协议]://[主机]/[路径]  
+```  
+
+例如：  
+- `file:///home/user/documents/report.pdf`  
+- `postgres://database/customers/schema`  
+- `screen://localhost/display1`  
+
+协议和路径结构由MCP服务器实现定义，服务器可自定义URI方案。  
+
+## 资源类型  
+
+资源包含两种内容类型：  
+
+### 文本资源  
+
+文本资源包含UTF-8编码的文本数据，适用于：  
+- 源代码  
+- 配置文件  
+- 日志文件  
+- JSON/XML数据  
+- 纯文本  
+
+### 二进制资源  
+
+二进制资源包含Base64编码的原始二进制数据，适用于：  
+- 图像  
+- PDF文档  
+- 音频文件  
+- 视频文件  
+- 其他非文本格式  
+
+## 资源发现  
+
+客户端可通过两种主要方法发现可用资源：  
+
+### 直接资源  
+
+服务器通过`resources/list`请求暴露资源列表，每个资源包含：  
+
+```typescript  
+{  
+  uri: string;           // 资源的唯一标识符  
+  name: string;          // 人类可读名称  
+  description?: string;  // 可选描述  
+  mimeType?: string;     // 可选MIME类型  
+  size?: number;         // 可选字节大小  
+}  
+```  
+
+### 资源模板  
+
+对于动态资源，服务器可暴露[URI模板](https://datatracker.ietf.org/doc/html/rfc6570)供客户端构造有效URI：  
+
+```typescript  
+{  
+  uriTemplate: string;   // 符合RFC 6570的URI模板  
+  name: string;          // 该类型的人类可读名称  
+  description?: string;  // 可选描述  
+  mimeType?: string;     // 所有匹配资源的可选MIME类型  
+}  
+```  
+
+## 读取资源  
+
+客户端通过`resources/read`请求并携带资源URI来读取资源。  
+
+服务器响应包含资源内容列表：  
+
+```typescript  
+{  
+  contents: [  
+    {  
+      uri: string;        // 资源URI  
+      mimeType?: string;  // 可选MIME类型  
+
+      // 以下二选一：  
+      text?: string;      // 文本资源内容  
+      blob?: string;      // 二进制资源(Base64编码)  
+    }  
+  ]  
+}  
+```  
+
+<Tip>  
+
+服务器可能响应单个`resources/read`请求返回多个资源。例如读取目录时可返回该目录下的文件列表。  
+
+</Tip>  
+
+## 资源更新  
+
+MCP通过两种机制支持资源实时更新：
+### 列表变更
+
+服务器可通过 `notifications/resources/list_changed` 通知告知客户端可用资源列表的变化。
+
+### 内容变更
+
+客户端可订阅特定资源的更新：
+
+1. 客户端发送包含资源URI的 `resources/subscribe` 请求
+2. 当资源变更时，服务器发送 `notifications/resources/updated` 通知
+3. 客户端可通过 `resources/read` 获取最新内容
+4. 客户端可通过 `resources/unsubscribe` 取消订阅
+
+## 实现示例
+
+以下是在MCP服务器中实现资源支持的简单示例：
+
+<CodeGroup>
+
+```typescript TypeScript
+const server = new Server(
+  {
+    name: "example-server",
+    version: "1.0.0",
+  },
+  {
+    capabilities: {
+      resources: {},
+    },
+  },
+);
+
+// 列出可用资源
+server.setRequestHandler(ListResourcesRequestSchema, async () => {
+  return {
+    resources: [
+      {
+        uri: "file:///logs/app.log",
+        name: "应用日志",
+        mimeType: "text/plain",
+      },
+    ],
+  };
+});
+
+// 读取资源内容
+server.setRequestHandler(ReadResourceRequestSchema, async (request) => {
+  const uri = request.params.uri;
+
+  if (uri === "file:///logs/app.log") {
+    const logContents = await readLogFile();
+    return {
+      contents: [
+        {
+          uri,
+          mimeType: "text/plain",
+          text: logContents,
+        },
+      ],
+    };
+  }
+
+  throw new Error("未找到资源");
+});
+```
+
+```python Python
+app = Server("example-server")
+
+@app.list_resources()
+async def list_resources() -> list[types.Resource]:
+    return [
+        types.Resource(
+            uri="file:///logs/app.log",
+            name="应用日志",
+            mimeType="text/plain"
+        )
+    ]
+
+@app.read_resource()
+async def read_resource(uri: AnyUrl) -> str:
+    if str(uri) == "file:///logs/app.log":
+        log_contents = await read_log_file()
+        return log_contents
+
+    raise ValueError("未找到资源")
+
+
+# 启动服务器
+async with stdio_server() as streams:
+    await app.run(
+        streams[0],
+        streams[1],
+        app.create_initialization_options()
+    )
+```
+
+</CodeGroup>
+
+## 最佳实践
+
+实现资源支持时建议：
+
+1. 使用清晰、描述性的资源名称和URI
+2. 包含辅助说明以帮助LLM理解
+3. 已知类型时设置正确的MIME类型
+4. 为动态内容实现资源模板
+5. 对频繁变更的资源使用订阅机制
+6. 以明确的错误信息优雅处理异常
+7. 大型资源列表考虑分页处理
+8. 适时缓存资源内容
+9. 处理前验证URI有效性
+10. 记录自定义URI方案
+
+## 安全注意事项
+
+暴露资源时需注意：
+
+- 验证所有资源URI
+- 实施适当的访问控制
+- 净化文件路径防止目录遍历
+- 谨慎处理二进制数据
+- 考虑对资源读取进行限流
+- 审计资源访问记录
+- 传输中加密敏感数据
+- 验证MIME类型
+- 为长时间读取操作设置超时
+- 妥善处理资源清理

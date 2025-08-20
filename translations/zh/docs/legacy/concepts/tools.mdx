@@ -1,0 +1,484 @@
+---  
+title: "工具"  
+description: "让大语言模型能够通过您的服务器执行操作"  
+
+工具是模型上下文协议（MCP）中一项强大的基础功能，它使服务器能够向客户端暴露可执行的功能。通过工具，大语言模型可以与外部系统交互、执行计算并在现实世界中采取行动。  
+
+<Note>  
+
+工具的设计理念是**由模型控制**，这意味着服务器向客户端公开工具时，预期AI模型能够自动调用它们（需经人工审核批准）。  
+
+</Note>  
+
+## 概述  
+
+MCP中的工具允许服务器暴露可执行函数，客户端可以调用这些函数，大语言模型则利用它们执行操作。工具的核心特性包括：  
+
+- **发现机制**：客户端通过发送`tools/list`请求获取可用工具列表  
+- **调用方式**：使用`tools/call`请求调用工具，服务器执行操作并返回结果  
+- **灵活性**：工具功能范围广泛，从简单计算到复杂的API交互均可实现  
+
+与[资源](/legacy/concepts/resources)类似，工具通过唯一名称标识，并可包含使用说明。但不同于资源的是，工具代表能修改状态或与外部系统交互的动态操作。  
+
+## 工具定义结构  
+
+每个工具的定义结构如下：  
+
+```typescript  
+{  
+  name: string;          // 工具的唯一标识符  
+  description?: string;  // 人类可读的描述  
+  inputSchema: {         // 工具参数的JSON模式  
+    type: "object",  
+    properties: { ... }  // 工具特定参数  
+  },  
+  annotations?: {        // 可选的行为提示  
+    title?: string;      // 工具的人类可读标题  
+    readOnlyHint?: boolean;    // 为true时表示工具不修改环境  
+    destructiveHint?: boolean; // 为true时表示工具可能执行破坏性更新  
+    idempotentHint?: boolean;  // 为true时表示相同参数重复调用不会产生额外效果  
+    openWorldHint?: boolean;   // 为true时表示工具会与外部实体交互  
+  }  
+}  
+```
+## 工具实现方案
+
+以下是MCP服务器中实现基础工具的示例：
+
+<CodeGroup>
+
+```typescript TypeScript
+const server = new Server(
+  {
+    name: "example-server",
+    version: "1.0.0",
+  },
+  {
+    capabilities: {
+      tools: {},
+    },
+  },
+);
+
+// 定义可用工具
+server.setRequestHandler(ListToolsRequestSchema, async () => {
+  return {
+    tools: [
+      {
+        name: "calculate_sum",
+        description: "计算两个数字之和",
+        inputSchema: {
+          type: "object",
+          properties: {
+            a: { type: "number" },
+            b: { type: "number" },
+          },
+          required: ["a", "b"],
+        },
+      },
+    ],
+  };
+});
+
+// 处理工具执行
+server.setRequestHandler(CallToolRequestSchema, async (request) => {
+  if (request.params.name === "calculate_sum") {
+    const { a, b } = request.params.arguments;
+    return {
+      content: [
+        {
+          type: "text",
+          text: String(a + b),
+        },
+      ],
+    };
+  }
+  throw new Error("未找到该工具");
+});
+```
+
+```python Python
+app = Server("example-server")
+
+@app.list_tools()
+async def list_tools() -> list[types.Tool]:
+    return [
+        types.Tool(
+            name="calculate_sum",
+            description="计算两个数字之和",
+            inputSchema={
+                "type": "object",
+                "properties": {
+                    "a": {"type": "number"},
+                    "b": {"type": "number"}
+                },
+                "required": ["a", "b"]
+            }
+        )
+    ]
+
+@app.call_tool()
+async def call_tool(
+    name: str,
+    arguments: dict
+) -> list[types.TextContent | types.ImageContent | types.EmbeddedResource]:
+    if name == "calculate_sum":
+        a = arguments["a"]
+        b = arguments["b"]
+        result = a + b
+        return [types.TextContent(type="text", text=str(result))]
+    raise ValueError(f"未找到工具: {name}")
+```
+
+</CodeGroup>
+
+## 工具模式示例
+
+以下是服务器可提供的几种典型工具类型：
+
+### 系统操作
+
+与本地系统交互的工具：
+
+```typescript
+{
+  name: "execute_command",
+  description: "执行shell命令",
+  inputSchema: {
+    type: "object",
+    properties: {
+      command: { type: "string" },
+      args: { type: "array", items: { type: "string" } }
+    }
+  }
+}
+```
+
+### API集成
+
+封装外部API的工具：
+
+```typescript
+{
+  name: "github_create_issue",
+  description: "创建GitHub工单",
+  inputSchema: {
+    type: "object",
+    properties: {
+      title: { type: "string" },
+      body: { type: "string" },
+      labels: { type: "array", items: { type: "string" } }
+    }
+  }
+}
+```
+
+### 数据处理
+
+用于数据转换和分析的工具：
+
+```typescript
+{
+  name: "analyze_csv",
+  description: "分析CSV文件",
+  inputSchema: {
+    type: "object",
+    properties: {
+      filepath: { type: "string" },
+      operations: {
+        type: "array",
+        items: {
+          enum: ["sum", "average", "count"]
+        }
+      }
+    }
+  }
+}
+```
+
+## 最佳实践
+
+实现工具时建议：
+
+1. 使用清晰、描述性的名称和说明
+2. 为参数定义详细的JSON Schema
+3. 在工具描述中包含使用示例
+4. 实现完善的错误处理和验证机制
+5. 对耗时操作提供进度报告
+6. 保持工具功能专注且原子化
+7. 文档化返回值结构
+8. 设置合理的超时机制
+9. 对资源密集型操作考虑限流
+10. 记录工具使用日志以便调试和监控
+### 工具名称冲突
+
+MCP客户端应用与MCP服务端代理在构建自身工具列表时可能遇到工具命名冲突。例如，两个已连接的MCP服务器`web1`和`web2`可能同时暴露名为`search_web`的工具。
+
+应用可采用以下策略（非穷尽列表）消除工具歧义：
+
+- 将用户定义的唯一服务器名与工具名拼接，如`web1___search_web`和`web2___search_web`。当配置文件中已提供唯一服务器名时，此策略更为适用。
+- 为工具名生成随机前缀，如`jrwxs___search_web`和`6cq52___search_web`。当服务端代理无法获取用户定义的唯一名称时，此策略更为适用。
+- 使用服务器URI作为工具名前缀，如`web1.example.com:search_web`和`web2.example.com:search_web`。此策略适用于远程MCP服务器场景。
+
+需注意：初始化流程中服务端提供的名称不保证唯一性，通常不适合用于消歧。
+
+## 安全考量
+
+暴露工具时需注意：
+
+### 输入校验
+- 严格依据模式校验所有参数
+- 净化文件路径与系统命令
+- 校验URL与外部标识符
+- 检查参数大小与取值范围
+- 防范命令注入攻击
+
+### 访问控制
+- 按需实施身份验证
+- 采用恰当的授权检查
+- 审计工具使用情况
+- 实施请求限流
+- 监控异常使用行为
+
+### 错误处理
+- 避免向客户端暴露内部错误
+- 记录安全相关错误日志
+- 正确处理超时情况
+- 错误发生后及时清理资源
+- 校验返回值有效性
+
+## 工具发现与更新
+
+MCP支持动态工具发现机制：
+1. 客户端可随时列举可用工具
+2. 服务端可通过`notifications/tools/list_changed`通知工具变更
+3. 运行时支持动态添加/移除工具
+4. 工具定义可更新（但需谨慎操作）
+
+## 错误处理规范
+
+工具错误应通过结果对象上报，而非MCP协议级错误，以便LLM感知并处理异常。当工具遇到错误时：
+1. 在结果中将`isError`设为`true`
+2. 将错误详情置于`content`数组中
+
+以下是规范化的工具错误处理示例：
+
+<CodeGroup>
+
+```typescript TypeScript
+try {
+  // 工具操作
+  const result = performOperation();
+  return {
+    content: [
+      {
+        type: "text",
+        text: `操作成功: ${result}`,
+      },
+    ],
+  };
+} catch (error) {
+  return {
+    isError: true,
+    content: [
+      {
+        type: "text",
+        text: `错误: ${error.message}`,
+      },
+    ],
+  };
+}
+```
+
+```python Python
+try:
+    # 工具操作
+    result = perform_operation()
+    return types.CallToolResult(
+        content=[
+            types.TextContent(
+                type="text",
+                text=f"操作成功: {result}"
+            )
+        ]
+    )
+except Exception as error:
+    return types.CallToolResult(
+        isError=True,
+        content=[
+            types.TextContent(
+                type="text",
+                text=f"错误: {str(error)}"
+            )
+        ]
+    )
+```
+
+</CodeGroup>
+
+该设计使LLM能感知错误状态，并可能触发纠正措施或请求人工干预。
+
+## 工具注解说明
+
+工具注解提供关于工具行为的元数据，帮助客户端理解如何呈现和管理工具。这些注解是描述工具特性及影响的提示信息，但不应依赖其进行安全决策。
+### 工具注解的作用  
+
+工具注解主要实现以下几个关键目的：  
+
+1. 提供与用户体验相关的信息，而不影响模型上下文  
+2. 帮助客户端对工具进行适当分类和展示  
+3. 传达工具可能产生的副作用信息  
+4. 协助开发直观的工具审批界面  
+
+### 可用的工具注解  
+
+MCP 规范定义了以下工具注解：  
+
+| 注解             | 类型     | 默认值  | 描述                                                                                                                          |  
+| ---------------- | -------- | ------- | ---------------------------------------------------------------------------------------------------------------------------- |  
+| `title`          | string   | -       | 工具的可读标题，便于在界面中显示                                                                                             |  
+| `readOnlyHint`   | boolean  | false   | 若为 true，表示该工具不会修改其运行环境                                                                                      |  
+| `destructiveHint`| boolean  | true    | 若为 true，表示该工具可能执行破坏性更新（仅在 `readOnlyHint` 为 false 时有效）                                               |  
+| `idempotentHint` | boolean  | false   | 若为 true，表示重复调用该工具（参数相同）不会产生额外效果（仅在 `readOnlyHint` 为 false 时有效）                             |  
+| `openWorldHint`  | boolean  | true    | 若为 true，表示该工具可能与外部实体交互（即“开放世界”）                                                                      |  
+
+### 示例用法  
+
+以下是不同场景下带注解的工具定义示例：  
+
+```typescript  
+// 一个只读的搜索工具  
+{  
+  name: "web_search",  
+  description: "在网络上搜索信息",  
+  inputSchema: {  
+    type: "object",  
+    properties: {  
+      query: { type: "string" }  
+    },  
+    required: ["query"]  
+  },  
+  annotations: {  
+    title: "网络搜索",  
+    readOnlyHint: true,  
+    openWorldHint: true  
+  }  
+}  
+
+// 一个破坏性的文件删除工具  
+{  
+  name: "delete_file",  
+  description: "从文件系统中删除文件",  
+  inputSchema: {  
+    type: "object",  
+    properties: {  
+      path: { type: "string" }  
+    },  
+    required: ["path"]  
+  },  
+  annotations: {  
+    title: "删除文件",  
+    readOnlyHint: false,  
+    destructiveHint: true,  
+    idempotentHint: true,  
+    openWorldHint: false  
+  }  
+}  
+
+// 一个非破坏性的数据库记录创建工具  
+{  
+  name: "create_record",  
+  description: "在数据库中创建新记录",  
+  inputSchema: {  
+    type: "object",  
+    properties: {  
+      table: { type: "string" },  
+      data: { type: "object" }  
+    },  
+    required: ["table", "data"]  
+  },  
+  annotations: {  
+    title: "创建数据库记录",  
+    readOnlyHint: false,  
+    destructiveHint: false,  
+    idempotentHint: false,  
+    openWorldHint: false  
+  }  
+}  
+```
+### 在服务器实现中集成注解
+
+<CodeGroup>
+
+```typescript TypeScript
+server.setRequestHandler(ListToolsRequestSchema, async () => {
+  return {
+    tools: [
+      {
+        name: "calculate_sum",
+        description: "将两个数字相加",
+        inputSchema: {
+          type: "object",
+          properties: {
+            a: { type: "number" },
+            b: { type: "number" },
+          },
+          required: ["a", "b"],
+        },
+        annotations: {
+          title: "求和计算",
+          readOnlyHint: true,
+          openWorldHint: false,
+        },
+      },
+    ],
+  };
+});
+```
+
+```python Python
+from mcp.server.fastmcp import FastMCP
+
+mcp = FastMCP("example-server")
+
+@mcp.tool(
+    annotations={
+        "title": "求和计算",
+        "readOnlyHint": True,
+        "openWorldHint": False
+    }
+)
+async def calculate_sum(a: float, b: float) -> str:
+    """将两个数字相加。
+
+    Args:
+        a: 待相加的第一个数字
+        b: 待相加的第二个数字
+    """
+    result = a + b
+    return str(result)
+```
+
+</CodeGroup>
+
+### 工具注解的最佳实践
+
+1. **准确描述副作用**：明确标注工具是否会修改环境，以及这些修改是否具有破坏性。
+
+2. **使用描述性标题**：提供易于理解的标题，清晰说明工具的用途。
+
+3. **正确标注幂等性**：只有当重复调用确实不会产生额外影响时，才将工具标记为幂等。
+
+4. **设置合适的开放/封闭世界提示**：指明工具是与封闭系统（如数据库）还是开放系统（如互联网）交互。
+
+5. **记住注解仅是提示**：ToolAnnotations中的所有属性都只是提示，并不能保证准确描述工具行为。客户端绝不应仅基于注解做出安全关键决策。
+
+## 测试工具
+
+完善的MCP工具测试策略应包含：
+
+- **功能测试**：验证工具能否正确处理有效输入并妥善处理无效输入
+- **集成测试**：使用真实和模拟的依赖项测试工具与外部系统的交互
+- **安全测试**：验证身份认证、权限控制、输入清理和速率限制
+- **性能测试**：检查高负载下的行为、超时处理和资源清理
+- **错误处理**：确保工具能通过MCP协议正确报告错误并清理资源
