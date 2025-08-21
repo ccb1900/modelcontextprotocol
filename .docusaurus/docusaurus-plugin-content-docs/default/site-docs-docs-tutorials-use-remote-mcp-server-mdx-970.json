@@ -1,7 +1,7 @@
 {
   "id": "docs/tutorials/use-remote-mcp-server",
-  "title": "Connect to Remote MCP Servers",
-  "description": "Learn how to connect Claude to remote MCP servers and extend its capabilities with internet-hosted tools and data sources",
+  "title": "连接远程MCP服务器",
+  "description": "学习如何将Claude连接至远程MCP服务器，通过互联网托管工具和数据源扩展其能力",
   "source": "@site/docs/docs/tutorials/use-remote-mcp-server.mdx",
   "sourceDirName": "docs/tutorials",
   "slug": "/docs/tutorials/use-remote-mcp-server",
@@ -12,8 +12,8 @@
   "tags": [],
   "version": "current",
   "frontMatter": {
-    "title": "Connect to Remote MCP Servers",
-    "description": "Learn how to connect Claude to remote MCP servers and extend its capabilities with internet-hosted tools and data sources"
+    "title": "连接远程MCP服务器",
+    "description": "学习如何将Claude连接至远程MCP服务器，通过互联网托管工具和数据源扩展其能力"
   },
   "sidebar": "tutorialSidebar",
   "previous": {
@@ -21,7 +21,7 @@
     "permalink": "/docs/docs/tutorials/use-local-mcp-server"
   },
   "next": {
-    "title": "Example Servers",
+    "title": "examples",
     "permalink": "/docs/examples"
   }
 }

@@ -1,7 +1,7 @@
 {
   "id": "quickstart/server",
-  "title": "Build an MCP Server",
-  "description": "Get started building your own server to use in Claude for Desktop and other clients.",
+  "title": "server",
+  "description": "---",
   "source": "@site/docs/quickstart/server.mdx",
   "sourceDirName": "quickstart",
   "slug": "/quickstart/server",
@@ -11,17 +11,14 @@
   "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/quickstart/server.mdx",
   "tags": [],
   "version": "current",
-  "frontMatter": {
-    "title": "Build an MCP Server",
-    "description": "Get started building your own server to use in Claude for Desktop and other clients."
-  },
+  "frontMatter": {},
   "sidebar": "tutorialSidebar",
   "previous": {
-    "title": "Build an MCP Client",
+    "title": "client",
     "permalink": "/docs/quickstart/client"
   },
   "next": {
-    "title": "Connect to Local MCP Servers",
+    "title": "user",
     "permalink": "/docs/quickstart/user"
   }
 }

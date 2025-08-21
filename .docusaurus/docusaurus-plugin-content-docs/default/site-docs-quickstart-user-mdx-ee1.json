@@ -1,7 +1,7 @@
 {
   "id": "quickstart/user",
-  "title": "Connect to Local MCP Servers",
-  "description": "Learn how to extend Claude Desktop with local MCP servers to enable file system access and other powerful integrations",
+  "title": "user",
+  "description": "---",
   "source": "@site/docs/quickstart/user.mdx",
   "sourceDirName": "quickstart",
   "slug": "/quickstart/user",
@@ -11,17 +11,14 @@
   "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/quickstart/user.mdx",
   "tags": [],
   "version": "current",
-  "frontMatter": {
-    "title": "Connect to Local MCP Servers",
-    "description": "Learn how to extend Claude Desktop with local MCP servers to enable file system access and other powerful integrations"
-  },
+  "frontMatter": {},
   "sidebar": "tutorialSidebar",
   "previous": {
-    "title": "Build an MCP Server",
+    "title": "server",
     "permalink": "/docs/quickstart/server"
   },
   "next": {
-    "title": "Java MCP Client",
+    "title": "Java MCP客户端",
     "permalink": "/docs/sdk/java/mcp-client"
   }
 }

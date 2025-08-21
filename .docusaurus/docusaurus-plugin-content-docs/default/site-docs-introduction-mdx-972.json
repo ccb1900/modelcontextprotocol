@@ -1,7 +1,7 @@
 {
   "id": "introduction",
-  "title": "Introduction",
-  "description": "Get started with the Model Context Protocol (MCP)",
+  "title": "简介",
+  "description": "开始使用模型上下文协议 (MCP)",
   "source": "@site/docs/introduction.mdx",
   "sourceDirName": ".",
   "slug": "/introduction",
@@ -12,16 +12,16 @@
   "tags": [],
   "version": "current",
   "frontMatter": {
-    "title": "Introduction",
-    "description": "Get started with the Model Context Protocol (MCP)"
+    "title": "简介",
+    "description": "开始使用模型上下文协议 (MCP)"
   },
   "sidebar": "tutorialSidebar",
   "previous": {
-    "title": "FAQs",
+    "title": "faqs",
     "permalink": "/docs/faqs"
   },
   "next": {
-    "title": "Core architecture",
+    "title": "核心架构",
     "permalink": "/docs/legacy/concepts/architecture"
   }
 }

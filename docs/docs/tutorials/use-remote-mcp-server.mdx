@@ -1,147 +1,142 @@
 ---
-title: Connect to Remote MCP Servers
-description: Learn how to connect Claude to remote MCP servers and extend its capabilities with internet-hosted tools and data sources
+title: 连接远程MCP服务器
+description: 学习如何将Claude连接至远程MCP服务器，通过互联网托管工具和数据源扩展其能力
 ---
 
-Remote MCP servers extend AI applications' capabilities beyond your local environment, providing access to internet-hosted tools, services, and data sources. By connecting to remote MCP servers, you transform AI assistants from helpful tools into informed teammates capable of handling complex, multi-step projects with real-time access to external resources.
+远程MCP服务器将AI应用的能力从本地环境延伸至云端，提供对互联网托管工具、服务和数据源的访问权限。通过连接远程MCP服务器，您可以将AI助手从实用工具转变为具备实时访问外部资源能力的智能队友，能够处理复杂的多步骤项目。
 
-Many clients now support remote MCP servers, enabling a wide range of integration possibilities. This guide demonstrates how to connect to remote MCP servers using [Claude](https://claude.ai/) as an example, one of the [many clients that support MCP](/clients). While we focus on Claude's implementation through Custom Connectors, the concepts apply broadly to other MCP-compatible clients.
+目前众多客户端已支持远程MCP服务器，实现了广泛的集成可能性。本指南以[Claude](https://claude.ai/)为例演示连接方法——这是众多[支持MCP的客户端](/clients)之一。虽然我们重点介绍通过自定义连接器实现的Claude集成方案，但这些概念同样适用于其他兼容MCP的客户端。
 
-## Understanding Remote MCP Servers
+## 理解远程MCP服务器
 
-Remote MCP servers function similarly to local MCP servers but are hosted on the internet rather than your local machine. They expose tools, prompts, and resources that Claude can use to perform tasks on your behalf. These servers can integrate with various services such as project management tools, documentation systems, code repositories, and any other API-enabled service.
+远程MCP服务器与本地服务器功能相似，但部署在互联网而非本地机器上。它们向Claude开放各类工具、提示词和资源，使其能代您执行任务。这些服务器可与项目管理工具、文档系统、代码仓库等任何支持API的服务集成。
 
-The key advantage of remote MCP servers is their accessibility. Unlike local servers that require installation and configuration on each device, remote servers are available from any MCP client with an internet connection. This makes them ideal for web-based AI applications, integrations that emphasize ease-of-use and services that require server-side processing or authentication.
+远程MCP服务器的核心优势在于可访问性。不同于需要在每台设备安装配置的本地服务器，远程服务器可通过任何联网的MCP客户端访问。这使其特别适合：基于网页的AI应用、强调易用性的集成方案，以及需要服务端处理或认证的场景。
 
-## What are Custom Connectors?
+## 什么是自定义连接器？
 
-Custom Connectors serve as the bridge between Claude and remote MCP servers. They allow you to connect Claude directly to the tools and data sources that matter most to your workflows, enabling Claude to operate within your favorite software and draw insights from the complete context of your external tools.
+自定义连接器是Claude与远程MCP服务器之间的桥梁。通过它们，您可以将Claude直接接入工作流中最关键的工具和数据源，使Claude能在您惯用的软件环境中运行，并从外部工具的完整上下文中获取洞察。
 
-With Custom Connectors, you can:
+借助自定义连接器，您可以：
+- [连接Claude至第三方开发者提供的现有远程MCP服务器](https://support.anthropic.com/en/articles/11175166-getting-started-with-custom-connectors-using-remote-mcp)
+- [构建专属远程MCP服务器来对接任意工具](https://support.anthropic.com/en/articles/11503834-building-custom-connectors-via-remote-mcp-servers)
+## 连接远程MCP服务器
 
-- [Connect Claude to existing remote MCP servers](https://support.anthropic.com/en/articles/11175166-getting-started-with-custom-connectors-using-remote-mcp) provided by third-party developers
-- [Build your own remote MCP servers to connect with any tool](https://support.anthropic.com/en/articles/11503834-building-custom-connectors-via-remote-mcp-servers)
+将Claude连接到远程MCP服务器的过程需要通过[Claude界面](https://claude.ai/)添加自定义连接器。这将建立Claude与所选远程服务器之间的安全连接。
 
-## Connecting to a Remote MCP Server
+<步骤>
+<步骤标题="进入连接器设置">
+在浏览器中打开Claude并进入设置页面。点击个人资料图标，从下拉菜单中选择"设置"。在设置中，找到并点击侧边栏的"连接器"选项。
 
-The process of connecting Claude to a remote MCP server involves adding a Custom Connector through the [Claude interface](https://claude.ai/). This establishes a secure connection between Claude and your chosen remote server.
+这将显示当前已配置的连接器，并提供添加新连接器的选项。
 
-<Steps>
-<Step title="Navigate to Connector Settings">
-Open Claude in your browser and navigate to the settings page. You can access this by clicking on your profile icon and selecting "Settings" from the dropdown menu. Once in settings, locate and click on the "Connectors" section in the sidebar.
+</步骤>
 
-This will display your currently configured connectors and provide options to add new ones.
+<步骤标题="添加自定义连接器">
+在连接器部分滚动到底部，找到"添加自定义连接器"按钮。点击此按钮开始连接流程。
 
-</Step>
-
-<Step title="Add a Custom Connector">
-In the Connectors section, scroll to the bottom where you'll find the "Add custom connector" button. Click this button to begin the connection process.
-
-<Frame>
-  <img
+<框架>
+  <图片
     src="/images/quickstart-remote/1-add-connector.png"
-    alt="Add custom connector button in Claude settings"
+    alt="Claude设置中的添加自定义连接器按钮"
   />
-</Frame>
+</框架>
 
-A dialog will appear prompting you to enter the remote MCP server URL. This URL should be provided by the server developer or administrator. Enter the complete URL, ensuring it includes the proper protocol (https://) and any necessary path components.
+随后会出现一个对话框，提示输入远程MCP服务器URL。该URL应由服务器开发者或管理员提供。输入完整URL，确保包含正确的协议(https://)和必要的路径组件。
 
-<Frame>
-  <img
+<框架>
+  <图片
     src="/images/quickstart-remote/2-connect.png"
-    alt="Dialog for entering remote MCP server URL"
+    alt="输入远程MCP服务器URL的对话框"
   />
-</Frame>
+</框架>
 
-After entering the URL, click "Add" to proceed with the connection.
+输入URL后，点击"添加"继续连接过程。
 
-</Step>
+</步骤>
 
-<Step title="Complete Authentication">
-Most remote MCP servers require authentication to ensure secure access to their resources. The authentication process varies depending on the server implementation but commonly involves OAuth, API keys, or username/password combinations.
+<步骤标题="完成身份验证">
+大多数远程MCP服务器需要身份验证以确保资源访问安全。验证方式因服务器实现而异，常见方式包括OAuth、API密钥或用户名/密码组合。
 
-<Frame>
-  <img
+<框架>
+  <图片
     src="/images/quickstart-remote/3-auth.png"
-    alt="Authentication screen for remote MCP server"
+    alt="远程MCP服务器身份验证界面"
   />
-</Frame>
+</框架>
 
-Follow the authentication prompts provided by the server. This may redirect you to a third-party authentication provider or display a form within Claude. Once authentication is complete, Claude will establish a secure connection to the remote server.
+按照服务器提供的验证提示操作。可能会重定向到第三方验证服务提供商，或在Claude内显示验证表单。完成验证后，Claude将与远程服务器建立安全连接。
 
-</Step>
+</步骤>
 
-<Step title="Access Resources and Prompts">
-After successful connection, the remote server's resources and prompts become available in your Claude conversations. You can access these by clicking the paperclip icon in the message input area, which opens the attachment menu.
+<步骤标题="访问资源和提示">
+成功连接后，远程服务器的资源和提示将在Claude对话中可用。点击消息输入区的回形针图标打开附件菜单即可访问。
 
-<Frame>
-  <img
+<框架>
+  <图片
     src="/images/quickstart-remote/4-select-resources-menu.png"
-    alt="Attachment menu showing available resources"
+    alt="显示可用资源的附件菜单"
   />
-</Frame>
+</框架>
 
-The menu displays all available resources and prompts from your connected servers. Select the items you want to include in your conversation. These resources provide Claude with context and information from your external tools.
+菜单中会显示所有已连接服务器提供的资源和提示。选择要加入对话的项目，这些资源将为Claude提供来自外部工具的上下文信息。
 
-<Frame>
-  <img src="/images/quickstart-remote/5-select-prompts-resources.png" alt="Selecting specific resources and prompts from the menu" />
-</Frame>
-</Step>
+<框架>
+  <图片 src="/images/quickstart-remote/5-select-prompts-resources.png" alt="从菜单中选择特定资源和提示" />
+</框架>
+</步骤>
 
-<Step title="Configure Tool Permissions">
-Remote MCP servers often expose multiple tools with varying capabilities. You can control which tools Claude is allowed to use by configuring permissions in the connector settings. This ensures Claude only performs actions you've explicitly authorized.
+<步骤标题="配置工具权限">
+远程MCP服务器通常会提供多个功能各异的工具。您可以通过连接器设置配置权限，控制Claude允许使用的工具，确保只执行明确授权的操作。
 
-<Frame>
-  <img
+<框架>
+  <图片
     src="/images/quickstart-remote/6-configure-tools.png"
-    alt="Tool permission configuration interface"
+    alt="工具权限配置界面"
   />
-</Frame>
+</框架>
 
-Navigate back to the Connectors settings and click on your connected server. Here you can enable or disable specific tools, set usage limits, and configure other security parameters according to your needs.
+返回连接器设置，点击已连接的服务器。在此可以启用或禁用特定工具、设置使用限制，并根据需要配置其他安全参数。
 
-</Step>
-</Steps>
+</步骤>
+</步骤>
+## 远程 MCP 服务器使用最佳实践
 
-## Best Practices for Using Remote MCP Servers
+使用远程 MCP 服务器时，请遵循以下建议以确保安全高效的体验：
 
-When working with remote MCP servers, consider these recommendations to ensure a secure and efficient experience:
+**安全注意事项**：连接前务必验证远程 MCP 服务器的真实性。仅连接来自可信来源的服务器，并仔细检查认证过程中请求的权限。对于敏感数据或系统的访问授权需保持谨慎。
 
-**Security considerations**: Always verify the authenticity of remote MCP servers before connecting. Only connect to servers from trusted sources, and review the permissions requested during authentication. Be cautious about granting access to sensitive data or systems.
+**管理多个连接器**：您可以同时连接多个远程 MCP 服务器。建议按用途或项目分类管理连接器以保持条理性。定期清理不再使用的连接器，确保工作环境整洁安全。
 
-**Managing multiple connectors**: You can connect to multiple remote MCP servers simultaneously. Organize your connectors by purpose or project to maintain clarity. Regularly review and remove connectors you no longer use to keep your workspace organized and secure.
+## 后续步骤
 
-## Next Steps
-
-Now that you've connected Claude to a remote MCP server, you can explore its capabilities in your conversations. Try using the connected tools to automate tasks, access external data, or integrate with your existing workflows.
+成功将 Claude 连接至远程 MCP 服务器后，您可以在对话中探索其功能。尝试使用已连接的工具来自动化任务、访问外部数据或与现有工作流集成。
 
 <CardGroup cols={2}>
   <Card
-    title="Build your own remote server"
+    title="构建专属远程服务器"
     icon="cloud"
     href="https://support.anthropic.com/en/articles/11503834-building-custom-connectors-via-remote-mcp-servers"
   >
-    Create custom remote MCP servers to integrate with proprietary tools and
-    services
+    创建自定义远程 MCP 服务器，与专有工具和服务集成
   </Card>
   <Card
-    title="Explore available servers"
+    title="探索可用服务器"
     icon="grid"
     href="https://github.com/modelcontextprotocol/servers"
   >
-    Browse our collection of official and community-created MCP servers
+    浏览官方及社区创建的 MCP 服务器资源库
   </Card>
-  <Card title="Connect local servers" icon="computer" href="/quickstart/user">
-    Learn how to connect Claude Desktop to local MCP servers for direct system
-    access
+  <Card title="连接本地服务器" icon="computer" href="/quickstart/user">
+    了解如何将 Claude Desktop 连接至本地 MCP 服务器实现直接系统访问
   </Card>
   <Card
-    title="Understand the architecture"
+    title="理解架构原理"
     icon="book"
     href="/docs/learn/architecture"
   >
-    Dive deeper into how MCP works and its architecture
+    深入探索 MCP 工作原理及其架构设计
   </Card>
 </CardGroup>
 
-Remote MCP servers unlock powerful possibilities for extending Claude's capabilities. As you become familiar with these integrations, you'll discover new ways to streamline your workflows and accomplish complex tasks more efficiently.
+远程 MCP 服务器为扩展 Claude 功能开启了强大可能性。随着您对这些集成的熟悉，将会发现优化工作流和高效完成复杂任务的新方法。

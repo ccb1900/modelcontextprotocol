@@ -1,7 +1,7 @@
 {
   "id": "about/index",
-  "title": "Model Context Protocol",
-  "description": "The open protocol that connects AI applications to the systems where context lives",
+  "title": "index",
+  "description": "---",
   "source": "@site/docs/about/index.mdx",
   "sourceDirName": "about",
   "slug": "/about/",
@@ -11,14 +11,10 @@
   "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/about/index.mdx",
   "tags": [],
   "version": "current",
-  "frontMatter": {
-    "title": "Model Context Protocol",
-    "description": "The open protocol that connects AI applications to the systems where context lives",
-    "mode": "custom"
-  },
+  "frontMatter": {},
   "sidebar": "tutorialSidebar",
   "next": {
-    "title": "Example Clients",
+    "title": "示例客户端",
     "permalink": "/docs/clients"
   }
 }

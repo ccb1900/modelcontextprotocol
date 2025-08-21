@@ -1,7 +1,7 @@
 {
   "id": "legacy/concepts/tools",
-  "title": "Tools",
-  "description": "Enable LLMs to perform actions through your server",
+  "title": "tools",
+  "description": "---",
   "source": "@site/docs/legacy/concepts/tools.mdx",
   "sourceDirName": "legacy/concepts",
   "slug": "/legacy/concepts/tools",
@@ -11,17 +11,14 @@
   "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/legacy/concepts/tools.mdx",
   "tags": [],
   "version": "current",
-  "frontMatter": {
-    "title": "Tools",
-    "description": "Enable LLMs to perform actions through your server"
-  },
+  "frontMatter": {},
   "sidebar": "tutorialSidebar",
   "previous": {
-    "title": "Sampling",
+    "title": "sampling",
     "permalink": "/docs/legacy/concepts/sampling"
   },
   "next": {
-    "title": "Transports",
+    "title": "transports",
     "permalink": "/docs/legacy/concepts/transports"
   }
 }

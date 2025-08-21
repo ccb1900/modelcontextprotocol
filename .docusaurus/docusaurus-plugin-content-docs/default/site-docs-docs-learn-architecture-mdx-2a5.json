@@ -1,7 +1,7 @@
 {
   "id": "docs/learn/architecture",
-  "title": "Architecture Overview",
-  "description": "This overview of the Model Context Protocol (MCP) discusses its scope and core concepts, and provides an example demonstrating each core concept.",
+  "title": "架构概述",
+  "description": "本文档概述了模型上下文协议（MCP），讨论了其范围和核心概念，并通过示例演示每个核心概念。",
   "source": "@site/docs/docs/learn/architecture.mdx",
   "sourceDirName": "docs/learn",
   "slug": "/docs/learn/architecture",
@@ -12,16 +12,16 @@
   "tags": [],
   "version": "current",
   "frontMatter": {
-    "title": "Architecture Overview",
+    "title": "架构概述",
     "type": "docs"
   },
   "sidebar": "tutorialSidebar",
   "previous": {
-    "title": "Introduction",
+    "title": "intro",
     "permalink": "/docs/docs/getting-started/intro"
   },
   "next": {
-    "title": "Client Concepts",
+    "title": "客户端核心概念",
     "permalink": "/docs/docs/learn/client-concepts"
   }
 }

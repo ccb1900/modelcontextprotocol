@@ -1,7 +1,7 @@
 {
   "id": "clients",
-  "title": "Example Clients",
-  "description": "A list of applications that support MCP integrations",
+  "title": "示例客户端",
+  "description": "支持MCP集成的应用程序列表",
   "source": "@site/docs/clients.mdx",
   "sourceDirName": ".",
   "slug": "/clients",
@@ -12,16 +12,16 @@
   "tags": [],
   "version": "current",
   "frontMatter": {
-    "title": "Example Clients",
-    "description": "A list of applications that support MCP integrations"
+    "title": "示例客户端",
+    "description": "支持MCP集成的应用程序列表"
   },
   "sidebar": "tutorialSidebar",
   "previous": {
-    "title": "Model Context Protocol",
+    "title": "index",
     "permalink": "/docs/about/"
   },
   "next": {
-    "title": "Contributor Communication",
+    "title": "贡献者沟通指南",
     "permalink": "/docs/community/communication"
   }
 }

@@ -1,150 +1,141 @@
 ---
-title: Governance and Stewardship
-description: Learn about the Model Context Protocol's governance structure and how to participate in the community
+title: 治理与管护机制
+description: 了解模型上下文协议（MCP）的治理架构及社区参与方式
 ---
 
-The Model Context Protocol (MCP) follows a formal governance model to ensure transparent decision-making and community participation. This document outlines how the project is organized and how decisions are made.
+模型上下文协议（MCP）采用正式治理模式，确保决策透明与社区参与。本文档阐述项目组织架构与决策流程。
 
-## Technical Governance
+## 技术治理
 
-The MCP project adopts a hierarchical structure, similar to Python, PyTorch and other open source projects:
+MCP项目采用与Python、PyTorch等开源项目类似的层级结构：
 
-- A community of **contributors** who file issues, make pull requests, and contribute to the project.
-- A small set of **maintainers** drive components within the MCP project, such as SDKs, documentation, and others.
-- Contributors and maintainers are overseen by **core maintainers**, who drive the overall project direction.
-- The core maintainers have two **lead core maintainers** who are the catch-all decision makers.
-- Maintainers, core maintainers, and lead core maintainers form the **MCP steering group**.
+- **贡献者**社区：提交问题、发起拉取请求并为项目作贡献
+- **维护者**小组：负责驱动MCP项目中各组件（如SDK、文档等）发展
+- **核心维护者**团队：监督贡献者与维护者，把握项目整体方向
+- **首席核心维护者**（2名）：拥有最终决策权
+- 维护者、核心维护者与首席核心维护者共同构成**MCP指导组**
 
-All maintainers are expected to have a strong bias towards MCP's design philosophy. Membership in the technical governance process is for individuals, not companies. That is, there are no seats reserved for specific companies, and membership is associated with the person rather than the company employing that person. This ensures that maintainers act in the best interests of the protocol itself and the open source community.
+所有维护者都应高度认同MCP的设计理念。技术治理成员资格以个人为单位（非企业），不设企业专属席位，确保决策始终符合协议本身与开源社区的最佳利益。
 
-### Channels
+### 沟通渠道
 
-Technical Governance is facilitated through a shared [Discord server](/community/communication#discord) of all **maintainers, core maintainers** and **lead maintainers**. Each maintainer group can choose additional communication channels, but all decisions and their supporting discussions must be recorded and made transparently available on the Discord server.
+技术治理通过全体**维护者**、**核心维护者**及**首席维护者**共用的[Discord服务器](/community/communication#discord)进行。各维护组可自选辅助沟通渠道，但所有决策及相关讨论必须记录并透明公开于Discord服务器。
 
-### Maintainers
+### 维护者职责
 
-Maintainers are responsible for individual projects or technical working groups within the MCP project. These generally are independent repositories such as language-specific SDKs, but can also extend to subdirectories of a repository, such as the MCP documentation. Maintainers may adopt their own rules and procedures for making decisions. Maintainers are expected to make decisions for their respective projects independently, but can defer or escalate to the core maintainers when needed.
+维护者负责MCP项目中的独立子项目或技术工作组（如特定语言SDK或文档子目录）。维护者可自主制定决策规则，但遇重大事项可提交核心维护者裁决。具体职责包括：
 
-Maintainers are responsible for the:
+- 与社区贡献者保持建设性互动
+- 持续优化所辖项目模块
+- 完善配套文档、路线图等周边内容
+- 向核心层传递社区建议
 
-- Thoughtful and productive engagement with community contributors,
-- Maintaining and improving their respective area of the MCP project,
-- Supporting documentation, roadmaps and other adjacent parts of the MCP project,
-- Present ideas from community to core.
+维护者可适时提名新增成员。其任免由核心/首席核心维护者全权决定，无需说明理由。维护者拥有对应代码库的写入/管理权限。
+### 核心维护者  
 
-Maintainers are encouraged to propose additional maintainers when needed. Maintainers can only be appointed and removed by core maintainers or lead core maintainers at any time and without reason.
+核心维护者需深入理解模型上下文协议（Model Context Protocol，MCP）及其规范。他们的职责包括：  
 
-Maintainers have write and/or admin access to their respective repositories.
+- 设计、评审并推动MCP规范的演进，以及MCP项目的其他部分，例如文档；  
+- 为项目阐明连贯的长期愿景；  
+- 公平、透明地调解和解决争议问题，尽可能达成共识，必要时果断决策；  
+- 任命或移除维护者；  
+- 以MCP的最佳利益为出发点，对项目进行管理。  
 
-### Core Maintainers
+核心维护者作为一个群体，有权通过多数投票否决维护者的任何决定。核心维护者有权以他们认为合适的方式解决争议，并应公开说明其决策过程。核心小组需自行制定决策流程。  
 
-The core maintainers are expected to have a deep understanding of the Model Context Protocol and its specification. Their responsibilities include:
+核心维护者通常对所有MCP代码库拥有写入和管理权限，但应与外部贡献者使用相同的贡献机制（通常是拉取请求）。基于安全考虑可作例外处理。  
 
-- Designing, reviewing and steering the evolution of the MCP specification, as well as all other parts of the MCP project, such as documentation,
-- Articulating a cohesive long-term vision for the project,
-- Mediating and resolving contentious issues with fairness and transparency, seeking consensus where possible while making decisive choices when necessary,
-- Appoint or remove maintainers,
-- Stewardship of the MCP project in the best interest of MCP.
+### 首席维护者（BDFL）  
 
-The core maintainers as a group have the power to veto any decisions made by maintainers by majority vote. The core maintainers have power to resolve disputes as they see fit. The core maintainers should publicly articulate their decision-making. The core group is responsible for adopting their own procedures for making decisions.
+MCP有两位首席维护者：Justin Spahr-Summers 和 David Soria Parra。首席维护者有权否决核心维护者或普通维护者的任何决定。这一模式在开源社区中通常被称为“终身仁慈独裁者”（Benevolent Dictator for Life，BDFL）。首席维护者应公开其决策过程，并给出清晰的决策理由。首席维护者属于核心维护者小组。  
 
-Core maintainers generally have write and admin access to all MCP repositories, but should use the same contribution (usually pull-requests) mechanism as outside contributors. Exceptions can be made based on security considerations.
+首席维护者负责确认或移除核心维护者。  
 
-### Lead Maintainers (BDFL)
+在可行的情况下，首席维护者应担任MCP项目所有基础设施的管理员，包括但不限于所有沟通渠道、GitHub组织及代码库。  
 
-MCP has two lead maintainers: Justin Spahr-Summers and David Soria Parra. Lead Maintainers can veto any decision by core maintainers or maintainers. This model is also commonly known as Benevolent Dictator for Life (BDFL) in the open source community. The Lead Maintainers should publicly articulate their decision-making and give clear reasoning for their decisions. Lead maintainers are part of the core maintainer group.
+### 决策流程  
 
-The Lead Maintainers are responsible for confirming or removing core maintainers.
+核心维护者小组每两周举行一次会议，讨论并投票表决提案，同时讨论其他必要议题。必要时，可通过共享的Discord服务器讨论并投票表决较小的提案。  
 
-Lead Maintainers are administrators on all infrastructure for the MCP project where possible. This includes but is not restricted to all communication channels, GitHub organizations and repositories.
+首席维护者、核心维护者及普通维护者小组应尝试每三至六个月线下会面一次。  
 
-### Decision Process
+## 流程  
 
-The core maintainer group meets every two weeks to discuss and vote on proposals, as well as discuss any topics needed. The shared Discord server can be used to discuss and vote on smaller proposals if needed.
+核心及首席维护者负责模型上下文协议的所有方面，包括文档、议题、内容建议以及[MCP项目](https://github.com/modelcontextprotocol)下的其他部分。普通维护者负责其所属MCP项目领域的文档、议题及内容建议，但也鼓励参与MCP项目的整体维护工作。维护者、核心维护者及首席维护者应与外部贡献者使用相同的贡献流程，而非直接修改代码库。这有助于明确意图并促进讨论。  
 
-The lead maintainer, core maintainer, and maintainer group should attempt to meet in person every three to six months.
+### 项目与工作组  
 
-## Processes
+MCP项目分为两大结构：项目和工作组。  
 
-Core and lead maintainers are responsible for all aspects of Model Context Protocol, including documentation, issues, suggestions for content, and all other parts under the [MCP project](https://github.com/modelcontextprotocol). Maintainers are responsible for documentation, issues, and suggestions of content for their area of the MCP project, but are encouraged to partake in general maintenance of the MCP projects. Maintainers, core maintainers, and lead maintainers should use the same contribution process as external contributors, rather than making direct changes to repos. This provides insight into intent and opportunity for discussion.
+项目是维护在独立代码库中的具体组件，包括规范、TypeScript SDK、Go SDK、检查器及其他实现产物。  
 
-### Projects and Working Groups
+工作组是协作论坛，供感兴趣的各方讨论MCP的特定方面，但不维护代码库。这些小组专注于传输协议、客户端实现等跨领域问题。
+#### 治理原则
 
-The MCP project is organized into two main structures: projects and working groups.
+所有项目和工作组在遵循以下核心原则的前提下实行自治：
 
-Projects are concrete components maintained in dedicated repositories. These include the Specification, TypeScript SDK, Go SDK, Inspector, and other implementation artifacts.
+1. 明确的贡献与决策流程  
+2. 开放的沟通与透明的决策  
 
-Working groups are forums for collaboration where interested parties discuss specific aspects of MCP without maintaining code repositories. These include groups focused on transport protocols, client implementation, and other cross-cutting concerns.
+二者均须做到：
+- 记录其贡献流程  
+- 保持沟通透明化  
+- 公开决策（工作组必须发布会议记录和提案）  
 
-#### Governance Principles
+未指定流程的项目和工作组默认采用：
+- GitHub 的拉取请求和议题作为贡献渠道  
+- 官方 [MCP贡献者Discord](/community/communication#discord) 中的公共频道  
 
-All projects and working groups are self-governed while adhering to these core principles:
+#### 维护职责
 
-1. Clear contribution and decision-making processes
-2. Open communication and transparent decisions
+无专属维护者的组件（如文档）由核心维护者负责。这些组件通过拉取请求遵循标准贡献指南，维护者负责审核，重大变更需提交核心维护者复审。
 
-Both must:
+鼓励核心维护者和维护者改进MCP项目的任何部分，无论是否属于其正式维护范围。
 
-- Document their contribution process
-- Maintain transparent communication
-- Make decisions publicly (working groups must publish meeting notes and proposals)
+### 规范项目
 
-Projects and working groups without specified processes default to:
+#### 规范增强提案（SEP）
 
-- GitHub pull requests and issues for contributions
-- A public channel in the official [MCP Contributor Discord](/community/communication#discord)
+对规范的修改提案必须以书面形式提交，开头需包含提案摘要，阐明待解决的**问题**、提出的**解决方案**、**替代方案**、**考量因素**、**预期结果**及**风险**。[SEP指南](/community/sep-guidelines)详述了提案的标准结构。SEP应作为议题提交至[规范仓库](https://github.com/modelcontextprotocol/specification)并标记`proposal, sep`标签。
 
-#### Maintenance Responsibilities
+所有提案必须获得MCP指导组（维护者、核心维护者或首席核心维护者）中一名**发起人**的支持。发起人负责确保提案积极开发、符合质量标准，并负责在核心维护者会议上陈述讨论。维护者与核心维护者组应定期审查未获发起人的公开提案。六个月内未找到发起人的提案将自动驳回。
 
-Components without dedicated maintainers (such as documentation) fall under core maintainer responsibility. These follow standard contribution guidelines through pull requests, with maintainers handling reviews and escalating to core maintainer review for any significant changes.
+提案获得发起人后，将被分配给该发起人并标记为`draft`状态。
 
-Core maintainers and maintainers are encouraged to improve any part of the MCP project, regardless of formal maintenance assignments.
+## 沟通机制
 
-### Specification Project
+### 核心维护者会议
 
-#### Specification Enhancement Proposal (SEP)
+核心维护者组每两周召开会议讨论提案与项目进展。提案相关记录应公开。核心维护者组每3-6个月应争取举行线下会议。
 
-Proposed changes to the specification must come in the form of a written version, starting with a summary of the proposal, outlining the **problem** it tries to solve, propose **solution**, **alternatives**, **considerations, outcomes** and **risks**. The [SEP Guidelines](/community/sep-guidelines) outline information on the expected structure of SEPs. SEP's should be created as issues in the [specification repository](https://github.com/modelcontextprotocol/specification) and tagged with the labels `proposal, sep`.
+### 公共交流
 
-All proposals must have a **sponsor** from the MCP steering group (maintainer, core maintainer or lead core maintainer). The sponsor is responsible for ensuring that the proposal is actively developed, meets the quality standard for proposals and is responsible for presenting and discussing it in meetings of core maintainers. Maintainer and Core Maintainer groups should review open proposals without sponsors in regular intervals. Proposals that do not find a sponsor within six months are automatically rejected.
+MCP项目在[官方Discord服务器](/community/communication#discord)为各兴趣组设立开放聊天室。特定沟通可能使用私有频道。
 
-Once proposals have a sponsor, they are assigned to the sponsor and are tagged `draft`.
+## 维护者提名、确认与移除
 
-## Communication
+### 基本原则
 
-### Core Maintainer Meetings
+- 模块维护者组的成员资格基于**个人**能力授予，需通过贡献、评审和讨论展现领域专业能力，并与MCP整体方向一致  
+- **维护者**组成员需持续展现与MCP原则的高度契合  
+- 模块维护者与核心维护者无任期限制  
+- 工作组或子项目维护者长期未活跃时可转为"荣誉"状态，各维护者组可自定义适用其领域的判定周期  
+- 成员资格归属个人而非企业  
 
-The core maintainer group meets on a bi-weekly basis to discuss proposals and the project. Notes on proposals should be made public. The core maintainer group will strive to meet in person every 3-6 months.
+### 提名与移除
 
-### Public Chat
+- 核心维护者负责维护者的增补与移除，需考虑现有维护者意见  
+- 首席维护者负责核心维护者的增补与移除  
 
-The MCP project maintains a [public Discord server](/community/communication#discord) with open chats for interest groups. The MCP project may have private channels for certain communications.
+## 现任核心维护者
 
-## Nominating, Confirming and Removing Maintainers
+- 尹娜·哈珀  
+- 巴兹尔·霍斯默  
+- 保罗·卡尔顿  
+- 尼克·库珀  
+- 尼克·奥尔德里奇  
+- 刘澈  
+- 丹·德利马尔斯基
+## 当前维护者与工作组
 
-### The Principles
-
-- Membership in module maintainer groups is given to **individuals** on merit basis after they demonstrated strong expertise of their area of work through contributions, reviews, and discussions and are aligned with the overall MCP direction.
-- For membership in the **maintainer** group the individual has to demonstrate strong and continued alignment with the overall MCP principles.
-- No term limits for module maintainers or core maintainers
-- Light criteria of moving working-group or sub-project maintenance to 'emeritus' status if they don't actively participate over long periods of time. Each maintainer group may define the inactive period that's appropriate for their area.
-- The membership is for an individual, not a company.
-
-### Nomination and Removal
-
-- Core Maintainers are responsible for adding and removing maintainers. They will take the consideration of existing maintainers into account.
-- The lead maintainers are responsible for adding and removing core maintainers.
-
-## Current Core Maintainers
-
-- Inna Harper
-- Basil Hosmer
-- Paul Carleton
-- Nick Cooper
-- Nick Aldridge
-- Che Liu
-- Den Delimarsky
-
-## Current Maintainers and Working Groups
-
-Refer to [the maintainer list](https://github.com/modelcontextprotocol/modelcontextprotocol/blob/main/MAINTAINERS.md).
+请参阅[维护者名单](https://github.com/modelcontextprotocol/modelcontextprotocol/blob/main/MAINTAINERS.md)。

@@ -1,7 +1,7 @@
 {
   "id": "sdk/java/mcp-server",
-  "title": "Java MCP Server",
-  "description": "Learn how to implement and configure a Model Context Protocol (MCP) server",
+  "title": "mcp-server",
+  "description": "---",
   "source": "@site/docs/sdk/java/mcp-server.mdx",
   "sourceDirName": "sdk/java",
   "slug": "/sdk/java/mcp-server",
@@ -11,13 +11,10 @@
   "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/sdk/java/mcp-server.mdx",
   "tags": [],
   "version": "current",
-  "frontMatter": {
-    "title": "Java MCP Server",
-    "description": "Learn how to implement and configure a Model Context Protocol (MCP) server"
-  },
+  "frontMatter": {},
   "sidebar": "tutorialSidebar",
   "previous": {
-    "title": "Java SDK Overview",
+    "title": "Java SDK 概述",
     "permalink": "/docs/sdk/java/mcp-overview"
   },
   "next": {

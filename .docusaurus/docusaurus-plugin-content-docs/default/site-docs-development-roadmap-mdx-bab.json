@@ -1,7 +1,7 @@
 {
   "id": "development/roadmap",
-  "title": "Roadmap",
-  "description": "Our plans for evolving Model Context Protocol",
+  "title": "路线图",
+  "description": "Model Context Protocol 的发展规划",
   "source": "@site/docs/development/roadmap.mdx",
   "sourceDirName": "development",
   "slug": "/development/roadmap",
@@ -12,16 +12,16 @@
   "tags": [],
   "version": "current",
   "frontMatter": {
-    "title": "Roadmap",
-    "description": "Our plans for evolving Model Context Protocol"
+    "title": "路线图",
+    "description": "Model Context Protocol 的发展规划"
   },
   "sidebar": "tutorialSidebar",
   "previous": {
-    "title": "Contributing",
+    "title": "贡献指南",
     "permalink": "/docs/development/contributing"
   },
   "next": {
-    "title": "Introduction",
+    "title": "intro",
     "permalink": "/docs/docs/getting-started/intro"
   }
 }

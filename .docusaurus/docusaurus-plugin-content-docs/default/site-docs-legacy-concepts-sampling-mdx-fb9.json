@@ -1,7 +1,7 @@
 {
   "id": "legacy/concepts/sampling",
-  "title": "Sampling",
-  "description": "Let your servers request completions from LLMs",
+  "title": "sampling",
+  "description": "---",
   "source": "@site/docs/legacy/concepts/sampling.mdx",
   "sourceDirName": "legacy/concepts",
   "slug": "/legacy/concepts/sampling",
@@ -11,17 +11,14 @@
   "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/legacy/concepts/sampling.mdx",
   "tags": [],
   "version": "current",
-  "frontMatter": {
-    "title": "Sampling",
-    "description": "Let your servers request completions from LLMs"
-  },
+  "frontMatter": {},
   "sidebar": "tutorialSidebar",
   "previous": {
-    "title": "Roots",
+    "title": "根路径",
     "permalink": "/docs/legacy/concepts/roots"
   },
   "next": {
-    "title": "Tools",
+    "title": "tools",
     "permalink": "/docs/legacy/concepts/tools"
   }
 }

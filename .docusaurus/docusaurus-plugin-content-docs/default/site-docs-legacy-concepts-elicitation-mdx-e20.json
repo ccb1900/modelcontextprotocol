@@ -1,7 +1,7 @@
 {
   "id": "legacy/concepts/elicitation",
-  "title": "Elicitation",
-  "description": "Interactive information gathering in MCP",
+  "title": "信息引导",
+  "description": "MCP中的交互式信息收集",
   "source": "@site/docs/legacy/concepts/elicitation.mdx",
   "sourceDirName": "legacy/concepts",
   "slug": "/legacy/concepts/elicitation",
@@ -12,16 +12,16 @@
   "tags": [],
   "version": "current",
   "frontMatter": {
-    "title": "Elicitation",
-    "description": "Interactive information gathering in MCP"
+    "title": "信息引导",
+    "description": "MCP中的交互式信息收集"
   },
   "sidebar": "tutorialSidebar",
   "previous": {
-    "title": "Core architecture",
+    "title": "核心架构",
     "permalink": "/docs/legacy/concepts/architecture"
   },
   "next": {
-    "title": "Prompts",
+    "title": "提示模板",
     "permalink": "/docs/legacy/concepts/prompts"
   }
 }

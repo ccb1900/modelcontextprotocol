@@ -1,83 +1,78 @@
----
-title: Java SDK Overview
-description: Introduction to the Model Context Protocol (MCP) Java SDK
----
+---  
+title: Java SDK 概述  
+description: 模型上下文协议 (MCP) Java SDK 简介  
+---  
 
-Java SDK for the [Model Context Protocol](https://modelcontextprotocol.org/docs/concepts/architecture)
-enables standardized integration between AI models and tools.
+[模型上下文协议](https://modelcontextprotocol.org/docs/concepts/architecture)的 Java SDK 实现了 AI 模型与工具之间的标准化集成。  
 
-## Content
+## 内容  
 
-- [Introduction](/sdk/java/mcp-overview#features) - Overview of the Model Context Protocol (MCP) Java SDK and its features.
-  - [Architecture](/sdk/java/mcp-overview#architecture) - The Java MCP SDK architecture overview.
-  - [Java Dependencies](/sdk/java/mcp-overview#dependencies) - Java dependencies required to use the MCP SDK.
-- [Java MCP Client](/sdk/java/mcp-client) - Learn how to use the MCP client to interact with MCP servers.
-- [Java MCP Server](/sdk/java/mcp-server) - Learn how to implement and configure an MCP server.
+- [简介](/sdk/java/mcp-overview#features) - 模型上下文协议 (MCP) Java SDK 及其功能概述。  
+  - [架构](/sdk/java/mcp-overview#architecture) - Java MCP SDK 架构概览。  
+  - [Java 依赖项](/sdk/java/mcp-overview#dependencies) - 使用 MCP SDK 所需的 Java 依赖项。  
+- [Java MCP 客户端](/sdk/java/mcp-client) - 学习如何使用 MCP 客户端与 MCP 服务器交互。  
+- [Java MCP 服务器](/sdk/java/mcp-server) - 学习如何实现和配置 MCP 服务器。  
 
-## Features
+## 功能  
 
-- MCP Client and MCP Server implementations supporting:
-  - Protocol [version compatibility negotiation](/specification/2024-11-05/basic/lifecycle/#initialization)
-  - [Tool](/specification/2024-11-05/server/tools/) discovery, execution, list change notifications
-  - [Resource](/specification/2024-11-05/server/resources/) management with URI templates
-  - [Roots](/specification/2024-11-05/client/roots/) list management and notifications
-  - [Prompt](/specification/2024-11-05/server/prompts/) handling and management
-  - [Sampling](/specification/2024-11-05/client/sampling/) support for AI model interactions
-- Multiple transport implementations:
-  - Default transports (included in core `mcp` module, no external web frameworks required):
-    - Stdio-based transport for process-based communication
-    - Java HttpClient-based SSE client transport for HTTP SSE Client-side streaming
-    - Servlet-based SSE server transport for HTTP SSE Server streaming
-  - Optional Spring-based transports (convenience if using Spring Framework):
-    - WebFlux SSE client and server transports for reactive HTTP streaming
-    - WebMVC SSE transport for servlet-based HTTP streaming
-- Supports Synchronous and Asynchronous programming paradigms
+- 支持以下功能的 MCP 客户端与服务器实现：  
+  - 协议[版本兼容性协商](/specification/2024-11-05/basic/lifecycle/#initialization)  
+  - [工具](/specification/2024-11-05/server/tools/)发现、执行及列表变更通知  
+  - 基于 URI 模板的[资源](/specification/2024-11-05/server/resources/)管理  
+  - [根节点](/specification/2024-11-05/client/roots/)列表管理与变更通知  
+  - [提示词](/specification/2024-11-05/server/prompts/)处理与管理  
+  - 支持 AI 模型交互的[采样](/specification/2024-11-05/client/sampling/)功能  
+- 多种传输实现：  
+  - 默认传输方式（包含在核心 `mcp` 模块中，无需外部 Web 框架）：  
+    - 基于标准输入输出的进程间通信传输  
+    - 基于 Java HttpClient 的 SSE 客户端传输（用于 HTTP SSE 客户端流）  
+    - 基于 Servlet 的 SSE 服务器传输（用于 HTTP SSE 服务器流）  
+  - 可选的 Spring 集成传输（适用于 Spring 框架用户）：  
+    - WebFlux SSE 客户端与服务器传输（支持响应式 HTTP 流）  
+    - WebMVC SSE 传输（基于 Servlet 的 HTTP 流）  
+- 支持同步与异步编程范式  
 
-<Tip>
+<Tip>  
 
-The core `io.modelcontextprotocol.sdk:mcp` module provides default STDIO and SSE client and server transport implementations without requiring external web frameworks.
+核心模块 `io.modelcontextprotocol.sdk:mcp` 提供了默认的 STDIO 和 SSE 客户端/服务器传输实现，无需依赖外部 Web 框架。  
 
-Spring-specific transports are available as optional dependencies for convenience when using the [Spring Framework](https://docs.spring.io/spring-ai/reference/api/mcp/mcp-client-boot-starter-docs.html).
+Spring 专用传输作为可选依赖提供，方便使用 [Spring Framework](https://docs.spring.io/spring-ai/reference/api/mcp/mcp-client-boot-starter-docs.html) 的开发者。  
 
 </Tip>
+## 架构
 
-## Architecture
+该SDK采用分层架构设计，各层职责明确：
 
-The SDK follows a layered architecture with clear separation of concerns:
+![MCP协议栈架构图](/images/java/mcp-stack.svg)
 
-![MCP Stack Architecture](/images/java/mcp-stack.svg)
+- **客户端/服务端层（McpClient/McpServer）**：均通过McpSession实现同步/异步操作，其中McpClient负责客户端协议操作，McpServer管理服务端协议操作。
+- **会话层（McpSession）**：使用DefaultMcpSession实现类管理通信模式和状态。
+- **传输层（McpTransport）**：处理JSON-RPC消息序列化/反序列化，具体实现包括：
+  - 核心模块中的StdioTransport（标准输入输出）
+  - 独立传输模块中的HTTP SSE传输（支持Java HttpClient、Spring WebFlux、Spring WebMVC）
 
-- **Client/Server Layer (McpClient/McpServer)**: Both use McpSession for sync/async operations,
-  with McpClient handling client-side protocol operations and McpServer managing server-side protocol operations.
-- **Session Layer (McpSession)**: Manages communication patterns and state using DefaultMcpSession implementation.
-- **Transport Layer (McpTransport)**: Handles JSON-RPC message serialization/deserialization via:
-  - StdioTransport (stdin/stdout) in the core module
-  - HTTP SSE transports in dedicated transport modules (Java HttpClient, Spring WebFlux, Spring WebMVC)
+[MCP客户端](/sdk/java/mcp-client)是模型上下文协议（MCP）架构中的核心组件，负责与MCP服务端建立并管理连接，实现协议的客户端部分。
 
-The [MCP Client](/sdk/java/mcp-client) is a key component in the Model Context Protocol (MCP) architecture, responsible for establishing and managing connections with MCP servers.
-It implements the client-side of the protocol.
+![Java版MCP客户端架构图](/images/java/java-mcp-client-architecture.jpg)
 
-![Java MCP Client Architecture](/images/java/java-mcp-client-architecture.jpg)
+[MCP服务端](/sdk/java/mcp-server)是模型上下文协议（MCP）架构的基础组件，为客户端提供工具、资源和能力支持，实现协议的服务端部分。
 
-The [MCP Server](/sdk/java/mcp-server) is a foundational component in the Model Context Protocol (MCP) architecture that provides tools, resources, and capabilities to clients.
-It implements the server-side of the protocol.
+![Java版MCP服务端架构图](/images/java/java-mcp-server-architecture.jpg)
 
-![Java MCP Server Architecture](/images/java/java-mcp-server-architecture.jpg)
+关键交互流程：
 
-Key Interactions:
+- **客户端/服务端初始化**：传输设置、协议兼容性检查、能力协商及实现细节交换
+- **消息流转**：JSON-RPC消息处理（含验证）、类型安全响应处理及错误处理
+- **资源管理**：资源发现、基于URI模板的访问、订阅系统及内容获取
 
-- **Client/Server Initialization**: Transport setup, protocol compatibility check, capability negotiation, and implementation details exchange.
-- **Message Flow**: JSON-RPC message handling with validation, type-safe response processing, and error handling.
-- **Resource Management**: Resource discovery, URI template-based access, subscription system, and content retrieval.
+## 依赖配置
 
-## Dependencies
-
-Add the following Maven dependency to your project:
+在项目中添加以下Maven依赖：
 
 <Tabs>
   <Tab title="Maven">
 
-The core MCP functionality:
+核心MCP功能：
 
 ```xml
 <dependency>
@@ -86,18 +81,18 @@ The core MCP functionality:
 </dependency>
 ```
 
-The core `mcp` module already includes default STDIO and SSE transport implementations and doesn't require external web frameworks.
+核心`mcp`模块已包含默认的STDIO和SSE传输实现，无需额外Web框架支持。
 
-If you're using the Spring Framework and want to use Spring-specific transport implementations, add one of the following optional dependencies:
+若使用Spring框架并需要特定传输实现，可添加以下可选依赖：
 
 ```xml
-<!-- Optional: Spring WebFlux-based SSE client and server transport -->
+<!-- 可选：基于Spring WebFlux的SSE客户端/服务端传输 -->
 <dependency>
     <groupId>io.modelcontextprotocol.sdk</groupId>
     <artifactId>mcp-spring-webflux</artifactId>
 </dependency>
 
-<!-- Optional: Spring WebMVC-based SSE server transport -->
+<!-- 可选：基于Spring WebMVC的SSE服务端传输 -->
 <dependency>
     <groupId>io.modelcontextprotocol.sdk</groupId>
     <artifactId>mcp-spring-webmvc</artifactId>
@@ -107,7 +102,7 @@ If you're using the Spring Framework and want to use Spring-specific transport i
   </Tab>
     <Tab title="Gradle">
 
-    The core MCP functionality:
+    核心MCP功能：
 
 ```groovy
 dependencies {
@@ -116,17 +111,17 @@ dependencies {
 }
 ```
 
-    The core `mcp` module already includes default STDIO and SSE transport implementations and doesn't require external web frameworks.
+    核心`mcp`模块已包含默认的STDIO和SSE传输实现，无需额外Web框架支持。
 
-    If you're using the Spring Framework and want to use Spring-specific transport implementations, add one of the following optional dependencies:
+    若使用Spring框架并需要特定传输实现，可添加以下可选依赖：
 
     ```groovy
-    // Optional: Spring WebFlux-based SSE client and server transport
+    // 可选：基于Spring WebFlux的SSE客户端/服务端传输
     dependencies {
       implementation platform("io.modelcontextprotocol.sdk:mcp-spring-webflux")
     }
 
-    // Optional: Spring WebMVC-based SSE server transport
+    // 可选：基于Spring WebMVC的SSE服务端传输
     dependencies {
       implementation platform("io.modelcontextprotocol.sdk:mcp-spring-webmvc")
     }
@@ -134,15 +129,14 @@ dependencies {
 
   </Tab>
 </Tabs>
+### 物料清单 (BOM)
 
-### Bill of Materials (BOM)
+物料清单 (BOM) 声明了某个版本所依赖的所有组件的推荐版本。  
+在应用的构建脚本中使用 BOM，可以避免手动指定和维护依赖版本。  
+相反，你所使用的 BOM 版本会自动决定依赖项的版本。  
+这还能确保你默认使用的是经过支持和测试的依赖版本，除非你选择覆盖它们。
 
-The Bill of Materials (BOM) declares the recommended versions of all the dependencies used by a given release.
-Using the BOM from your application's build script avoids the need for you to specify and maintain the dependency versions yourself.
-Instead, the version of the BOM you're using determines the utilized dependency versions.
-It also ensures that you're using supported and tested versions of the dependencies by default, unless you choose to override them.
-
-Add the BOM to your project:
+将 BOM 添加到项目中：
 
 <Tabs>
   <Tab title="Maven">
@@ -172,23 +166,23 @@ dependencies {
 }
 ```
 
-Gradle users can also use the Spring AI MCP BOM by leveraging Gradle (5.0+) native support for declaring dependency constraints using a Maven BOM.
-This is implemented by adding a 'platform' dependency handler method to the dependencies section of your Gradle build script.
-As shown in the snippet above this can then be followed by version-less declarations of the Starter Dependencies for the one or more spring-ai modules you wish to use, e.g. spring-ai-openai.
+Gradle 用户还可以利用 Gradle（5.0+）对 Maven BOM 的原生支持，通过声明依赖约束来使用 Spring AI MCP BOM。  
+具体实现方式是在 Gradle 构建脚本的依赖部分添加一个 'platform' 依赖处理方法。  
+如上代码片段所示，之后可以无版本声明地引入你希望使用的一个或多个 spring-ai 模块的 Starter 依赖项，例如 spring-ai-openai。
 
   </Tab>
 </Tabs>
 
-Replace the version number with the version of the BOM you want to use.
+将版本号替换为你希望使用的 BOM 版本。
 
-### Available Dependencies
+### 可用依赖项
 
-The following dependencies are available and managed by the BOM:
+以下是 BOM 管理的可用依赖项：
 
-- Core Dependencies
-  - `io.modelcontextprotocol.sdk:mcp` - Core MCP library providing the base functionality and APIs for Model Context Protocol implementation, including default STDIO and SSE client and server transport implementations. No external web frameworks required.
-- Optional Transport Dependencies (convenience if using Spring Framework)
-  - `io.modelcontextprotocol.sdk:mcp-spring-webflux` - WebFlux-based Server-Sent Events (SSE) transport implementation for reactive applications.
-  - `io.modelcontextprotocol.sdk:mcp-spring-webmvc` - WebMVC-based Server-Sent Events (SSE) transport implementation for servlet-based applications.
-- Testing Dependencies
-  - `io.modelcontextprotocol.sdk:mcp-test` - Testing utilities and support for MCP-based applications.
+- 核心依赖项
+  - `io.modelcontextprotocol.sdk:mcp` - 核心 MCP 库，提供基础功能和 API 用于实现 Model Context Protocol，包括默认的 STDIO 和 SSE 客户端及服务端传输实现。无需外部 Web 框架。
+- 可选传输依赖项（适用于 Spring Framework 的便捷支持）
+  - `io.modelcontextprotocol.sdk:mcp-spring-webflux` - 基于 WebFlux 的 Server-Sent Events (SSE) 传输实现，适用于响应式应用。
+  - `io.modelcontextprotocol.sdk:mcp-spring-webmvc` - 基于 WebMVC 的 Server-Sent Events (SSE) 传输实现，适用于基于 Servlet 的应用。
+- 测试依赖项
+  - `io.modelcontextprotocol.sdk:mcp-test` - 为基于 MCP 的应用提供的测试工具和支持。

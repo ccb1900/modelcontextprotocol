@@ -1,7 +1,7 @@
 {
   "id": "sdk/java/mcp-overview",
-  "title": "Java SDK Overview",
-  "description": "Introduction to the Model Context Protocol (MCP) Java SDK",
+  "title": "Java SDK 概述",
+  "description": "模型上下文协议 (MCP) Java SDK 简介",
   "source": "@site/docs/sdk/java/mcp-overview.mdx",
   "sourceDirName": "sdk/java",
   "slug": "/sdk/java/mcp-overview",
@@ -12,16 +12,16 @@
   "tags": [],
   "version": "current",
   "frontMatter": {
-    "title": "Java SDK Overview",
-    "description": "Introduction to the Model Context Protocol (MCP) Java SDK"
+    "title": "Java SDK 概述",
+    "description": "模型上下文协议 (MCP) Java SDK 简介"
   },
   "sidebar": "tutorialSidebar",
   "previous": {
-    "title": "Java MCP Client",
+    "title": "Java MCP客户端",
     "permalink": "/docs/sdk/java/mcp-client"
   },
   "next": {
-    "title": "Java MCP Server",
+    "title": "mcp-server",
     "permalink": "/docs/sdk/java/mcp-server"
   }
 }

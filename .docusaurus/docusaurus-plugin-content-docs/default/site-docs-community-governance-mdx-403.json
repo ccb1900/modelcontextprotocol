@@ -1,7 +1,7 @@
 {
   "id": "community/governance",
-  "title": "Governance and Stewardship",
-  "description": "Learn about the Model Context Protocol's governance structure and how to participate in the community",
+  "title": "治理与管护机制",
+  "description": "了解模型上下文协议（MCP）的治理架构及社区参与方式",
   "source": "@site/docs/community/governance.mdx",
   "sourceDirName": "community",
   "slug": "/community/governance",
@@ -12,16 +12,16 @@
   "tags": [],
   "version": "current",
   "frontMatter": {
-    "title": "Governance and Stewardship",
-    "description": "Learn about the Model Context Protocol's governance structure and how to participate in the community"
+    "title": "治理与管护机制",
+    "description": "了解模型上下文协议（MCP）的治理架构及社区参与方式"
   },
   "sidebar": "tutorialSidebar",
   "previous": {
-    "title": "Contributor Communication",
+    "title": "贡献者沟通指南",
     "permalink": "/docs/community/communication"
   },
   "next": {
-    "title": "SEP Guidelines",
+    "title": "sep-guidelines",
     "permalink": "/docs/community/sep-guidelines"
   }
 }

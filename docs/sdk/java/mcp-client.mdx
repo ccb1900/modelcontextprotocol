@@ -1,107 +1,104 @@
----
-title: Java MCP Client
-description: Learn how to use the Model Context Protocol (MCP) client to interact with MCP servers
----
+---  
+title: Java MCP客户端  
+description: 学习如何使用模型上下文协议（MCP）客户端与MCP服务器交互  
+---  
 
-Go to the [Java MCP Server](/sdk/java/mcp-server) to learn how to build MCP servers or the [Java MCP Overview](/sdk/java/mcp-overview) to understand the overall architecture.
+前往[Java MCP服务器](/sdk/java/mcp-server)了解如何构建MCP服务器，或查看[Java MCP概述](/sdk/java/mcp-overview)以理解整体架构。
+# 模型上下文协议客户端
 
-# Model Context Protocol Client
+MCP客户端是模型上下文协议(MCP)架构中的核心组件，负责与MCP服务器建立并管理连接。它实现了协议的客户端功能，主要处理：
 
-The MCP Client is a key component in the Model Context Protocol (MCP) architecture, responsible for establishing and managing connections with MCP servers. It implements the client-side of the protocol, handling:
-
-- Protocol version negotiation to ensure compatibility with servers
-- Capability negotiation to determine available features
-- Message transport and JSON-RPC communication
-- Tool discovery and execution
-- Resource access and management
-- Prompt system interactions
-- Optional features like roots management and sampling support
+- 协议版本协商以确保与服务器兼容
+- 能力协商确定可用功能
+- 消息传输和JSON-RPC通信
+- 工具发现与执行
+- 资源访问与管理
+- 提示系统交互
+- 可选功能如根目录管理和采样支持
 
 <Tip>
-The core `io.modelcontextprotocol.sdk:mcp` module provides STDIO and SSE client transport implementations without requiring external web frameworks.
+核心模块`io.modelcontextprotocol.sdk:mcp`提供了STDIO和SSE客户端传输实现，无需依赖外部Web框架。
 
-Spring-specific transport implementations are available as an **optional** dependency `io.modelcontextprotocol.sdk:mcp-spring-webflux` for [Spring Framework](https://docs.spring.io/spring-ai/reference/api/mcp/mcp-client-boot-starter-docs.html) users.
-
+针对[Spring框架](https://docs.spring.io/spring-ai/reference/api/mcp/mcp-client-boot-starter-docs.html)用户，还提供**可选**依赖`io.modelcontextprotocol.sdk:mcp-spring-webflux`的Spring专用传输实现。
 </Tip>
 
 <Tip>
-  This [quickstart demo](/quickstart/client), based on Spring AI MCP, will show
-  you how to build an AI client that connects to MCP servers.
+这个基于Spring AI MCP的[快速入门示例](/quickstart/client)将展示如何构建连接MCP服务器的AI客户端。
 </Tip>
 
-The client provides both synchronous and asynchronous APIs for flexibility in different application contexts.
+客户端同时提供同步和异步API，以适应不同的应用场景需求。
 
 <Tabs>
-  <Tab title="Sync API">
+  <Tab title="同步API">
 
 ```java
-// Create a sync client with custom configuration
+// 创建带自定义配置的同步客户端
 McpSyncClient client = McpClient.sync(transport)
     .requestTimeout(Duration.ofSeconds(10))
     .capabilities(ClientCapabilities.builder()
-        .roots(true)      // Enable roots capability
-        .sampling()       // Enable sampling capability
+        .roots(true)      // 启用根目录功能
+        .sampling()       // 启用采样功能
         .build())
     .sampling(request -> new CreateMessageResult(response))
     .build();
 
-// Initialize connection
+// 初始化连接
 client.initialize();
 
-// List available tools
+// 列出可用工具
 ListToolsResult tools = client.listTools();
 
-// Call a tool
+// 调用工具
 CallToolResult result = client.callTool(
     new CallToolRequest("calculator",
         Map.of("operation", "add", "a", 2, "b", 3))
 );
 
-// List and read resources
+// 列出并读取资源
 ListResourcesResult resources = client.listResources();
 ReadResourceResult resource = client.readResource(
     new ReadResourceRequest("resource://uri")
 );
 
-// List and use prompts
+// 列出并使用提示词
 ListPromptsResult prompts = client.listPrompts();
 GetPromptResult prompt = client.getPrompt(
     new GetPromptRequest("greeting", Map.of("name", "Spring"))
 );
 
-// Add/remove roots
+// 添加/移除根目录
 client.addRoot(new Root("file:///path", "description"));
 client.removeRoot("file:///path");
 
-// Close client
+// 优雅关闭客户端
 client.closeGracefully();
 ```
 
   </Tab>
 
-  <Tab title="Async API">
+  <Tab title="异步API">
 
 ```java
-// Create an async client with custom configuration
+// 创建带自定义配置的异步客户端
 McpAsyncClient client = McpClient.async(transport)
     .requestTimeout(Duration.ofSeconds(10))
     .capabilities(ClientCapabilities.builder()
-        .roots(true)      // Enable roots capability
-        .sampling()       // Enable sampling capability
+        .roots(true)      // 启用根目录功能
+        .sampling()       // 启用采样功能
         .build())
     .sampling(request -> Mono.just(new CreateMessageResult(response)))
     .toolsChangeConsumer(tools -> Mono.fromRunnable(() -> {
-        logger.info("Tools updated: {}", tools);
+        logger.info("工具更新: {}", tools);
     }))
     .resourcesChangeConsumer(resources -> Mono.fromRunnable(() -> {
-        logger.info("Resources updated: {}", resources);
+        logger.info("资源更新: {}", resources);
     }))
     .promptsChangeConsumer(prompts -> Mono.fromRunnable(() -> {
-        logger.info("Prompts updated: {}", prompts);
+        logger.info("提示词更新: {}", prompts);
     }))
     .build();
 
-// Initialize connection and use features
+// 初始化连接并使用功能
 client.initialize()
     .flatMap(initResult -> client.listTools())
     .flatMap(tools -> {
@@ -137,15 +134,14 @@ client.initialize()
 
   </Tab>
 </Tabs>
+## 客户端传输层
 
-## Client Transport
-
-The transport layer handles the communication between MCP clients and servers, providing different implementations for various use cases. The client transport manages message serialization, connection establishment, and protocol-specific communication patterns.
+传输层负责处理MCP客户端与服务器之间的通信，为不同使用场景提供多种实现方案。客户端传输层管理消息序列化、连接建立以及特定协议的通信模式。
 
 <Tabs>
-    <Tab title="STDIO">
+    <Tab title="标准输入输出">
 
-        Creates transport for in-process based communication
+        创建基于进程内通信的传输层
         ```java
         ServerParameters params = ServerParameters.builder("npx")
             .args("-y", "@modelcontextprotocol/server-everything", "dir")
@@ -156,7 +152,7 @@ The transport layer handles the communication between MCP clients and servers, p
     </Tab>
     <Tab title="SSE (HttpClient)">
 
-        Creates a framework agnostic (pure Java API) SSE client transport. Included in the core mcp module.
+        创建框架无关（纯Java API）的SSE客户端传输层。该实现包含在核心mcp模块中。
         ```java
         McpTransport transport = new HttpClientSseClientTransport("http://your-mcp-server");
         ```
@@ -164,7 +160,7 @@ The transport layer handles the communication between MCP clients and servers, p
     </Tab>
     <Tab title="SSE (WebFlux)">
 
-        Creates WebFlux-based SSE client transport. Requires the mcp-webflux-sse-transport dependency.
+        创建基于WebFlux的SSE客户端传输层。需要添加mcp-webflux-sse-transport依赖项。
         ```java
         WebClient.Builder webClientBuilder = WebClient.builder()
             .baseUrl("http://your-mcp-server");
@@ -175,50 +171,50 @@ The transport layer handles the communication between MCP clients and servers, p
 
 </Tabs>
 
-## Client Capabilities
+## 客户端能力配置
 
-The client can be configured with various capabilities:
+客户端支持多种可配置能力：
 
 ```java
 var capabilities = ClientCapabilities.builder()
-    .roots(true)      // Enable filesystem roots support with list changes notifications
-    .sampling()       // Enable LLM sampling support
+    .roots(true)      // 启用文件系统根目录支持及变更通知功能
+    .sampling()       // 启用大语言模型采样支持
     .build();
 ```
 
-### Roots Support
+### 根目录支持
 
-Roots define the boundaries of where servers can operate within the filesystem:
+根目录定义了服务器在文件系统中的操作边界：
 
 ```java
-// Add a root dynamically
-client.addRoot(new Root("file:///path", "description"));
+// 动态添加根目录
+client.addRoot(new Root("file:///路径", "描述信息"));
 
-// Remove a root
-client.removeRoot("file:///path");
+// 移除根目录
+client.removeRoot("file:///路径");
 
-// Notify server of roots changes
+// 向服务器发送根目录变更通知
 client.rootsListChangedNotification();
 ```
 
-The roots capability allows servers to:
+根目录能力使服务器可以：
 
-- Request the list of accessible filesystem roots
-- Receive notifications when the roots list changes
-- Understand which directories and files they have access to
+- 请求可访问的文件系统根目录列表
+- 接收根目录列表变更通知
+- 明确其有权访问的目录和文件范围
 
-### Sampling Support
+### 采样支持
 
-Sampling enables servers to request LLM interactions ("completions" or "generations") through the client:
+采样功能允许服务器通过客户端请求大语言模型交互（"补全"或"生成"）：
 
 ```java
-// Configure sampling handler
+// 配置采样处理器
 Function<CreateMessageRequest, CreateMessageResult> samplingHandler = request -> {
-    // Sampling implementation that interfaces with LLM
+    // 对接大语言模型的采样实现
     return new CreateMessageResult(response);
 };
 
-// Create client with sampling support
+// 创建支持采样的客户端
 var client = McpClient.sync(transport)
     .capabilities(ClientCapabilities.builder()
         .sampling()
@@ -227,21 +223,21 @@ var client = McpClient.sync(transport)
     .build();
 ```
 
-This capability allows:
+该能力支持：
 
-- Servers to leverage AI capabilities without requiring API keys
-- Clients to maintain control over model access and permissions
-- Support for both text and image-based interactions
-- Optional inclusion of MCP server context in prompts
+- 服务器无需API密钥即可使用AI功能
+- 客户端保留模型访问权限控制
+- 同时支持文本和图像交互
+- 可选择在提示词中包含MCP服务器上下文
 
-### Logging Support
+### 日志支持
 
-The client can register a logging consumer to receive log messages from the server and set the minimum logging level to filter messages:
+客户端可注册日志消费者接收服务器日志消息，并通过设置最低日志级别过滤消息：
 
 ```java
 var mcpClient = McpClient.sync(transport)
         .loggingConsumer(notification -> {
-            System.out.println("Received log message: " + notification.data());
+            System.out.println("收到日志消息：" + notification.data());
         })
         .build();
 
@@ -249,28 +245,27 @@ mcpClient.initialize();
 
 mcpClient.setLoggingLevel(McpSchema.LoggingLevel.INFO);
 
-// Call the tool that can sends logging notifications
+// 调用可发送日志通知的工具
 CallToolResult result = mcpClient.callTool(new McpSchema.CallToolRequest("logging-test", Map.of()));
 ```
 
-Clients can control the minimum logging level they receive through the `mcpClient.setLoggingLevel(level)` request. Messages below the set level will be filtered out.
-Supported logging levels (in order of increasing severity): DEBUG (0), INFO (1), NOTICE (2), WARNING (3), ERROR (4), CRITICAL (5), ALERT (6), EMERGENCY (7)
+客户端可通过`mcpClient.setLoggingLevel(level)`请求控制接收的最低日志级别，低于该级别的消息将被过滤。
+支持的日志级别（按严重程度递增）：DEBUG(0)、INFO(1)、NOTICE(2)、WARNING(3)、ERROR(4)、CRITICAL(5)、ALERT(6)、EMERGENCY(7)
 
-## Using MCP Clients
+## 使用MCP客户端
+### 工具执行
 
-### Tool Execution
-
-Tools are server-side functions that clients can discover and execute. The MCP client provides methods to list available tools and execute them with specific parameters. Each tool has a unique name and accepts a map of parameters.
+工具是客户端可发现并调用的服务端函数。MCP客户端提供了列举可用工具及传入特定参数执行它们的方法。每个工具都有唯一名称并接受参数映射表。
 
 <Tabs>
-  <Tab title="Sync API">
+  <Tab title="同步API">
 
 ```java
-// List available tools and their names
+// 列举可用工具及其名称
 var tools = client.listTools();
 tools.forEach(tool -> System.out.println(tool.getName()));
 
-// Execute a tool with parameters
+// 传入参数执行工具
 var result = client.callTool("calculator", Map.of(
     "operation", "add",
     "a", 1,
@@ -280,16 +275,16 @@ var result = client.callTool("calculator", Map.of(
 
   </Tab>
 
-  <Tab title="Async API">
+  <Tab title="异步API">
 
 ```java
-// List available tools asynchronously
+// 异步列举可用工具
 client.listTools()
     .doOnNext(tools -> tools.forEach(tool ->
         System.out.println(tool.getName())))
     .subscribe();
 
-// Execute a tool asynchronously
+// 异步执行工具
 client.callTool("calculator", Map.of(
         "operation", "add",
         "a", 1,
@@ -301,19 +296,19 @@ client.callTool("calculator", Map.of(
   </Tab>
 </Tabs>
 
-### Resource Access
+### 资源访问
 
-Resources represent server-side data sources that clients can access using URI templates. The MCP client provides methods to discover available resources and retrieve their contents through a standardized interface.
+资源代表客户端可通过URI模板访问的服务端数据源。MCP客户端提供发现可用资源并通过标准化接口获取其内容的方法。
 
 <Tabs>
-  <Tab title="Sync API">
+  <Tab title="同步API">
 
 ```java
-// List available resources and their names
+// 列举可用资源及其名称
 var resources = client.listResources();
 resources.forEach(resource -> System.out.println(resource.getName()));
 
-// Retrieve resource content using a URI template
+// 使用URI模板获取资源内容
 var content = client.getResource("file", Map.of(
     "path", "/path/to/file.txt"
 ));
@@ -321,16 +316,16 @@ var content = client.getResource("file", Map.of(
 
   </Tab>
 
-  <Tab title="Async API">
+  <Tab title="异步API">
 
 ```java
-// List available resources asynchronously
+// 异步列举可用资源
 client.listResources()
     .doOnNext(resources -> resources.forEach(resource ->
         System.out.println(resource.getName())))
     .subscribe();
 
-// Retrieve resource content asynchronously
+// 异步获取资源内容
 client.getResource("file", Map.of(
         "path", "/path/to/file.txt"
     ))
@@ -340,19 +335,19 @@ client.getResource("file", Map.of(
   </Tab>
 </Tabs>
 
-### Prompt System
+### 提示系统
 
-The prompt system enables interaction with server-side prompt templates. These templates can be discovered and executed with custom parameters, allowing for dynamic text generation based on predefined patterns.
+提示系统支持与服务端提示模板交互。这些模板可被发现并通过自定义参数执行，实现基于预定义模式的动态文本生成。
 
 <Tabs>
-  <Tab title="Sync API">
+  <Tab title="同步API">
 
 ```java
-// List available prompt templates
+// 列举可用提示模板
 var prompts = client.listPrompts();
 prompts.forEach(prompt -> System.out.println(prompt.getName()));
 
-// Execute a prompt template with parameters
+// 传入参数执行提示模板
 var response = client.executePrompt("echo", Map.of(
     "text", "Hello, World!"
 ));
@@ -360,16 +355,16 @@ var response = client.executePrompt("echo", Map.of(
 
   </Tab>
 
-  <Tab title="Async API">
+  <Tab title="异步API">
 
 ```java
-// List available prompt templates asynchronously
+// 异步列举提示模板
 client.listPrompts()
     .doOnNext(prompts -> prompts.forEach(prompt ->
         System.out.println(prompt.getName())))
     .subscribe();
 
-// Execute a prompt template asynchronously
+// 异步执行提示模板
 client.executePrompt("echo", Map.of(
         "text", "Hello, World!"
     ))
@@ -379,39 +374,35 @@ client.executePrompt("echo", Map.of(
   </Tab>
 </Tabs>
 
-### Using Completion
+### 自动补全功能
 
-As part of the [Completion capabilities](/specification/2025-03-26/server/utilities/completion), MCP provides a standardized way for servers to offer argument autocompletion suggestions for prompts and resource URIs.
+作为[补全能力](/specification/2025-03-26/server/utilities/completion)的一部分，MCP为服务端提供了标准化参数自动补全建议机制。
 
-Check the [Server Completion capabilities](/sdk/java/mcp-server#completion-specification) to learn how to enable and configure completions on the server side.
+查看[服务端补全能力文档](/sdk/java/mcp-server#completion-specification)了解服务端如何启用和配置补全功能。
 
-On the client side, the MCP client provides methods to request auto-completions:
+客户端可通过MCP接口请求自动补全：
 
 <Tabs>
-  <Tab title="Sync API">
+  <Tab title="同步API">
 
 ```java
-
 CompleteRequest request = new CompleteRequest(
         new PromptReference("code_review"),
         new CompleteRequest.CompleteArgument("language", "py"));
 
 CompleteResult result = syncMcpClient.completeCompletion(request);
-
 ```
 
   </Tab>
 
-  <Tab title="Async API">
+  <Tab title="异步API">
 
 ```java
-
 CompleteRequest request = new CompleteRequest(
         new PromptReference("code_review"),
         new CompleteRequest.CompleteArgument("language", "py"));
 
 Mono<CompleteResult> result = mcpClient.completeCompletion(request);
-
 ```
 
   </Tab>

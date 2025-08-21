@@ -1,7 +1,7 @@
 {
   "id": "sdk/java/mcp-client",
-  "title": "Java MCP Client",
-  "description": "Learn how to use the Model Context Protocol (MCP) client to interact with MCP servers",
+  "title": "Java MCP客户端",
+  "description": "学习如何使用模型上下文协议（MCP）客户端与MCP服务器交互",
   "source": "@site/docs/sdk/java/mcp-client.mdx",
   "sourceDirName": "sdk/java",
   "slug": "/sdk/java/mcp-client",
@@ -12,16 +12,16 @@
   "tags": [],
   "version": "current",
   "frontMatter": {
-    "title": "Java MCP Client",
-    "description": "Learn how to use the Model Context Protocol (MCP) client to interact with MCP servers"
+    "title": "Java MCP客户端",
+    "description": "学习如何使用模型上下文协议（MCP）客户端与MCP服务器交互"
   },
   "sidebar": "tutorialSidebar",
   "previous": {
-    "title": "Connect to Local MCP Servers",
+    "title": "user",
     "permalink": "/docs/quickstart/user"
   },
   "next": {
-    "title": "Java SDK Overview",
+    "title": "Java SDK 概述",
     "permalink": "/docs/sdk/java/mcp-overview"
   }
 }

@@ -1,7 +1,7 @@
 {
   "id": "tutorials/building-a-client-node",
   "title": "building-a-client-node",
-  "description": "System Requirements",
+  "description": "系统要求",
   "source": "@site/docs/tutorials/building-a-client-node.mdx",
   "sourceDirName": "tutorials",
   "slug": "/tutorials/building-a-client-node",
@@ -18,7 +18,7 @@
     "permalink": "/docs/specification/versioning"
   },
   "next": {
-    "title": "Building MCP with LLMs",
+    "title": "building-mcp-with-llms",
     "permalink": "/docs/tutorials/building-mcp-with-llms"
   }
 }

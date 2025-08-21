@@ -1,7 +1,7 @@
 {
   "id": "community/communication",
-  "title": "Contributor Communication",
-  "description": "Communication strategy and framework for the Model Context Protocol community",
+  "title": "贡献者沟通指南",
+  "description": "Model Context Protocol（MCP）社区的沟通策略与框架",
   "source": "@site/docs/community/communication.mdx",
   "sourceDirName": "community",
   "slug": "/community/communication",
@@ -12,16 +12,16 @@
   "tags": [],
   "version": "current",
   "frontMatter": {
-    "title": "Contributor Communication",
-    "description": "Communication strategy and framework for the Model Context Protocol community"
+    "title": "贡献者沟通指南",
+    "description": "Model Context Protocol（MCP）社区的沟通策略与框架"
   },
   "sidebar": "tutorialSidebar",
   "previous": {
-    "title": "Example Clients",
+    "title": "示例客户端",
     "permalink": "/docs/clients"
   },
   "next": {
-    "title": "Governance and Stewardship",
+    "title": "治理与管护机制",
     "permalink": "/docs/community/governance"
   }
 }

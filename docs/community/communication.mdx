@@ -1,107 +1,100 @@
----
-title: Contributor Communication
-description: Communication strategy and framework for the Model Context Protocol community
----
+---  
+title: 贡献者沟通指南  
+description: Model Context Protocol（MCP）社区的沟通策略与框架  
+---  
 
-This document explains how to communicate and collaborate within the Model Context Protocol (MCP) project.
+本文档阐述了如何在Model Context Protocol（MCP）项目中进行沟通与协作。  
 
-## Communication Channels
+## 沟通渠道  
 
-In short:
+简而言之：  
 
-- **[Discord][discord-join]**: For real-time or ad-hoc discussions.
-- **[GitHub Discussions](https://github.com/modelcontextprotocol/modelcontextprotocol/discussions)**: For structured, longer-form discussions.
-- **[GitHub Issues](https://github.com/modelcontextprotocol/modelcontextprotocol/issues)**: For actionable tasks, bug reports, and feature requests.
-- **For security-sensitive issues**: Follow the process in [SECURITY.md](https://github.com/modelcontextprotocol/modelcontextprotocol/blob/main/SECURITY.md).
+- **[Discord][discord-join]**：用于实时或临时讨论。  
+- **[GitHub Discussions](https://github.com/modelcontextprotocol/modelcontextprotocol/discussions)**：用于结构化、长篇幅的讨论。  
+- **[GitHub Issues](https://github.com/modelcontextprotocol/modelcontextprotocol/issues)**：用于可执行的任务、错误报告和功能请求。  
+- **涉及安全问题**：请遵循[SECURITY.md](https://github.com/modelcontextprotocol/modelcontextprotocol/blob/main/SECURITY.md)中的流程。  
 
-All communication is governed by our [Code of Conduct](https://github.com/modelcontextprotocol/modelcontextprotocol/blob/main/CODE_OF_CONDUCT.md). We expect all participants to maintain respectful, professional, and inclusive interactions across all channels.
+所有沟通均受[行为准则](https://github.com/modelcontextprotocol/modelcontextprotocol/blob/main/CODE_OF_CONDUCT.md)约束。我们要求所有参与者在所有渠道中保持尊重、专业且包容的互动。  
 
-### Discord
+### Discord  
 
-For real-time contributor discussion and collaboration. The server is designed around **MCP contributors** and is not intended
-to be a place for general MCP support.
+用于贡献者实时讨论与协作。该服务器专为**MCP贡献者**设计，不适用于一般MCP技术支持。  
 
-The Discord server will have both public and private channels.
+Discord服务器将包含公开和私密频道。  
 
-[Join the Discord server here][discord-join].
+[点击加入Discord服务器][discord-join]。  
 
-#### Public Channels (Default)
+#### 公开频道（默认）  
 
-- **Purpose**: Open community engagement, collaborative development, and transparent project coordination.
-- Primary use cases:
-  - **Public SDK and tooling development**: All development, from ideation to release planning, happens in public channels (e.g., `#typescript-sdk-dev`, `#inspector-dev`).
-  - **Working and interest group discussions** (`#client-implementors`, `#agents-wg`, etc.)
-    - **Working Group**: Some specific goal or project in mind (such as an SDK, inspector, registry, server-identity, load-balancing, etc).
-    - **Interest Group**: An abstract gathering of folks that might raise a range of various topics. Some might get actioned on as one-offs, others might spin into Working Groups.
-  - **Community onboarding** and contribution guidance.
-  - **Community feedback** and collaborative brainstorming.
-  - Public **office hours** and **maintainer availability**.
-- Avoid:
-  - MCP user support: participants are expected to read official documentation and start new GitHub Discussions for questions or support.
-  - Service or product marketing: interactions on this Discord are expected to be vendor-neutral and not used for brand-building or sales. Mentions of brands or products are discouraged outside of being used as examples or responses to conversations that start off focused on the specification.
+- **目的**：开放社区互动、协作开发及透明的项目协调。  
+- 主要用途：  
+  - **公开SDK与工具开发**：从构思到发布计划，所有开发均在公开频道进行（如`#typescript-sdk-dev`、`#inspector-dev`）。  
+  - **工作组与兴趣组讨论**（如`#client-implementors`、`#agents-wg`等）  
+    - **工作组**：围绕特定目标或项目（如SDK、检查器、注册表、服务器身份、负载均衡等）。  
+    - **兴趣组**：抽象的话题集合，可能涉及各类主题。部分可能以一次性任务处理，另一些可能发展为工作组。  
+  - **社区入门**与贡献指引。  
+  - **社区反馈**与协作头脑风暴。  
+  - 公开**办公时间**与**维护者答疑**。  
+- 避免：  
+  - MCP用户支持：参与者应阅读官方文档，并在GitHub Discussions中发起新话题提问或寻求支持。  
+  - 服务或产品推广：此Discord的互动需保持供应商中立，不得用于品牌宣传或销售。除非作为示例或对规范相关讨论的回应，否则不鼓励提及品牌或产品。
+#### 私有频道（例外情况）
 
-#### Private channels (Exceptions)
+- **目的**：用于机密协调和敏感事务讨论，这些内容无法公开进行。仅限指定维护者访问。
+- **严格使用标准**：
+  - **安全事件**（如CVE漏洞、协议安全问题）。
+  - **人员相关事务**（维护者内部讨论、行为准则政策）。
+  - 部分频道将设为**只读模式**，例如用于维护者决策过程。
+  - 需要**即时响应**或**限定范围集中讨论**的协调事务。
+- **透明度要求**：
+  - **所有影响社区的技术和治理决策**必须在GitHub Discussions或Issues中记录，并标注`notes`标签。
+  - **涉及个别贡献者的事务**在适当时可保持私密（如个人情况、纪律处分等敏感事项）。
+  - 私有频道仅作为**临时"应急讨论室"**，不可用于常规开发。
 
-- **Purpose**: Confidential coordination and sensitive matters that cannot be discussed publicly. Access will be restricted to designated maintainers.
-- **Strict criteria for private use**:
-  - **Security incidents** (CVEs, protocol vulnerabilities).
-  - **People matters** (maintainer-related discussions, code of conduct policies).
-  - Select channels will be configured to be **read-only**. This can be good for example for maintainer decision making.
-  - Coordination requiring **immediate** or otherwise **focused response** with a limited audience.
-- **Transparency**:
-  - **All technical and governance decisions** affecting the community **must be documented** in GitHub Discussions and/or Issues, and will be labeled with `notes`.
-  - **Some matters related to individual contributors** may remain private when appropriate (e.g., personal circumstances, disciplinary actions, or other sensitive individual matters).
-  - Private channels are to be used as **temporary "incident rooms,"** not for routine development.
-
-Any significant discussion on Discord that leads to a potential decision or proposal must be moved to a GitHub Discussion or GitHub Issue to create a persistent, searchable record. Proposals will then be promoted to full-fledged PRs with associated work items (GitHub Issues) as needed.
+任何在Discord上可能形成决议或提案的重要讨论，必须转移到GitHub Discussion或Issue中形成可追溯的永久记录。提案将视情况升级为正式PR并关联相关工作项（GitHub Issues）。
 
 ### GitHub Discussions
 
-For structured, long-form discussion and debate on project direction, features, improvements, and community topics.
+用于结构化、长周期的项目方向讨论，包括功能规划、改进建议和社区议题。
 
-When to use:
-
-- Project roadmap planning and milestone discussions
-- Announcements and release communications
-- Community polls and consensus-building processes
-- Feature requests with context and rationale
-  - If a particular repository does not have GitHub Discussions enabled, feel free to open a GitHub Issue instead.
+适用场景：
+- 项目路线图规划与里程碑讨论
+- 公告发布与版本通讯
+- 社区投票与共识形成流程
+- 附带背景说明的功能请求
+  - 若某仓库未启用GitHub Discussions功能，可直接创建GitHub Issue替代
 
 ### GitHub Issues
 
-For bug reports, feature tracking, and actionable development tasks.
+用于缺陷报告、功能追踪和可执行开发任务。
 
-When to use:
+适用场景：
+- 提交SEP提案（遵循[SEP指南](./sep-guidelines)）
+- 附带重现步骤的缺陷报告
+- 有明确范围的文档改进
+- CI/CD问题与基础设施故障
+- 版本任务与里程碑追踪
 
-- Submit SEP proposals (following the [SEP guidelines](./sep-guidelines))
-- Bug reports with reproducible steps
-- Documentation improvements with specific scope
-- CI/CD problems and infrastructure issues
-- Release tasks and milestone tracking
+### 安全问题
 
-### Security Issues
+**严禁公开披露安全问题**，处理流程如下：
+1. 使用私有安全报告流程。协议级安全问题请遵循[modelcontextprotocol仓库的SECURITY.md](https://github.com/modelcontextprotocol/modelcontextprotocol/blob/main/SECURITY.md)流程
+2. 直接联系项目负责人或[核心维护者](./governance#current-core-maintainers)
+3. 遵循负责任的漏洞披露准则
 
-**Do not post security issues publicly.** Instead:
+## 决策记录
 
-1. Use the private security reporting process. For protocol-level security issues, follow the process in [SECURITY.md in the modelcontextprotocol GitHub repository](https://github.com/modelcontextprotocol/modelcontextprotocol/blob/main/SECURITY.md).
-2. Contact lead and/or [core maintainers](./governance#current-core-maintainers) directly.
-3. Follow responsible disclosure guidelines.
+所有MCP决策均通过公开渠道记录存档：
+- **技术决策**：[GitHub Issues](https://github.com/modelcontextprotocol/modelcontextprotocol/issues)与SEP文档
+- **规范变更**：[Model Context Protocol官网](https://modelcontextprotocol.io/specification/draft/changelog)
+- **流程变更**：[社区文档](https://modelcontextprotocol.io/community/governance)
+- **治理决策与更新**：[GitHub Issues](https://github.com/modelcontextprotocol/modelcontextprotocol/issues)与SEP文档
 
-## Decision Records
-
-All MCP decisions are documented and captured in public channels.
-
-- **Technical decisions**: [GitHub Issues](https://github.com/modelcontextprotocol/modelcontextprotocol/issues) and SEPs.
-- **Specification changes**: [On the Model Context Protocol website](https://modelcontextprotocol.io/specification/draft/changelog).
-- **Process changes**: [Community documentation](https://modelcontextprotocol.io/community/governance).
-- **Governance decisions and updates**: [GitHub Issues](https://github.com/modelcontextprotocol/modelcontextprotocol/issues) and SEPs.
-
-When documenting decisions, we will retain as much context as possible:
-
-- Decision makers
-- Background context and motivation
-- Options that were considered
-- Rationale for the chosen approach
-- Implementation steps
+决策文档需包含完整上下文：
+- 决策者信息
+- 背景与动机说明
+- 已考虑的备选方案
+- 最终方案的选定依据
+- 具体实施步骤
 
 [discord-join]: https://discord.gg/6CSzBmMkjX

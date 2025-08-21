@@ -1,7 +1,7 @@
 {
   "id": "docs/learn/server-concepts",
-  "title": "Server Concepts",
-  "description": "Understanding MCP server concepts",
+  "title": "服务器核心概念",
+  "description": "理解MCP服务器的核心概念",
   "source": "@site/docs/docs/learn/server-concepts.mdx",
   "sourceDirName": "docs/learn",
   "slug": "/docs/learn/server-concepts",
@@ -12,16 +12,16 @@
   "tags": [],
   "version": "current",
   "frontMatter": {
-    "title": "Server Concepts",
-    "description": "Understanding MCP server concepts"
+    "title": "服务器核心概念",
+    "description": "理解MCP服务器的核心概念"
   },
   "sidebar": "tutorialSidebar",
   "previous": {
-    "title": "Client Concepts",
+    "title": "客户端核心概念",
     "permalink": "/docs/docs/learn/client-concepts"
   },
   "next": {
-    "title": "Client",
+    "title": "client",
     "permalink": "/docs/docs/reference/client"
   }
 }

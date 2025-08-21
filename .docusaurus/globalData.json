@@ -616,7 +616,7 @@
             "tutorialSidebar": {
               "link": {
                 "path": "/docs/about/",
-                "label": "Model Context Protocol"
+                "label": "index"
               }
             }
           }

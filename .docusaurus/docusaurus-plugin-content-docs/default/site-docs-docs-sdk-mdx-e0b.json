@@ -1,7 +1,7 @@
 {
   "id": "docs/sdk",
-  "title": "SDKs",
-  "description": "Official SDKs for building with the Model Context Protocol",
+  "title": "SDK",
+  "description": "用于构建 Model Context Protocol 的官方 SDK",
   "source": "@site/docs/docs/sdk.mdx",
   "sourceDirName": "docs",
   "slug": "/docs/sdk",
@@ -12,12 +12,12 @@
   "tags": [],
   "version": "current",
   "frontMatter": {
-    "title": "SDKs",
-    "description": "Official SDKs for building with the Model Context Protocol"
+    "title": "SDK",
+    "description": "用于构建 Model Context Protocol 的官方 SDK"
   },
   "sidebar": "tutorialSidebar",
   "previous": {
-    "title": "Server",
+    "title": "服务器",
     "permalink": "/docs/docs/reference/server"
   },
   "next": {

@@ -1,7 +1,7 @@
 {
   "id": "legacy/concepts/transports",
-  "title": "Transports",
-  "description": "Learn about MCP's communication mechanisms",
+  "title": "transports",
+  "description": "---",
   "source": "@site/docs/legacy/concepts/transports.mdx",
   "sourceDirName": "legacy/concepts",
   "slug": "/legacy/concepts/transports",
@@ -11,17 +11,14 @@
   "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/legacy/concepts/transports.mdx",
   "tags": [],
   "version": "current",
-  "frontMatter": {
-    "title": "Transports",
-    "description": "Learn about MCP's communication mechanisms"
-  },
+  "frontMatter": {},
   "sidebar": "tutorialSidebar",
   "previous": {
-    "title": "Tools",
+    "title": "tools",
     "permalink": "/docs/legacy/concepts/tools"
   },
   "next": {
-    "title": "Debugging",
+    "title": "debugging",
     "permalink": "/docs/legacy/tools/debugging"
   }
 }

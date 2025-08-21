@@ -8,6 +8,7 @@ export default {
   "tagline": "Dinosaurs are cool",
   "favicon": "img/favicon.ico",
   "staticDirectories": [
+    "translations/zh/docs",
     "docs"
   ],
   "future": {
@@ -96,7 +97,7 @@ export default {
           "items": [
             {
               "label": "Tutorial",
-              "to": "/docs/intro"
+              "to": "/translations/zh/docs/intro"
             }
           ]
         },

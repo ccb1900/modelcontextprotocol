@@ -1,158 +1,158 @@
----
-title: Inspector
-description: In-depth guide to using the MCP Inspector for testing and debugging Model Context Protocol servers
----
+---  
+title: 检测器  
+description: 深入指南：使用MCP检测器测试和调试模型上下文协议服务器  
 
-The [MCP Inspector](https://github.com/modelcontextprotocol/inspector) is an interactive developer tool for testing and debugging MCP servers. While the [Debugging Guide](/legacy/tools/debugging) covers the Inspector as part of the overall debugging toolkit, this document provides a detailed exploration of the Inspector's features and capabilities.
+[MCP检测器](https://github.com/modelcontextprotocol/inspector)是一款用于测试和调试MCP服务器的交互式开发者工具。虽然[调试指南](/legacy/tools/debugging)将检测器作为整体调试工具包的一部分进行了介绍，但本文档将详细探讨检测器的各项功能与特性。  
 
-## Getting started
+## 快速入门  
 
-### Installation and basic usage
+### 安装与基础用法  
 
-The Inspector runs directly through `npx` without requiring installation:
+检测器可直接通过`npx`运行，无需安装：  
 
-```bash
-npx @modelcontextprotocol/inspector <command>
-```
+```bash  
+npx @modelcontextprotocol/inspector <命令>  
+```  
 
-```bash
-npx @modelcontextprotocol/inspector <command> <arg1> <arg2>
-```
+```bash  
+npx @modelcontextprotocol/inspector <命令> <参数1> <参数2>  
+```  
 
-#### Inspecting servers from NPM or PyPi
+#### 检测NPM或PyPi上的服务器  
 
-A common way to start server packages from [NPM](https://npmjs.com) or [PyPi](https://pypi.org).
+从[NPM](https://npmjs.com)或[PyPi](https://pypi.org)启动服务器包的常见方式：  
 
-<Tabs>
+<Tabs>  
 
-  <Tab title="NPM package">
+  <Tab title="NPM包">  
 
-```bash
-npx -y @modelcontextprotocol/inspector npx <package-name> <args>
-# For example
-npx -y @modelcontextprotocol/inspector npx @modelcontextprotocol/server-filesystem /Users/username/Desktop
-```
+```bash  
+npx -y @modelcontextprotocol/inspector npx <包名称> <参数>  
 
-  </Tab>
+# 示例  
+npx -y @modelcontextprotocol/inspector npx @modelcontextprotocol/server-filesystem /Users/用户名/桌面  
+```  
 
-  <Tab title="PyPi package">
+  </Tab>  
 
-```bash
-npx @modelcontextprotocol/inspector uvx <package-name> <args>
-# For example
-npx @modelcontextprotocol/inspector uvx mcp-server-git --repository ~/code/mcp/servers.git
-```
+  <Tab title="PyPi包">  
 
-  </Tab>
-</Tabs>
+```bash  
+npx @modelcontextprotocol/inspector uvx <包名称> <参数>  
 
-#### Inspecting locally developed servers
+# 示例  
+npx @modelcontextprotocol/inspector uvx mcp-server-git --repository ~/code/mcp/servers.git  
+```  
 
-To inspect servers locally developed or downloaded as a repository, the most common
-way is:
+  </Tab>  
+</Tabs>  
 
-<Tabs>
-  <Tab title="TypeScript">
+#### 检测本地开发的服务器  
 
-```bash
-npx @modelcontextprotocol/inspector node path/to/server/index.js args...
-```
+对于本地开发或通过代码库下载的服务器，常用检测方式为：  
 
-  </Tab>
-  <Tab title="Python">
+<Tabs>  
+  <Tab title="TypeScript">  
 
-```bash
-npx @modelcontextprotocol/inspector \
-  uv \
-  --directory path/to/server \
-  run \
-  package-name \
-  args...
-```
+```bash  
+npx @modelcontextprotocol/inspector node 路径/到/服务器/index.js 参数...  
+```  
 
-  </Tab>
-</Tabs>
+  </Tab>  
+  <Tab title="Python">  
 
-Please carefully read any attached README for the most accurate instructions.
+```bash  
+npx @modelcontextprotocol/inspector \  
+  uv \  
+  --directory 路径/到/服务器 \  
+  run \  
+  包名称 \  
+  参数...  
+```  
 
-## Feature overview
+  </Tab>  
+</Tabs>  
 
-<Frame caption="The MCP Inspector interface">
-  <img src="/images/mcp-inspector.png" />
-</Frame>
+请仔细阅读附带的README文件以获取最准确的操作指南。  
 
-The Inspector provides several features for interacting with your MCP server:
+## 功能概览  
 
-### Server connection pane
+<Frame caption="MCP检测器界面">  
+  <img src="/images/mcp-inspector.png" />  
+</Frame>  
 
-- Allows selecting the [transport](/legacy/concepts/transports) for connecting to the server
-- For local servers, supports customizing the command-line arguments and environment
+检测器提供以下与MCP服务器交互的功能：  
 
-### Resources tab
+### 服务器连接面板  
 
-- Lists all available resources
-- Shows resource metadata (MIME types, descriptions)
-- Allows resource content inspection
-- Supports subscription testing
+- 可选择用于连接服务器的[传输方式](/legacy/concepts/transports)  
+- 对于本地服务器，支持自定义命令行参数和环境变量  
 
-### Prompts tab
+### 资源标签页  
 
-- Displays available prompt templates
-- Shows prompt arguments and descriptions
-- Enables prompt testing with custom arguments
-- Previews generated messages
+- 列出所有可用资源  
+- 显示资源元数据（MIME类型、描述信息）  
+- 支持资源内容检查  
+- 可测试订阅功能  
 
-### Tools tab
+### 提示模板标签页  
 
-- Lists available tools
-- Shows tool schemas and descriptions
-- Enables tool testing with custom inputs
-- Displays tool execution results
+- 展示可用提示模板  
+- 显示提示参数和描述  
+- 支持使用自定义参数测试提示  
+- 预览生成的消息  
 
-### Notifications pane
+### 工具标签页  
 
-- Presents all logs recorded from the server
-- Shows notifications received from the server
+- 列出可用工具  
+- 展示工具架构和描述  
+- 支持使用自定义输入测试工具  
+- 显示工具执行结果  
 
-## Best practices
+### 通知面板  
 
-### Development workflow
+- 呈现服务器记录的所有日志  
+- 显示从服务器接收到的通知  
 
-1. Start Development
-   - Launch Inspector with your server
-   - Verify basic connectivity
-   - Check capability negotiation
+## 最佳实践  
 
-2. Iterative testing
-   - Make server changes
-   - Rebuild the server
-   - Reconnect the Inspector
-   - Test affected features
-   - Monitor messages
+### 开发工作流  
 
-3. Test edge cases
-   - Invalid inputs
-   - Missing prompt arguments
-   - Concurrent operations
-   - Verify error handling and error responses
+1. 启动开发  
+   - 用检测器启动服务器  
+   - 验证基础连接性  
+   - 检查能力协商  
 
-## Next steps
+2. 迭代测试  
+   - 修改服务器代码  
+   - 重新构建服务器  
+   - 重连检测器  
+   - 测试受影响功能  
+   - 监控消息流  
 
-<CardGroup cols={2}>
-    <Card
-        title="Inspector Repository"
-        icon="github"
-        href="https://github.com/modelcontextprotocol/inspector"
-    >
-        Check out the MCP Inspector source code
-    </Card>
+3. 测试边界情况  
+   - 无效输入  
+   - 缺失提示参数  
+   - 并发操作  
+   - 验证错误处理与错误响应  
 
-    <Card
-        title="Debugging Guide"
-        icon="bug"
-        href="/legacy/tools/debugging"
-    >
-        Learn about broader debugging strategies
-    </Card>
+## 后续步骤  
+
+<CardGroup cols={2}>  
+    <Card  
+        title="检测器代码库"  
+        icon="github"  
+        href="https://github.com/modelcontextprotocol/inspector"  
+    >  
+        查看MCP检测器源代码  
+    </Card>  
+
+    <Card  
+        title="调试指南"  
+        icon="bug"  
+        href="/legacy/tools/debugging"  
+    >  
+        学习更全面的调试策略  
+    </Card>  
 
 </CardGroup>

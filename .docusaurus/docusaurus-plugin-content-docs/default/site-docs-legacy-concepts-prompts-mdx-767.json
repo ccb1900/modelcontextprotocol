@@ -1,7 +1,7 @@
 {
   "id": "legacy/concepts/prompts",
-  "title": "Prompts",
-  "description": "Create reusable prompt templates and workflows",
+  "title": "提示模板",
+  "description": "创建可复用的提示模板与工作流程",
   "source": "@site/docs/legacy/concepts/prompts.mdx",
   "sourceDirName": "legacy/concepts",
   "slug": "/legacy/concepts/prompts",
@@ -12,16 +12,16 @@
   "tags": [],
   "version": "current",
   "frontMatter": {
-    "title": "Prompts",
-    "description": "Create reusable prompt templates and workflows"
+    "title": "提示模板",
+    "description": "创建可复用的提示模板与工作流程"
   },
   "sidebar": "tutorialSidebar",
   "previous": {
-    "title": "Elicitation",
+    "title": "信息引导",
     "permalink": "/docs/legacy/concepts/elicitation"
   },
   "next": {
-    "title": "Resources",
+    "title": "resources",
     "permalink": "/docs/legacy/concepts/resources"
   }
 }

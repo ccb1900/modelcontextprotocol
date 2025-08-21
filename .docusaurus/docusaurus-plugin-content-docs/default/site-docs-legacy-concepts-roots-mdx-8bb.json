@@ -1,7 +1,7 @@
 {
   "id": "legacy/concepts/roots",
-  "title": "Roots",
-  "description": "Understanding roots in MCP",
+  "title": "根路径",
+  "description": "理解MCP中的根路径概念",
   "source": "@site/docs/legacy/concepts/roots.mdx",
   "sourceDirName": "legacy/concepts",
   "slug": "/legacy/concepts/roots",
@@ -12,16 +12,16 @@
   "tags": [],
   "version": "current",
   "frontMatter": {
-    "title": "Roots",
-    "description": "Understanding roots in MCP"
+    "title": "根路径",
+    "description": "理解MCP中的根路径概念"
   },
   "sidebar": "tutorialSidebar",
   "previous": {
-    "title": "Resources",
+    "title": "resources",
     "permalink": "/docs/legacy/concepts/resources"
   },
   "next": {
-    "title": "Sampling",
+    "title": "sampling",
     "permalink": "/docs/legacy/concepts/sampling"
   }
 }

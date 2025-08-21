@@ -1,7 +1,7 @@
 {
   "id": "quickstart/client",
-  "title": "Build an MCP Client",
-  "description": "Get started building your own client that can integrate with all MCP servers.",
+  "title": "client",
+  "description": "---",
   "source": "@site/docs/quickstart/client.mdx",
   "sourceDirName": "quickstart",
   "slug": "/quickstart/client",
@@ -11,17 +11,14 @@
   "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/quickstart/client.mdx",
   "tags": [],
   "version": "current",
-  "frontMatter": {
-    "title": "Build an MCP Client",
-    "description": "Get started building your own client that can integrate with all MCP servers."
-  },
+  "frontMatter": {},
   "sidebar": "tutorialSidebar",
   "previous": {
-    "title": "Inspector",
+    "title": "inspector",
     "permalink": "/docs/legacy/tools/inspector"
   },
   "next": {
-    "title": "Build an MCP Server",
+    "title": "server",
     "permalink": "/docs/quickstart/server"
   }
 }

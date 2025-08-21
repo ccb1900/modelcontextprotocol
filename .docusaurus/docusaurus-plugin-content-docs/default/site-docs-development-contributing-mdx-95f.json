@@ -1,7 +1,7 @@
 {
   "id": "development/contributing",
-  "title": "Contributing",
-  "description": "How to participate in Model Context Protocol development",
+  "title": "贡献指南",
+  "description": "如何参与模型上下文协议开发",
   "source": "@site/docs/development/contributing.mdx",
   "sourceDirName": "development",
   "slug": "/development/contributing",
@@ -12,16 +12,16 @@
   "tags": [],
   "version": "current",
   "frontMatter": {
-    "title": "Contributing",
-    "description": "How to participate in Model Context Protocol development"
+    "title": "贡献指南",
+    "description": "如何参与模型上下文协议开发"
   },
   "sidebar": "tutorialSidebar",
   "previous": {
-    "title": "SEP Guidelines",
+    "title": "sep-guidelines",
     "permalink": "/docs/community/sep-guidelines"
   },
   "next": {
-    "title": "Roadmap",
+    "title": "路线图",
     "permalink": "/docs/development/roadmap"
   }
 }

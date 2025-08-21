@@ -1,7 +1,7 @@
 {
   "id": "docs/reference/server",
-  "title": "Server",
-  "description": "Use LLMs to quickly generate a prototype",
+  "title": "服务器",
+  "description": "利用LLMs快速生成原型",
   "source": "@site/docs/docs/reference/server.mdx",
   "sourceDirName": "docs/reference",
   "slug": "/docs/reference/server",
@@ -12,16 +12,16 @@
   "tags": [],
   "version": "current",
   "frontMatter": {
-    "title": "Server",
-    "description": "Use LLMs to quickly generate a prototype"
+    "title": "服务器",
+    "description": "利用LLMs快速生成原型"
   },
   "sidebar": "tutorialSidebar",
   "previous": {
-    "title": "Client",
+    "title": "client",
     "permalink": "/docs/docs/reference/client"
   },
   "next": {
-    "title": "SDKs",
+    "title": "SDK",
     "permalink": "/docs/docs/sdk"
   }
 }
