@@ -1,0 +1,27 @@
+{
+  "id": "docs/learn/client-concepts",
+  "title": "Client Concepts",
+  "description": "Understanding MCP client concepts",
+  "source": "@site/docs/docs/learn/client-concepts.mdx",
+  "sourceDirName": "docs/learn",
+  "slug": "/docs/learn/client-concepts",
+  "permalink": "/docs/docs/learn/client-concepts",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/docs/learn/client-concepts.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Client Concepts",
+    "description": "Understanding MCP client concepts"
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Architecture Overview",
+    "permalink": "/docs/docs/learn/architecture"
+  },
+  "next": {
+    "title": "Server Concepts",
+    "permalink": "/docs/docs/learn/server-concepts"
+  }
+}

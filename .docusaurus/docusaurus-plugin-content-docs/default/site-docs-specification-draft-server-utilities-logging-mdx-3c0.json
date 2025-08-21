@@ -1,0 +1,26 @@
+{
+  "id": "specification/draft/server/utilities/logging",
+  "title": "Logging",
+  "description": "Protocol Revision: draft",
+  "source": "@site/docs/specification/draft/server/utilities/logging.mdx",
+  "sourceDirName": "specification/draft/server/utilities",
+  "slug": "/specification/draft/server/utilities/logging",
+  "permalink": "/docs/specification/draft/server/utilities/logging",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/specification/draft/server/utilities/logging.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Logging"
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Completion",
+    "permalink": "/docs/specification/draft/server/utilities/completion"
+  },
+  "next": {
+    "title": "Pagination",
+    "permalink": "/docs/specification/draft/server/utilities/pagination"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "id": "specification/2025-03-26/basic/utilities/progress",
+  "title": "Progress",
+  "description": "Protocol Revision: 2025-03-26",
+  "source": "@site/docs/specification/2025-03-26/basic/utilities/progress.mdx",
+  "sourceDirName": "specification/2025-03-26/basic/utilities",
+  "slug": "/specification/2025-03-26/basic/utilities/progress",
+  "permalink": "/docs/specification/2025-03-26/basic/utilities/progress",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/specification/2025-03-26/basic/utilities/progress.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Progress"
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Ping",
+    "permalink": "/docs/specification/2025-03-26/basic/utilities/ping"
+  },
+  "next": {
+    "title": "Key Changes",
+    "permalink": "/docs/specification/2025-03-26/changelog"
+  }
+}

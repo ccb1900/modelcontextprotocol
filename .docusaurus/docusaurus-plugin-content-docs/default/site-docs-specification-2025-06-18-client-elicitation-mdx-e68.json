@@ -1,0 +1,26 @@
+{
+  "id": "specification/2025-06-18/client/elicitation",
+  "title": "Elicitation",
+  "description": "Protocol Revision: 2025-06-18",
+  "source": "@site/docs/specification/2025-06-18/client/elicitation.mdx",
+  "sourceDirName": "specification/2025-06-18/client",
+  "slug": "/specification/2025-06-18/client/elicitation",
+  "permalink": "/docs/specification/2025-06-18/client/elicitation",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/specification/2025-06-18/client/elicitation.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Elicitation"
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Key Changes",
+    "permalink": "/docs/specification/2025-06-18/changelog"
+  },
+  "next": {
+    "title": "Roots",
+    "permalink": "/docs/specification/2025-06-18/client/roots"
+  }
+}

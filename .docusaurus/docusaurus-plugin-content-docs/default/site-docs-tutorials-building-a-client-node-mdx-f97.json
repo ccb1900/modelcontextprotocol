@@ -1,0 +1,24 @@
+{
+  "id": "tutorials/building-a-client-node",
+  "title": "building-a-client-node",
+  "description": "System Requirements",
+  "source": "@site/docs/tutorials/building-a-client-node.mdx",
+  "sourceDirName": "tutorials",
+  "slug": "/tutorials/building-a-client-node",
+  "permalink": "/docs/tutorials/building-a-client-node",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/tutorials/building-a-client-node.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Versioning",
+    "permalink": "/docs/specification/versioning"
+  },
+  "next": {
+    "title": "Building MCP with LLMs",
+    "permalink": "/docs/tutorials/building-mcp-with-llms"
+  }
+}

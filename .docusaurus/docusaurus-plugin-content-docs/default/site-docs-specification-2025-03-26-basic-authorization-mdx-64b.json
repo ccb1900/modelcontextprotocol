@@ -1,0 +1,26 @@
+{
+  "id": "specification/2025-03-26/basic/authorization",
+  "title": "Authorization",
+  "description": "Protocol Revision: 2025-03-26",
+  "source": "@site/docs/specification/2025-03-26/basic/authorization.mdx",
+  "sourceDirName": "specification/2025-03-26/basic",
+  "slug": "/specification/2025-03-26/basic/authorization",
+  "permalink": "/docs/specification/2025-03-26/basic/authorization",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/specification/2025-03-26/basic/authorization.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Authorization"
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Overview",
+    "permalink": "/docs/specification/2025-03-26/basic/"
+  },
+  "next": {
+    "title": "Lifecycle",
+    "permalink": "/docs/specification/2025-03-26/basic/lifecycle"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "id": "specification/2024-11-05/basic/lifecycle",
+  "title": "Lifecycle",
+  "description": "Protocol Revision: 2024-11-05",
+  "source": "@site/docs/specification/2024-11-05/basic/lifecycle.mdx",
+  "sourceDirName": "specification/2024-11-05/basic",
+  "slug": "/specification/2024-11-05/basic/lifecycle",
+  "permalink": "/docs/specification/2024-11-05/basic/lifecycle",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/specification/2024-11-05/basic/lifecycle.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Lifecycle",
+    "type": "docs",
+    "weight": 30
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Overview",
+    "permalink": "/docs/specification/2024-11-05/basic/"
+  },
+  "next": {
+    "title": "Messages",
+    "permalink": "/docs/specification/2024-11-05/basic/messages"
+  }
+}

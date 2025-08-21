@@ -1,0 +1,26 @@
+{
+  "id": "specification/2025-03-26/server/prompts",
+  "title": "Prompts",
+  "description": "Protocol Revision: 2025-03-26",
+  "source": "@site/docs/specification/2025-03-26/server/prompts.mdx",
+  "sourceDirName": "specification/2025-03-26/server",
+  "slug": "/specification/2025-03-26/server/prompts",
+  "permalink": "/docs/specification/2025-03-26/server/prompts",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/specification/2025-03-26/server/prompts.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Prompts"
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Overview",
+    "permalink": "/docs/specification/2025-03-26/server/"
+  },
+  "next": {
+    "title": "Resources",
+    "permalink": "/docs/specification/2025-03-26/server/resources"
+  }
+}

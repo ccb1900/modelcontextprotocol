@@ -1,0 +1,27 @@
+{
+  "id": "docs/tutorials/use-remote-mcp-server",
+  "title": "Connect to Remote MCP Servers",
+  "description": "Learn how to connect Claude to remote MCP servers and extend its capabilities with internet-hosted tools and data sources",
+  "source": "@site/docs/docs/tutorials/use-remote-mcp-server.mdx",
+  "sourceDirName": "docs/tutorials",
+  "slug": "/docs/tutorials/use-remote-mcp-server",
+  "permalink": "/docs/docs/tutorials/use-remote-mcp-server",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/docs/tutorials/use-remote-mcp-server.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Connect to Remote MCP Servers",
+    "description": "Learn how to connect Claude to remote MCP servers and extend its capabilities with internet-hosted tools and data sources"
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "use-local-mcp-server",
+    "permalink": "/docs/docs/tutorials/use-local-mcp-server"
+  },
+  "next": {
+    "title": "Example Servers",
+    "permalink": "/docs/examples"
+  }
+}

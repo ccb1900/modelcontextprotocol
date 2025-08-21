@@ -1,0 +1,27 @@
+{
+  "id": "docs/reference/client",
+  "title": "Client",
+  "description": "Create an MCP server with tools and resources",
+  "source": "@site/docs/docs/reference/client.mdx",
+  "sourceDirName": "docs/reference",
+  "slug": "/docs/reference/client",
+  "permalink": "/docs/docs/reference/client",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/docs/reference/client.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Client",
+    "description": "Create an MCP server with tools and resources"
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Server Concepts",
+    "permalink": "/docs/docs/learn/server-concepts"
+  },
+  "next": {
+    "title": "Server",
+    "permalink": "/docs/docs/reference/server"
+  }
+}

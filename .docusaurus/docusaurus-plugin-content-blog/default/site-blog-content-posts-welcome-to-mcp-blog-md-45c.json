@@ -1,0 +1,18 @@
+{
+  "permalink": "/blog/content/posts/welcome-to-mcp-blog",
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/blog/content/posts/welcome-to-mcp-blog.md",
+  "source": "@site/blog/content/posts/welcome-to-mcp-blog.md",
+  "title": "content/posts/welcome-to-mcp-blog",
+  "description": "+++",
+  "date": "2025-07-08T14:18:59.000Z",
+  "tags": [],
+  "readingTime": 0.6,
+  "hasTruncateMarker": false,
+  "authors": [],
+  "frontMatter": {},
+  "unlisted": false,
+  "prevItem": {
+    "title": "archetypes/default",
+    "permalink": "/blog/archetypes/default"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "id": "specification/2025-03-26/basic/lifecycle",
+  "title": "Lifecycle",
+  "description": "Protocol Revision: 2025-03-26",
+  "source": "@site/docs/specification/2025-03-26/basic/lifecycle.mdx",
+  "sourceDirName": "specification/2025-03-26/basic",
+  "slug": "/specification/2025-03-26/basic/lifecycle",
+  "permalink": "/docs/specification/2025-03-26/basic/lifecycle",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/specification/2025-03-26/basic/lifecycle.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Lifecycle"
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Authorization",
+    "permalink": "/docs/specification/2025-03-26/basic/authorization"
+  },
+  "next": {
+    "title": "Transports",
+    "permalink": "/docs/specification/2025-03-26/basic/transports"
+  }
+}

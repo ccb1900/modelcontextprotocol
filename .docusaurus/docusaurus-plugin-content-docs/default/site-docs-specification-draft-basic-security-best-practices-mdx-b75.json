@@ -1,0 +1,26 @@
+{
+  "id": "specification/draft/basic/security_best_practices",
+  "title": "Security Best Practices",
+  "description": "Introduction",
+  "source": "@site/docs/specification/draft/basic/security_best_practices.mdx",
+  "sourceDirName": "specification/draft/basic",
+  "slug": "/specification/draft/basic/security_best_practices",
+  "permalink": "/docs/specification/draft/basic/security_best_practices",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/specification/draft/basic/security_best_practices.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Security Best Practices"
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Lifecycle",
+    "permalink": "/docs/specification/draft/basic/lifecycle"
+  },
+  "next": {
+    "title": "Transports",
+    "permalink": "/docs/specification/draft/basic/transports"
+  }
+}

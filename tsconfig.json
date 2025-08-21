@@ -1,5 +1,9 @@
 {
+    "extends": "@docusaurus/tsconfig",
+  "exclude": [".docusaurus", "build"]
+,
   "compilerOptions": {
+        "baseUrl": ".",
     "noEmit": true,
     "target": "es2016",
     "rootDir": "schema",

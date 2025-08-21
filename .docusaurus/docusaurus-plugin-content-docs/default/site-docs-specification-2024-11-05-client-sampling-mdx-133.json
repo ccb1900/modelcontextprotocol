@@ -1,0 +1,28 @@
+{
+  "id": "specification/2024-11-05/client/sampling",
+  "title": "Sampling",
+  "description": "Protocol Revision: 2024-11-05",
+  "source": "@site/docs/specification/2024-11-05/client/sampling.mdx",
+  "sourceDirName": "specification/2024-11-05/client",
+  "slug": "/specification/2024-11-05/client/sampling",
+  "permalink": "/docs/specification/2024-11-05/client/sampling",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/specification/2024-11-05/client/sampling.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Sampling",
+    "type": "docs",
+    "weight": 40
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Roots",
+    "permalink": "/docs/specification/2024-11-05/client/roots"
+  },
+  "next": {
+    "title": "Overview",
+    "permalink": "/docs/specification/2024-11-05/server/"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "id": "development/contributing",
+  "title": "Contributing",
+  "description": "How to participate in Model Context Protocol development",
+  "source": "@site/docs/development/contributing.mdx",
+  "sourceDirName": "development",
+  "slug": "/development/contributing",
+  "permalink": "/docs/development/contributing",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/development/contributing.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Contributing",
+    "description": "How to participate in Model Context Protocol development"
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "SEP Guidelines",
+    "permalink": "/docs/community/sep-guidelines"
+  },
+  "next": {
+    "title": "Roadmap",
+    "permalink": "/docs/development/roadmap"
+  }
+}

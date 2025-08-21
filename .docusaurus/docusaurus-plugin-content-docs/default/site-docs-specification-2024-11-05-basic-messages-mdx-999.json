@@ -1,0 +1,28 @@
+{
+  "id": "specification/2024-11-05/basic/messages",
+  "title": "Messages",
+  "description": "Protocol Revision: 2024-11-05",
+  "source": "@site/docs/specification/2024-11-05/basic/messages.mdx",
+  "sourceDirName": "specification/2024-11-05/basic",
+  "slug": "/specification/2024-11-05/basic/messages",
+  "permalink": "/docs/specification/2024-11-05/basic/messages",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/specification/2024-11-05/basic/messages.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Messages",
+    "type": "docs",
+    "weight": 20
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Lifecycle",
+    "permalink": "/docs/specification/2024-11-05/basic/lifecycle"
+  },
+  "next": {
+    "title": "Transports",
+    "permalink": "/docs/specification/2024-11-05/basic/transports"
+  }
+}

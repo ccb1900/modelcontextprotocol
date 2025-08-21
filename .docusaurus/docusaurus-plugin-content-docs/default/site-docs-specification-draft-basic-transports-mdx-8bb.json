@@ -1,0 +1,26 @@
+{
+  "id": "specification/draft/basic/transports",
+  "title": "Transports",
+  "description": "Protocol Revision: draft",
+  "source": "@site/docs/specification/draft/basic/transports.mdx",
+  "sourceDirName": "specification/draft/basic",
+  "slug": "/specification/draft/basic/transports",
+  "permalink": "/docs/specification/draft/basic/transports",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/specification/draft/basic/transports.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Transports"
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Security Best Practices",
+    "permalink": "/docs/specification/draft/basic/security_best_practices"
+  },
+  "next": {
+    "title": "Cancellation",
+    "permalink": "/docs/specification/draft/basic/utilities/cancellation"
+  }
+}

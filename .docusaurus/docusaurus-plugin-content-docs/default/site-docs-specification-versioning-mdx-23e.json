@@ -1,0 +1,28 @@
+{
+  "id": "specification/versioning",
+  "title": "Versioning",
+  "description": "The Model Context Protocol uses string-based version identifiers following the format",
+  "source": "@site/docs/specification/versioning.mdx",
+  "sourceDirName": "specification",
+  "slug": "/specification/versioning",
+  "permalink": "/docs/specification/versioning",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/specification/versioning.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Versioning",
+    "type": "docs",
+    "weight": 10
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Pagination",
+    "permalink": "/docs/specification/draft/server/utilities/pagination"
+  },
+  "next": {
+    "title": "building-a-client-node",
+    "permalink": "/docs/tutorials/building-a-client-node"
+  }
+}

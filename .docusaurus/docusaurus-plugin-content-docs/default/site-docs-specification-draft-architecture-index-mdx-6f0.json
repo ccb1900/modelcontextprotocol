@@ -1,0 +1,26 @@
+{
+  "id": "specification/draft/architecture/index",
+  "title": "Architecture",
+  "description": "The Model Context Protocol (MCP) follows a client-host-server architecture where each",
+  "source": "@site/docs/specification/draft/architecture/index.mdx",
+  "sourceDirName": "specification/draft/architecture",
+  "slug": "/specification/draft/architecture/",
+  "permalink": "/docs/specification/draft/architecture/",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/specification/draft/architecture/index.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Architecture"
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Specification",
+    "permalink": "/docs/specification/draft/"
+  },
+  "next": {
+    "title": "Overview",
+    "permalink": "/docs/specification/draft/basic/"
+  }
+}

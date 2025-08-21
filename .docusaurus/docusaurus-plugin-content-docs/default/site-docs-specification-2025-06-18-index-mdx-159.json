@@ -1,0 +1,26 @@
+{
+  "id": "specification/2025-06-18/index",
+  "title": "Specification",
+  "description": "Model Context Protocol (MCP) is an open protocol that",
+  "source": "@site/docs/specification/2025-06-18/index.mdx",
+  "sourceDirName": "specification/2025-06-18",
+  "slug": "/specification/2025-06-18/",
+  "permalink": "/docs/specification/2025-06-18/",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/specification/2025-06-18/index.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Specification"
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Pagination",
+    "permalink": "/docs/specification/2025-03-26/server/utilities/pagination"
+  },
+  "next": {
+    "title": "Architecture",
+    "permalink": "/docs/specification/2025-06-18/architecture/"
+  }
+}

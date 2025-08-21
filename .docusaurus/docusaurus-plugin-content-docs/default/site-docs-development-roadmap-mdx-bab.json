@@ -1,0 +1,27 @@
+{
+  "id": "development/roadmap",
+  "title": "Roadmap",
+  "description": "Our plans for evolving Model Context Protocol",
+  "source": "@site/docs/development/roadmap.mdx",
+  "sourceDirName": "development",
+  "slug": "/development/roadmap",
+  "permalink": "/docs/development/roadmap",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/development/roadmap.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Roadmap",
+    "description": "Our plans for evolving Model Context Protocol"
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Contributing",
+    "permalink": "/docs/development/contributing"
+  },
+  "next": {
+    "title": "Introduction",
+    "permalink": "/docs/docs/getting-started/intro"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "id": "legacy/concepts/architecture",
+  "title": "Core architecture",
+  "description": "Understand how MCP connects clients, servers, and LLMs",
+  "source": "@site/docs/legacy/concepts/architecture.mdx",
+  "sourceDirName": "legacy/concepts",
+  "slug": "/legacy/concepts/architecture",
+  "permalink": "/docs/legacy/concepts/architecture",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/legacy/concepts/architecture.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Core architecture",
+    "description": "Understand how MCP connects clients, servers, and LLMs"
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Introduction",
+    "permalink": "/docs/introduction"
+  },
+  "next": {
+    "title": "Elicitation",
+    "permalink": "/docs/legacy/concepts/elicitation"
+  }
+}

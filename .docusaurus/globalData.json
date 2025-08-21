@@ -1,0 +1,628 @@
+{
+  "docusaurus-plugin-content-docs": {
+    "default": {
+      "path": "/docs",
+      "versions": [
+        {
+          "name": "current",
+          "label": "Next",
+          "isLast": true,
+          "path": "/docs",
+          "mainDocId": "about/index",
+          "docs": [
+            {
+              "id": "about/index",
+              "path": "/docs/about/",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "clients",
+              "path": "/docs/clients",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "community/communication",
+              "path": "/docs/community/communication",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "community/governance",
+              "path": "/docs/community/governance",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "community/sep-guidelines",
+              "path": "/docs/community/sep-guidelines",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "development/contributing",
+              "path": "/docs/development/contributing",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "development/roadmap",
+              "path": "/docs/development/roadmap",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "docs/getting-started/intro",
+              "path": "/docs/docs/getting-started/intro",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "docs/learn/architecture",
+              "path": "/docs/docs/learn/architecture",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "docs/learn/client-concepts",
+              "path": "/docs/docs/learn/client-concepts",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "docs/learn/server-concepts",
+              "path": "/docs/docs/learn/server-concepts",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "docs/reference/client",
+              "path": "/docs/docs/reference/client",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "docs/reference/server",
+              "path": "/docs/docs/reference/server",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "docs/sdk",
+              "path": "/docs/docs/sdk",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "docs/tutorials/use-local-mcp-server",
+              "path": "/docs/docs/tutorials/use-local-mcp-server",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "docs/tutorials/use-remote-mcp-server",
+              "path": "/docs/docs/tutorials/use-remote-mcp-server",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "examples",
+              "path": "/docs/examples",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "faqs",
+              "path": "/docs/faqs",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "introduction",
+              "path": "/docs/introduction",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "legacy/concepts/architecture",
+              "path": "/docs/legacy/concepts/architecture",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "legacy/concepts/elicitation",
+              "path": "/docs/legacy/concepts/elicitation",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "legacy/concepts/prompts",
+              "path": "/docs/legacy/concepts/prompts",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "legacy/concepts/resources",
+              "path": "/docs/legacy/concepts/resources",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "legacy/concepts/roots",
+              "path": "/docs/legacy/concepts/roots",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "legacy/concepts/sampling",
+              "path": "/docs/legacy/concepts/sampling",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "legacy/concepts/tools",
+              "path": "/docs/legacy/concepts/tools",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "legacy/concepts/transports",
+              "path": "/docs/legacy/concepts/transports",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "legacy/tools/debugging",
+              "path": "/docs/legacy/tools/debugging",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "legacy/tools/inspector",
+              "path": "/docs/legacy/tools/inspector",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "quickstart/client",
+              "path": "/docs/quickstart/client",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "quickstart/server",
+              "path": "/docs/quickstart/server",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "quickstart/user",
+              "path": "/docs/quickstart/user",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "sdk/java/mcp-client",
+              "path": "/docs/sdk/java/mcp-client",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "sdk/java/mcp-overview",
+              "path": "/docs/sdk/java/mcp-overview",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "sdk/java/mcp-server",
+              "path": "/docs/sdk/java/mcp-server",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "snippets/snippet-intro",
+              "path": "/docs/snippets/snippet-intro",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "specification/2024-11-05/architecture/index",
+              "path": "/docs/specification/2024-11-05/architecture/",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "specification/2024-11-05/basic/index",
+              "path": "/docs/specification/2024-11-05/basic/",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "specification/2024-11-05/basic/lifecycle",
+              "path": "/docs/specification/2024-11-05/basic/lifecycle",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "specification/2024-11-05/basic/messages",
+              "path": "/docs/specification/2024-11-05/basic/messages",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "specification/2024-11-05/basic/transports",
+              "path": "/docs/specification/2024-11-05/basic/transports",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "specification/2024-11-05/basic/utilities/cancellation",
+              "path": "/docs/specification/2024-11-05/basic/utilities/cancellation",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "specification/2024-11-05/basic/utilities/ping",
+              "path": "/docs/specification/2024-11-05/basic/utilities/ping",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "specification/2024-11-05/basic/utilities/progress",
+              "path": "/docs/specification/2024-11-05/basic/utilities/progress",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "specification/2024-11-05/client/roots",
+              "path": "/docs/specification/2024-11-05/client/roots",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "specification/2024-11-05/client/sampling",
+              "path": "/docs/specification/2024-11-05/client/sampling",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "specification/2024-11-05/index",
+              "path": "/docs/specification/2024-11-05/",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "specification/2024-11-05/server/index",
+              "path": "/docs/specification/2024-11-05/server/",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "specification/2024-11-05/server/prompts",
+              "path": "/docs/specification/2024-11-05/server/prompts",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "specification/2024-11-05/server/resources",
+              "path": "/docs/specification/2024-11-05/server/resources",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "specification/2024-11-05/server/tools",
+              "path": "/docs/specification/2024-11-05/server/tools",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "specification/2024-11-05/server/utilities/completion",
+              "path": "/docs/specification/2024-11-05/server/utilities/completion",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "specification/2024-11-05/server/utilities/logging",
+              "path": "/docs/specification/2024-11-05/server/utilities/logging",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "specification/2024-11-05/server/utilities/pagination",
+              "path": "/docs/specification/2024-11-05/server/utilities/pagination",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "specification/2025-03-26/architecture/index",
+              "path": "/docs/specification/2025-03-26/architecture/",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "specification/2025-03-26/basic/authorization",
+              "path": "/docs/specification/2025-03-26/basic/authorization",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "specification/2025-03-26/basic/index",
+              "path": "/docs/specification/2025-03-26/basic/",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "specification/2025-03-26/basic/lifecycle",
+              "path": "/docs/specification/2025-03-26/basic/lifecycle",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "specification/2025-03-26/basic/transports",
+              "path": "/docs/specification/2025-03-26/basic/transports",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "specification/2025-03-26/basic/utilities/cancellation",
+              "path": "/docs/specification/2025-03-26/basic/utilities/cancellation",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "specification/2025-03-26/basic/utilities/ping",
+              "path": "/docs/specification/2025-03-26/basic/utilities/ping",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "specification/2025-03-26/basic/utilities/progress",
+              "path": "/docs/specification/2025-03-26/basic/utilities/progress",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "specification/2025-03-26/changelog",
+              "path": "/docs/specification/2025-03-26/changelog",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "specification/2025-03-26/client/roots",
+              "path": "/docs/specification/2025-03-26/client/roots",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "specification/2025-03-26/client/sampling",
+              "path": "/docs/specification/2025-03-26/client/sampling",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "specification/2025-03-26/index",
+              "path": "/docs/specification/2025-03-26/",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "specification/2025-03-26/server/index",
+              "path": "/docs/specification/2025-03-26/server/",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "specification/2025-03-26/server/prompts",
+              "path": "/docs/specification/2025-03-26/server/prompts",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "specification/2025-03-26/server/resources",
+              "path": "/docs/specification/2025-03-26/server/resources",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "specification/2025-03-26/server/tools",
+              "path": "/docs/specification/2025-03-26/server/tools",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "specification/2025-03-26/server/utilities/completion",
+              "path": "/docs/specification/2025-03-26/server/utilities/completion",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "specification/2025-03-26/server/utilities/logging",
+              "path": "/docs/specification/2025-03-26/server/utilities/logging",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "specification/2025-03-26/server/utilities/pagination",
+              "path": "/docs/specification/2025-03-26/server/utilities/pagination",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "specification/2025-06-18/architecture/index",
+              "path": "/docs/specification/2025-06-18/architecture/",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "specification/2025-06-18/basic/authorization",
+              "path": "/docs/specification/2025-06-18/basic/authorization",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "specification/2025-06-18/basic/index",
+              "path": "/docs/specification/2025-06-18/basic/",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "specification/2025-06-18/basic/lifecycle",
+              "path": "/docs/specification/2025-06-18/basic/lifecycle",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "specification/2025-06-18/basic/security_best_practices",
+              "path": "/docs/specification/2025-06-18/basic/security_best_practices",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "specification/2025-06-18/basic/transports",
+              "path": "/docs/specification/2025-06-18/basic/transports",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "specification/2025-06-18/basic/utilities/cancellation",
+              "path": "/docs/specification/2025-06-18/basic/utilities/cancellation",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "specification/2025-06-18/basic/utilities/ping",
+              "path": "/docs/specification/2025-06-18/basic/utilities/ping",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "specification/2025-06-18/basic/utilities/progress",
+              "path": "/docs/specification/2025-06-18/basic/utilities/progress",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "specification/2025-06-18/changelog",
+              "path": "/docs/specification/2025-06-18/changelog",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "specification/2025-06-18/client/elicitation",
+              "path": "/docs/specification/2025-06-18/client/elicitation",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "specification/2025-06-18/client/roots",
+              "path": "/docs/specification/2025-06-18/client/roots",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "specification/2025-06-18/client/sampling",
+              "path": "/docs/specification/2025-06-18/client/sampling",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "specification/2025-06-18/index",
+              "path": "/docs/specification/2025-06-18/",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "specification/2025-06-18/schema",
+              "path": "/docs/specification/2025-06-18/schema",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "specification/2025-06-18/server/index",
+              "path": "/docs/specification/2025-06-18/server/",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "specification/2025-06-18/server/prompts",
+              "path": "/docs/specification/2025-06-18/server/prompts",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "specification/2025-06-18/server/resources",
+              "path": "/docs/specification/2025-06-18/server/resources",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "specification/2025-06-18/server/tools",
+              "path": "/docs/specification/2025-06-18/server/tools",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "specification/2025-06-18/server/utilities/completion",
+              "path": "/docs/specification/2025-06-18/server/utilities/completion",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "specification/2025-06-18/server/utilities/logging",
+              "path": "/docs/specification/2025-06-18/server/utilities/logging",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "specification/2025-06-18/server/utilities/pagination",
+              "path": "/docs/specification/2025-06-18/server/utilities/pagination",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "specification/draft/architecture/index",
+              "path": "/docs/specification/draft/architecture/",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "specification/draft/basic/authorization",
+              "path": "/docs/specification/draft/basic/authorization",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "specification/draft/basic/index",
+              "path": "/docs/specification/draft/basic/",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "specification/draft/basic/lifecycle",
+              "path": "/docs/specification/draft/basic/lifecycle",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "specification/draft/basic/security_best_practices",
+              "path": "/docs/specification/draft/basic/security_best_practices",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "specification/draft/basic/transports",
+              "path": "/docs/specification/draft/basic/transports",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "specification/draft/basic/utilities/cancellation",
+              "path": "/docs/specification/draft/basic/utilities/cancellation",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "specification/draft/basic/utilities/ping",
+              "path": "/docs/specification/draft/basic/utilities/ping",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "specification/draft/basic/utilities/progress",
+              "path": "/docs/specification/draft/basic/utilities/progress",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "specification/draft/changelog",
+              "path": "/docs/specification/draft/changelog",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "specification/draft/client/elicitation",
+              "path": "/docs/specification/draft/client/elicitation",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "specification/draft/client/roots",
+              "path": "/docs/specification/draft/client/roots",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "specification/draft/client/sampling",
+              "path": "/docs/specification/draft/client/sampling",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "specification/draft/index",
+              "path": "/docs/specification/draft/",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "specification/draft/schema",
+              "path": "/docs/specification/draft/schema",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "specification/draft/server/index",
+              "path": "/docs/specification/draft/server/",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "specification/draft/server/prompts",
+              "path": "/docs/specification/draft/server/prompts",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "specification/draft/server/resources",
+              "path": "/docs/specification/draft/server/resources",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "specification/draft/server/tools",
+              "path": "/docs/specification/draft/server/tools",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "specification/draft/server/utilities/completion",
+              "path": "/docs/specification/draft/server/utilities/completion",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "specification/draft/server/utilities/logging",
+              "path": "/docs/specification/draft/server/utilities/logging",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "specification/draft/server/utilities/pagination",
+              "path": "/docs/specification/draft/server/utilities/pagination",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "specification/versioning",
+              "path": "/docs/specification/versioning",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "tutorials/building-a-client-node",
+              "path": "/docs/tutorials/building-a-client-node",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "tutorials/building-mcp-with-llms",
+              "path": "/docs/tutorials/building-mcp-with-llms",
+              "sidebar": "tutorialSidebar"
+            }
+          ],
+          "draftIds": [],
+          "sidebars": {
+            "tutorialSidebar": {
+              "link": {
+                "path": "/docs/about/",
+                "label": "Model Context Protocol"
+              }
+            }
+          }
+        }
+      ],
+      "breadcrumbs": true
+    }
+  }
+}

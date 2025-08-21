@@ -1,0 +1,26 @@
+{
+  "id": "specification/draft/server/index",
+  "title": "Overview",
+  "description": "Protocol Revision: draft",
+  "source": "@site/docs/specification/draft/server/index.mdx",
+  "sourceDirName": "specification/draft/server",
+  "slug": "/specification/draft/server/",
+  "permalink": "/docs/specification/draft/server/",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/specification/draft/server/index.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Overview"
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Schema Reference",
+    "permalink": "/docs/specification/draft/schema"
+  },
+  "next": {
+    "title": "Prompts",
+    "permalink": "/docs/specification/draft/server/prompts"
+  }
+}

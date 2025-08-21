@@ -1,0 +1,26 @@
+{
+  "id": "specification/2025-03-26/basic/utilities/ping",
+  "title": "Ping",
+  "description": "Protocol Revision: 2025-03-26",
+  "source": "@site/docs/specification/2025-03-26/basic/utilities/ping.mdx",
+  "sourceDirName": "specification/2025-03-26/basic/utilities",
+  "slug": "/specification/2025-03-26/basic/utilities/ping",
+  "permalink": "/docs/specification/2025-03-26/basic/utilities/ping",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/specification/2025-03-26/basic/utilities/ping.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Ping"
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Cancellation",
+    "permalink": "/docs/specification/2025-03-26/basic/utilities/cancellation"
+  },
+  "next": {
+    "title": "Progress",
+    "permalink": "/docs/specification/2025-03-26/basic/utilities/progress"
+  }
+}

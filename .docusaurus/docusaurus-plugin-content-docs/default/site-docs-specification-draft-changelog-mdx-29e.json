@@ -1,0 +1,26 @@
+{
+  "id": "specification/draft/changelog",
+  "title": "Key Changes",
+  "description": "This document lists changes made to the Model Context Protocol (MCP) specification since",
+  "source": "@site/docs/specification/draft/changelog.mdx",
+  "sourceDirName": "specification/draft",
+  "slug": "/specification/draft/changelog",
+  "permalink": "/docs/specification/draft/changelog",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/specification/draft/changelog.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Key Changes"
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Progress",
+    "permalink": "/docs/specification/draft/basic/utilities/progress"
+  },
+  "next": {
+    "title": "Elicitation",
+    "permalink": "/docs/specification/draft/client/elicitation"
+  }
+}

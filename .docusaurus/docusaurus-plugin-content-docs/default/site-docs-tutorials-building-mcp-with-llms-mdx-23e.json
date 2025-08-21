@@ -1,0 +1,23 @@
+{
+  "id": "tutorials/building-mcp-with-llms",
+  "title": "Building MCP with LLMs",
+  "description": "Speed up your MCP development using LLMs such as Claude!",
+  "source": "@site/docs/tutorials/building-mcp-with-llms.mdx",
+  "sourceDirName": "tutorials",
+  "slug": "/tutorials/building-mcp-with-llms",
+  "permalink": "/docs/tutorials/building-mcp-with-llms",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/tutorials/building-mcp-with-llms.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Building MCP with LLMs",
+    "description": "Speed up your MCP development using LLMs such as Claude!"
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "building-a-client-node",
+    "permalink": "/docs/tutorials/building-a-client-node"
+  }
+}

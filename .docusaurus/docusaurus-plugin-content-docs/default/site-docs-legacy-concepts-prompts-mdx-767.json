@@ -1,0 +1,27 @@
+{
+  "id": "legacy/concepts/prompts",
+  "title": "Prompts",
+  "description": "Create reusable prompt templates and workflows",
+  "source": "@site/docs/legacy/concepts/prompts.mdx",
+  "sourceDirName": "legacy/concepts",
+  "slug": "/legacy/concepts/prompts",
+  "permalink": "/docs/legacy/concepts/prompts",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/legacy/concepts/prompts.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Prompts",
+    "description": "Create reusable prompt templates and workflows"
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Elicitation",
+    "permalink": "/docs/legacy/concepts/elicitation"
+  },
+  "next": {
+    "title": "Resources",
+    "permalink": "/docs/legacy/concepts/resources"
+  }
+}

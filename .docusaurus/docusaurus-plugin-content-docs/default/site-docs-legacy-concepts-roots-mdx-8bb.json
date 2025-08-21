@@ -1,0 +1,27 @@
+{
+  "id": "legacy/concepts/roots",
+  "title": "Roots",
+  "description": "Understanding roots in MCP",
+  "source": "@site/docs/legacy/concepts/roots.mdx",
+  "sourceDirName": "legacy/concepts",
+  "slug": "/legacy/concepts/roots",
+  "permalink": "/docs/legacy/concepts/roots",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/legacy/concepts/roots.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Roots",
+    "description": "Understanding roots in MCP"
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Resources",
+    "permalink": "/docs/legacy/concepts/resources"
+  },
+  "next": {
+    "title": "Sampling",
+    "permalink": "/docs/legacy/concepts/sampling"
+  }
+}

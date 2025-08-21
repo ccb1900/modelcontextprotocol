@@ -1,0 +1,26 @@
+{
+  "id": "specification/2025-06-18/basic/transports",
+  "title": "Transports",
+  "description": "Protocol Revision: 2025-06-18",
+  "source": "@site/docs/specification/2025-06-18/basic/transports.mdx",
+  "sourceDirName": "specification/2025-06-18/basic",
+  "slug": "/specification/2025-06-18/basic/transports",
+  "permalink": "/docs/specification/2025-06-18/basic/transports",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/specification/2025-06-18/basic/transports.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Transports"
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Security Best Practices",
+    "permalink": "/docs/specification/2025-06-18/basic/security_best_practices"
+  },
+  "next": {
+    "title": "Cancellation",
+    "permalink": "/docs/specification/2025-06-18/basic/utilities/cancellation"
+  }
+}

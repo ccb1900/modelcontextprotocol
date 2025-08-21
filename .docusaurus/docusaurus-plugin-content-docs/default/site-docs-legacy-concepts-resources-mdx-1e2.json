@@ -1,0 +1,27 @@
+{
+  "id": "legacy/concepts/resources",
+  "title": "Resources",
+  "description": "Expose data and content from your servers to LLMs",
+  "source": "@site/docs/legacy/concepts/resources.mdx",
+  "sourceDirName": "legacy/concepts",
+  "slug": "/legacy/concepts/resources",
+  "permalink": "/docs/legacy/concepts/resources",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/legacy/concepts/resources.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Resources",
+    "description": "Expose data and content from your servers to LLMs"
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Prompts",
+    "permalink": "/docs/legacy/concepts/prompts"
+  },
+  "next": {
+    "title": "Roots",
+    "permalink": "/docs/legacy/concepts/roots"
+  }
+}

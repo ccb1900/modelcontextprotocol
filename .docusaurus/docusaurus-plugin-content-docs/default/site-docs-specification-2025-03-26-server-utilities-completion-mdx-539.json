@@ -1,0 +1,26 @@
+{
+  "id": "specification/2025-03-26/server/utilities/completion",
+  "title": "Completion",
+  "description": "Protocol Revision: 2025-03-26",
+  "source": "@site/docs/specification/2025-03-26/server/utilities/completion.mdx",
+  "sourceDirName": "specification/2025-03-26/server/utilities",
+  "slug": "/specification/2025-03-26/server/utilities/completion",
+  "permalink": "/docs/specification/2025-03-26/server/utilities/completion",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/specification/2025-03-26/server/utilities/completion.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Completion"
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Tools",
+    "permalink": "/docs/specification/2025-03-26/server/tools"
+  },
+  "next": {
+    "title": "Logging",
+    "permalink": "/docs/specification/2025-03-26/server/utilities/logging"
+  }
+}

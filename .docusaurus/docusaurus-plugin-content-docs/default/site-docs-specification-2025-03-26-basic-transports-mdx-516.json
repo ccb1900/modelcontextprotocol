@@ -1,0 +1,26 @@
+{
+  "id": "specification/2025-03-26/basic/transports",
+  "title": "Transports",
+  "description": "Protocol Revision: 2025-03-26",
+  "source": "@site/docs/specification/2025-03-26/basic/transports.mdx",
+  "sourceDirName": "specification/2025-03-26/basic",
+  "slug": "/specification/2025-03-26/basic/transports",
+  "permalink": "/docs/specification/2025-03-26/basic/transports",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/specification/2025-03-26/basic/transports.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Transports"
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Lifecycle",
+    "permalink": "/docs/specification/2025-03-26/basic/lifecycle"
+  },
+  "next": {
+    "title": "Cancellation",
+    "permalink": "/docs/specification/2025-03-26/basic/utilities/cancellation"
+  }
+}

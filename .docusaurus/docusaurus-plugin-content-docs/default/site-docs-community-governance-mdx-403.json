@@ -1,0 +1,27 @@
+{
+  "id": "community/governance",
+  "title": "Governance and Stewardship",
+  "description": "Learn about the Model Context Protocol's governance structure and how to participate in the community",
+  "source": "@site/docs/community/governance.mdx",
+  "sourceDirName": "community",
+  "slug": "/community/governance",
+  "permalink": "/docs/community/governance",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/community/governance.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Governance and Stewardship",
+    "description": "Learn about the Model Context Protocol's governance structure and how to participate in the community"
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Contributor Communication",
+    "permalink": "/docs/community/communication"
+  },
+  "next": {
+    "title": "SEP Guidelines",
+    "permalink": "/docs/community/sep-guidelines"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "id": "faqs",
+  "title": "FAQs",
+  "description": "Explaining MCP and why it matters in simple terms",
+  "source": "@site/docs/faqs.mdx",
+  "sourceDirName": ".",
+  "slug": "/faqs",
+  "permalink": "/docs/faqs",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/faqs.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "FAQs",
+    "description": "Explaining MCP and why it matters in simple terms"
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Example Servers",
+    "permalink": "/docs/examples"
+  },
+  "next": {
+    "title": "Introduction",
+    "permalink": "/docs/introduction"
+  }
+}

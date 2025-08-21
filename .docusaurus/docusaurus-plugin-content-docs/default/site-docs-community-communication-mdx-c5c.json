@@ -1,0 +1,27 @@
+{
+  "id": "community/communication",
+  "title": "Contributor Communication",
+  "description": "Communication strategy and framework for the Model Context Protocol community",
+  "source": "@site/docs/community/communication.mdx",
+  "sourceDirName": "community",
+  "slug": "/community/communication",
+  "permalink": "/docs/community/communication",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/community/communication.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Contributor Communication",
+    "description": "Communication strategy and framework for the Model Context Protocol community"
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Example Clients",
+    "permalink": "/docs/clients"
+  },
+  "next": {
+    "title": "Governance and Stewardship",
+    "permalink": "/docs/community/governance"
+  }
+}

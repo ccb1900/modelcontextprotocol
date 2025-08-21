@@ -1,0 +1,538 @@
+{
+  "/__docusaurus/debug-5ff": {
+    "__comp": "__comp---theme-debug-config-23-a-2ff",
+    "__context": {
+      "plugin": "plugin---docusaurus-debugb-38-ad3"
+    }
+  },
+  "/__docusaurus/debug/config-5ba": {
+    "__comp": "__comp---theme-debug-config-23-a-2ff",
+    "__context": {
+      "plugin": "plugin---docusaurus-debugb-38-ad3"
+    }
+  },
+  "/__docusaurus/debug/content-a2b": {
+    "__comp": "__comp---theme-debug-contentba-8-ce7",
+    "__context": {
+      "plugin": "plugin---docusaurus-debugb-38-ad3"
+    },
+    "__props": "__props---docusaurus-debug-content-3-c-0-be2"
+  },
+  "/__docusaurus/debug/globalData-c3c": {
+    "__comp": "__comp---theme-debug-global-dataede-0fa",
+    "__context": {
+      "plugin": "plugin---docusaurus-debugb-38-ad3"
+    }
+  },
+  "/__docusaurus/debug/metadata-156": {
+    "__comp": "__comp---theme-debug-site-metadata-68-e-3d4",
+    "__context": {
+      "plugin": "plugin---docusaurus-debugb-38-ad3"
+    }
+  },
+  "/__docusaurus/debug/registry-88c": {
+    "__comp": "__comp---theme-debug-registry-679-501",
+    "__context": {
+      "plugin": "plugin---docusaurus-debugb-38-ad3"
+    }
+  },
+  "/__docusaurus/debug/routes-000": {
+    "__comp": "__comp---theme-debug-routes-946-699",
+    "__context": {
+      "plugin": "plugin---docusaurus-debugb-38-ad3"
+    }
+  },
+  "/docs-73c": {
+    "__comp": "__comp---theme-docs-root-5-e-9-0b6",
+    "__context": {
+      "plugin": "plugin---docsaba-d7c"
+    }
+  },
+  "/docs-f06": {
+    "__comp": "__comp---theme-doc-version-roota-7-b-5de",
+    "__props": "__props---docs-005-788"
+  },
+  "/docs-fa0": {
+    "__comp": "__comp---theme-doc-roota-94-67a"
+  },
+  "/docs/about/-8b6": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-about-6-b-4-48f"
+  },
+  "/docs/clients-557": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-clients-5-c-2-993"
+  },
+  "/docs/community/communication-a2b": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-community-communicationc-5-c-4fe"
+  },
+  "/docs/community/governance-67b": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-community-governance-403-be9"
+  },
+  "/docs/community/sep-guidelines-994": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-community-sep-guidelinesdd-6-e7d"
+  },
+  "/docs/development/contributing-400": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-development-contributing-95-f-005"
+  },
+  "/docs/development/roadmap-16f": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-development-roadmapbab-10e"
+  },
+  "/docs/docs/getting-started/intro-a29": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-docs-getting-started-intro-41-c-54b"
+  },
+  "/docs/docs/learn/architecture-0f7": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-docs-learn-architecture-2-a-5-6c0"
+  },
+  "/docs/docs/learn/client-concepts-33f": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-docs-learn-client-concepts-2-a-9-e4e"
+  },
+  "/docs/docs/learn/server-concepts-71c": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-docs-learn-server-conceptsa-1-a-79c"
+  },
+  "/docs/docs/reference/client-36a": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-docs-reference-client-585-b1d"
+  },
+  "/docs/docs/reference/server-70a": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-docs-reference-server-3-ec-653"
+  },
+  "/docs/docs/sdk-54a": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-docs-sdke-0-b-7e1"
+  },
+  "/docs/docs/tutorials/use-local-mcp-server-dc1": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-docs-tutorials-use-local-mcp-server-1-b-7-7bc"
+  },
+  "/docs/docs/tutorials/use-remote-mcp-server-ffb": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-docs-tutorials-use-remote-mcp-server-970-0bf"
+  },
+  "/docs/examples-04c": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-examples-675-db8"
+  },
+  "/docs/faqs-5c9": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-faqsc-12-b19"
+  },
+  "/docs/introduction-4e2": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-introduction-972-0fc"
+  },
+  "/docs/legacy/concepts/architecture-ef5": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-legacy-concepts-architecture-519-0bb"
+  },
+  "/docs/legacy/concepts/elicitation-c38": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-legacy-concepts-elicitatione-20-8d4"
+  },
+  "/docs/legacy/concepts/prompts-5c3": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-legacy-concepts-prompts-767-52f"
+  },
+  "/docs/legacy/concepts/resources-232": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-legacy-concepts-resources-1-e-2-92b"
+  },
+  "/docs/legacy/concepts/roots-5f0": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-legacy-concepts-roots-8-bb-7a2"
+  },
+  "/docs/legacy/concepts/sampling-b26": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-legacy-concepts-samplingfb-9-eb7"
+  },
+  "/docs/legacy/concepts/tools-1b3": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-legacy-concepts-tools-812-ba5"
+  },
+  "/docs/legacy/concepts/transports-913": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-legacy-concepts-transports-552-846"
+  },
+  "/docs/legacy/tools/debugging-aff": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-legacy-tools-debuggingb-43-2b3"
+  },
+  "/docs/legacy/tools/inspector-338": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-legacy-tools-inspector-6-c-1-ef6"
+  },
+  "/docs/quickstart/client-df4": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-quickstart-client-3-de-5c4"
+  },
+  "/docs/quickstart/server-b58": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-quickstart-server-2-ca-d22"
+  },
+  "/docs/quickstart/user-58d": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-quickstart-useree-1-752"
+  },
+  "/docs/sdk/java/mcp-client-d13": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-sdk-java-mcp-client-7-cd-b1e"
+  },
+  "/docs/sdk/java/mcp-overview-b22": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-sdk-java-mcp-overview-480-436"
+  },
+  "/docs/sdk/java/mcp-server-9b6": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-sdk-java-mcp-server-437-302"
+  },
+  "/docs/snippets/snippet-intro-b51": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-snippets-snippet-introd-94-67a"
+  },
+  "/docs/specification/2024-11-05/-564": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-specification-2024-11-05-4-d-8-4d2"
+  },
+  "/docs/specification/2024-11-05/architecture/-a5a": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-specification-2024-11-05-architecture-69-b-da3"
+  },
+  "/docs/specification/2024-11-05/basic/-1d6": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-specification-2024-11-05-basic-13-b-582"
+  },
+  "/docs/specification/2024-11-05/basic/lifecycle-490": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-specification-2024-11-05-basic-lifecycle-0-bd-d0f"
+  },
+  "/docs/specification/2024-11-05/basic/messages-b20": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-specification-2024-11-05-basic-messages-999-e81"
+  },
+  "/docs/specification/2024-11-05/basic/transports-ecb": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-specification-2024-11-05-basic-transports-530-36a"
+  },
+  "/docs/specification/2024-11-05/basic/utilities/cancellation-3f8": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-specification-2024-11-05-basic-utilities-cancellationa-44-1b1"
+  },
+  "/docs/specification/2024-11-05/basic/utilities/ping-e8b": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-specification-2024-11-05-basic-utilities-pingbee-1ca"
+  },
+  "/docs/specification/2024-11-05/basic/utilities/progress-01f": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-specification-2024-11-05-basic-utilities-progressf-5-f-a8b"
+  },
+  "/docs/specification/2024-11-05/client/roots-5a6": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-specification-2024-11-05-client-rootse-55-aea"
+  },
+  "/docs/specification/2024-11-05/client/sampling-5a2": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-specification-2024-11-05-client-sampling-133-ee8"
+  },
+  "/docs/specification/2024-11-05/server/-4cf": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-specification-2024-11-05-server-732-247"
+  },
+  "/docs/specification/2024-11-05/server/prompts-7d9": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-specification-2024-11-05-server-prompts-014-b3a"
+  },
+  "/docs/specification/2024-11-05/server/resources-2d5": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-specification-2024-11-05-server-resourcesb-80-f9d"
+  },
+  "/docs/specification/2024-11-05/server/tools-4e2": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-specification-2024-11-05-server-tools-22-f-851"
+  },
+  "/docs/specification/2024-11-05/server/utilities/completion-31f": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-specification-2024-11-05-server-utilities-completionf-70-fa1"
+  },
+  "/docs/specification/2024-11-05/server/utilities/logging-28d": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-specification-2024-11-05-server-utilities-logging-6-d-4-48a"
+  },
+  "/docs/specification/2024-11-05/server/utilities/pagination-748": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-specification-2024-11-05-server-utilities-paginationec-4-35b"
+  },
+  "/docs/specification/2025-03-26/-15d": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-specification-2025-03-26-774-3e1"
+  },
+  "/docs/specification/2025-03-26/architecture/-b17": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-specification-2025-03-26-architecture-38-f-3a2"
+  },
+  "/docs/specification/2025-03-26/basic/-572": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-specification-2025-03-26-basic-2-d-4-7f9"
+  },
+  "/docs/specification/2025-03-26/basic/authorization-b68": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-specification-2025-03-26-basic-authorization-64-b-32f"
+  },
+  "/docs/specification/2025-03-26/basic/lifecycle-8d3": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-specification-2025-03-26-basic-lifecycle-404-471"
+  },
+  "/docs/specification/2025-03-26/basic/transports-f9c": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-specification-2025-03-26-basic-transports-516-976"
+  },
+  "/docs/specification/2025-03-26/basic/utilities/cancellation-467": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-specification-2025-03-26-basic-utilities-cancellation-9-d-4-bcb"
+  },
+  "/docs/specification/2025-03-26/basic/utilities/ping-c32": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-specification-2025-03-26-basic-utilities-pingb-6-c-6e7"
+  },
+  "/docs/specification/2025-03-26/basic/utilities/progress-d76": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-specification-2025-03-26-basic-utilities-progressc-05-bae"
+  },
+  "/docs/specification/2025-03-26/changelog-7d3": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-specification-2025-03-26-changelogda-2-09f"
+  },
+  "/docs/specification/2025-03-26/client/roots-858": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-specification-2025-03-26-client-roots-4-ec-005"
+  },
+  "/docs/specification/2025-03-26/client/sampling-0f5": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-specification-2025-03-26-client-samplingfba-a20"
+  },
+  "/docs/specification/2025-03-26/server/-972": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-specification-2025-03-26-server-02-c-f61"
+  },
+  "/docs/specification/2025-03-26/server/prompts-7bb": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-specification-2025-03-26-server-prompts-5-c-8-44b"
+  },
+  "/docs/specification/2025-03-26/server/resources-42f": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-specification-2025-03-26-server-resources-1-b-5-699"
+  },
+  "/docs/specification/2025-03-26/server/tools-d89": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-specification-2025-03-26-server-tools-0-c-6-9b3"
+  },
+  "/docs/specification/2025-03-26/server/utilities/completion-949": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-specification-2025-03-26-server-utilities-completion-539-9b8"
+  },
+  "/docs/specification/2025-03-26/server/utilities/logging-029": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-specification-2025-03-26-server-utilities-logging-023-3af"
+  },
+  "/docs/specification/2025-03-26/server/utilities/pagination-411": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-specification-2025-03-26-server-utilities-pagination-81-b-251"
+  },
+  "/docs/specification/2025-06-18/-ed6": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-specification-2025-06-18-159-5c3"
+  },
+  "/docs/specification/2025-06-18/architecture/-626": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-specification-2025-06-18-architecture-208-c77"
+  },
+  "/docs/specification/2025-06-18/basic/-c96": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-specification-2025-06-18-basic-83-a-ec9"
+  },
+  "/docs/specification/2025-06-18/basic/authorization-829": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-specification-2025-06-18-basic-authorization-3-a-6-4e0"
+  },
+  "/docs/specification/2025-06-18/basic/lifecycle-c6f": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-specification-2025-06-18-basic-lifecycle-27-e-066"
+  },
+  "/docs/specification/2025-06-18/basic/security_best_practices-0ba": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-specification-2025-06-18-basic-security-best-practicesd-4-d-ec7"
+  },
+  "/docs/specification/2025-06-18/basic/transports-4e3": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-specification-2025-06-18-basic-transports-5-ec-f46"
+  },
+  "/docs/specification/2025-06-18/basic/utilities/cancellation-530": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-specification-2025-06-18-basic-utilities-cancellatione-6-a-377"
+  },
+  "/docs/specification/2025-06-18/basic/utilities/ping-e73": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-specification-2025-06-18-basic-utilities-pingb-81-6b6"
+  },
+  "/docs/specification/2025-06-18/basic/utilities/progress-ce3": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-specification-2025-06-18-basic-utilities-progress-5-f-1-880"
+  },
+  "/docs/specification/2025-06-18/changelog-628": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-specification-2025-06-18-changelogdcc-47e"
+  },
+  "/docs/specification/2025-06-18/client/elicitation-a43": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-specification-2025-06-18-client-elicitatione-68-b77"
+  },
+  "/docs/specification/2025-06-18/client/roots-0cb": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-specification-2025-06-18-client-roots-946-d33"
+  },
+  "/docs/specification/2025-06-18/client/sampling-d96": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-specification-2025-06-18-client-samplinga-8-c-b90"
+  },
+  "/docs/specification/2025-06-18/schema-508": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-specification-2025-06-18-schema-22-a-b92"
+  },
+  "/docs/specification/2025-06-18/server/-d2e": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-specification-2025-06-18-server-6-b-1-29a"
+  },
+  "/docs/specification/2025-06-18/server/prompts-dbb": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-specification-2025-06-18-server-promptsc-9-f-6c5"
+  },
+  "/docs/specification/2025-06-18/server/resources-537": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-specification-2025-06-18-server-resources-6-d-4-915"
+  },
+  "/docs/specification/2025-06-18/server/tools-500": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-specification-2025-06-18-server-toolscef-ffc"
+  },
+  "/docs/specification/2025-06-18/server/utilities/completion-854": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-specification-2025-06-18-server-utilities-completiondb-3-5ed"
+  },
+  "/docs/specification/2025-06-18/server/utilities/logging-849": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-specification-2025-06-18-server-utilities-logging-0-d-9-17c"
+  },
+  "/docs/specification/2025-06-18/server/utilities/pagination-fcb": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-specification-2025-06-18-server-utilities-paginationec-0-f4d"
+  },
+  "/docs/specification/draft/-c25": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-specification-draft-4-ef-661"
+  },
+  "/docs/specification/draft/architecture/-bc5": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-specification-draft-architecture-6-f-0-e66"
+  },
+  "/docs/specification/draft/basic/-0f7": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-specification-draft-basic-464-6b6"
+  },
+  "/docs/specification/draft/basic/authorization-9c7": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-specification-draft-basic-authorization-3-d-9-bc7"
+  },
+  "/docs/specification/draft/basic/lifecycle-65b": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-specification-draft-basic-lifecycle-944-4f4"
+  },
+  "/docs/specification/draft/basic/security_best_practices-ad5": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-specification-draft-basic-security-best-practicesb-75-3b8"
+  },
+  "/docs/specification/draft/basic/transports-afb": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-specification-draft-basic-transports-8-bb-ed9"
+  },
+  "/docs/specification/draft/basic/utilities/cancellation-8c4": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-specification-draft-basic-utilities-cancellationd-5-b-c71"
+  },
+  "/docs/specification/draft/basic/utilities/ping-636": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-specification-draft-basic-utilities-pingbdc-0db"
+  },
+  "/docs/specification/draft/basic/utilities/progress-852": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-specification-draft-basic-utilities-progress-706-fa4"
+  },
+  "/docs/specification/draft/changelog-ff0": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-specification-draft-changelog-29-e-3bb"
+  },
+  "/docs/specification/draft/client/elicitation-632": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-specification-draft-client-elicitation-005-e8d"
+  },
+  "/docs/specification/draft/client/roots-7bf": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-specification-draft-client-roots-249-223"
+  },
+  "/docs/specification/draft/client/sampling-b7d": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-specification-draft-client-sampling-6-cb-1c4"
+  },
+  "/docs/specification/draft/schema-7b9": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-specification-draft-schema-349-246"
+  },
+  "/docs/specification/draft/server/-0d4": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-specification-draft-server-aab-544"
+  },
+  "/docs/specification/draft/server/prompts-080": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-specification-draft-server-prompts-2-ed-792"
+  },
+  "/docs/specification/draft/server/resources-517": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-specification-draft-server-resources-624-cd8"
+  },
+  "/docs/specification/draft/server/tools-d2a": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-specification-draft-server-tools-124-847"
+  },
+  "/docs/specification/draft/server/utilities/completion-0b7": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-specification-draft-server-utilities-completion-949-4f8"
+  },
+  "/docs/specification/draft/server/utilities/logging-a37": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-specification-draft-server-utilities-logging-3-c-0-6a7"
+  },
+  "/docs/specification/draft/server/utilities/pagination-d80": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-specification-draft-server-utilities-paginatione-73-c91"
+  },
+  "/docs/specification/versioning-ece": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-specification-versioning-23-e-3ea"
+  },
+  "/docs/tutorials/building-a-client-node-7b5": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-tutorials-building-a-client-nodef-97-040"
+  },
+  "/docs/tutorials/building-mcp-with-llms-bff": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-tutorials-building-mcp-with-llms-23-e-237"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "id": "legacy/tools/inspector",
+  "title": "Inspector",
+  "description": "In-depth guide to using the MCP Inspector for testing and debugging Model Context Protocol servers",
+  "source": "@site/docs/legacy/tools/inspector.mdx",
+  "sourceDirName": "legacy/tools",
+  "slug": "/legacy/tools/inspector",
+  "permalink": "/docs/legacy/tools/inspector",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/legacy/tools/inspector.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Inspector",
+    "description": "In-depth guide to using the MCP Inspector for testing and debugging Model Context Protocol servers"
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Debugging",
+    "permalink": "/docs/legacy/tools/debugging"
+  },
+  "next": {
+    "title": "Build an MCP Client",
+    "permalink": "/docs/quickstart/client"
+  }
+}

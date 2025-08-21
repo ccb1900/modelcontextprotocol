@@ -1,0 +1,26 @@
+{
+  "id": "specification/2025-03-26/basic/utilities/cancellation",
+  "title": "Cancellation",
+  "description": "Protocol Revision: 2025-03-26",
+  "source": "@site/docs/specification/2025-03-26/basic/utilities/cancellation.mdx",
+  "sourceDirName": "specification/2025-03-26/basic/utilities",
+  "slug": "/specification/2025-03-26/basic/utilities/cancellation",
+  "permalink": "/docs/specification/2025-03-26/basic/utilities/cancellation",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/specification/2025-03-26/basic/utilities/cancellation.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Cancellation"
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Transports",
+    "permalink": "/docs/specification/2025-03-26/basic/transports"
+  },
+  "next": {
+    "title": "Ping",
+    "permalink": "/docs/specification/2025-03-26/basic/utilities/ping"
+  }
+}

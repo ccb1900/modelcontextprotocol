@@ -1,0 +1,26 @@
+{
+  "id": "specification/2025-03-26/basic/index",
+  "title": "Overview",
+  "description": "Protocol Revision: 2025-03-26",
+  "source": "@site/docs/specification/2025-03-26/basic/index.mdx",
+  "sourceDirName": "specification/2025-03-26/basic",
+  "slug": "/specification/2025-03-26/basic/",
+  "permalink": "/docs/specification/2025-03-26/basic/",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/specification/2025-03-26/basic/index.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Overview"
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Architecture",
+    "permalink": "/docs/specification/2025-03-26/architecture/"
+  },
+  "next": {
+    "title": "Authorization",
+    "permalink": "/docs/specification/2025-03-26/basic/authorization"
+  }
+}

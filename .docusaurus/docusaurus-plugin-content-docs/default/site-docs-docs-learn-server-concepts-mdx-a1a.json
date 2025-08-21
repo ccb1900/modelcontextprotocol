@@ -1,0 +1,27 @@
+{
+  "id": "docs/learn/server-concepts",
+  "title": "Server Concepts",
+  "description": "Understanding MCP server concepts",
+  "source": "@site/docs/docs/learn/server-concepts.mdx",
+  "sourceDirName": "docs/learn",
+  "slug": "/docs/learn/server-concepts",
+  "permalink": "/docs/docs/learn/server-concepts",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/docs/learn/server-concepts.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Server Concepts",
+    "description": "Understanding MCP server concepts"
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Client Concepts",
+    "permalink": "/docs/docs/learn/client-concepts"
+  },
+  "next": {
+    "title": "Client",
+    "permalink": "/docs/docs/reference/client"
+  }
+}

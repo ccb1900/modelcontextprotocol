@@ -1,0 +1,26 @@
+{
+  "id": "specification/draft/basic/lifecycle",
+  "title": "Lifecycle",
+  "description": "Protocol Revision: draft",
+  "source": "@site/docs/specification/draft/basic/lifecycle.mdx",
+  "sourceDirName": "specification/draft/basic",
+  "slug": "/specification/draft/basic/lifecycle",
+  "permalink": "/docs/specification/draft/basic/lifecycle",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/specification/draft/basic/lifecycle.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Lifecycle"
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Authorization",
+    "permalink": "/docs/specification/draft/basic/authorization"
+  },
+  "next": {
+    "title": "Security Best Practices",
+    "permalink": "/docs/specification/draft/basic/security_best_practices"
+  }
+}

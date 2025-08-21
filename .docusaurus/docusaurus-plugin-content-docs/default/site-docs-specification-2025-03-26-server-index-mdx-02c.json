@@ -1,0 +1,26 @@
+{
+  "id": "specification/2025-03-26/server/index",
+  "title": "Overview",
+  "description": "Protocol Revision: 2025-03-26",
+  "source": "@site/docs/specification/2025-03-26/server/index.mdx",
+  "sourceDirName": "specification/2025-03-26/server",
+  "slug": "/specification/2025-03-26/server/",
+  "permalink": "/docs/specification/2025-03-26/server/",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/specification/2025-03-26/server/index.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Overview"
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Sampling",
+    "permalink": "/docs/specification/2025-03-26/client/sampling"
+  },
+  "next": {
+    "title": "Prompts",
+    "permalink": "/docs/specification/2025-03-26/server/prompts"
+  }
+}

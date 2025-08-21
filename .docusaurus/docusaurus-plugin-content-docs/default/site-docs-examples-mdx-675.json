@@ -1,0 +1,27 @@
+{
+  "id": "examples",
+  "title": "Example Servers",
+  "description": "A list of example servers and implementations",
+  "source": "@site/docs/examples.mdx",
+  "sourceDirName": ".",
+  "slug": "/examples",
+  "permalink": "/docs/examples",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/examples.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Example Servers",
+    "description": "A list of example servers and implementations"
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Connect to Remote MCP Servers",
+    "permalink": "/docs/docs/tutorials/use-remote-mcp-server"
+  },
+  "next": {
+    "title": "FAQs",
+    "permalink": "/docs/faqs"
+  }
+}

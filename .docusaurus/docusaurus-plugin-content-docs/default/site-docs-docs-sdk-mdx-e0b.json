@@ -1,0 +1,27 @@
+{
+  "id": "docs/sdk",
+  "title": "SDKs",
+  "description": "Official SDKs for building with the Model Context Protocol",
+  "source": "@site/docs/docs/sdk.mdx",
+  "sourceDirName": "docs",
+  "slug": "/docs/sdk",
+  "permalink": "/docs/docs/sdk",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/docs/sdk.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "SDKs",
+    "description": "Official SDKs for building with the Model Context Protocol"
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Server",
+    "permalink": "/docs/docs/reference/server"
+  },
+  "next": {
+    "title": "use-local-mcp-server",
+    "permalink": "/docs/docs/tutorials/use-local-mcp-server"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "id": "specification/draft/basic/authorization",
+  "title": "Authorization",
+  "description": "Protocol Revision: draft",
+  "source": "@site/docs/specification/draft/basic/authorization.mdx",
+  "sourceDirName": "specification/draft/basic",
+  "slug": "/specification/draft/basic/authorization",
+  "permalink": "/docs/specification/draft/basic/authorization",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/specification/draft/basic/authorization.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Authorization"
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Overview",
+    "permalink": "/docs/specification/draft/basic/"
+  },
+  "next": {
+    "title": "Lifecycle",
+    "permalink": "/docs/specification/draft/basic/lifecycle"
+  }
+}

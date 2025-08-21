@@ -1,0 +1,26 @@
+{
+  "id": "specification/draft/server/tools",
+  "title": "Tools",
+  "description": "Protocol Revision: draft",
+  "source": "@site/docs/specification/draft/server/tools.mdx",
+  "sourceDirName": "specification/draft/server",
+  "slug": "/specification/draft/server/tools",
+  "permalink": "/docs/specification/draft/server/tools",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/specification/draft/server/tools.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Tools"
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Resources",
+    "permalink": "/docs/specification/draft/server/resources"
+  },
+  "next": {
+    "title": "Completion",
+    "permalink": "/docs/specification/draft/server/utilities/completion"
+  }
+}

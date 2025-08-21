@@ -1,0 +1,27 @@
+{
+  "id": "docs/reference/server",
+  "title": "Server",
+  "description": "Use LLMs to quickly generate a prototype",
+  "source": "@site/docs/docs/reference/server.mdx",
+  "sourceDirName": "docs/reference",
+  "slug": "/docs/reference/server",
+  "permalink": "/docs/docs/reference/server",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/docs/reference/server.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Server",
+    "description": "Use LLMs to quickly generate a prototype"
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Client",
+    "permalink": "/docs/docs/reference/client"
+  },
+  "next": {
+    "title": "SDKs",
+    "permalink": "/docs/docs/sdk"
+  }
+}

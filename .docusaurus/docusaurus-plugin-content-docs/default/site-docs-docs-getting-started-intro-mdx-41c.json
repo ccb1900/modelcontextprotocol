@@ -1,0 +1,27 @@
+{
+  "id": "docs/getting-started/intro",
+  "title": "Introduction",
+  "description": "Get started with the Model Context Protocol (MCP)",
+  "source": "@site/docs/docs/getting-started/intro.mdx",
+  "sourceDirName": "docs/getting-started",
+  "slug": "/docs/getting-started/intro",
+  "permalink": "/docs/docs/getting-started/intro",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/docs/getting-started/intro.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Introduction",
+    "description": "Get started with the Model Context Protocol (MCP)"
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Roadmap",
+    "permalink": "/docs/development/roadmap"
+  },
+  "next": {
+    "title": "Architecture Overview",
+    "permalink": "/docs/docs/learn/architecture"
+  }
+}

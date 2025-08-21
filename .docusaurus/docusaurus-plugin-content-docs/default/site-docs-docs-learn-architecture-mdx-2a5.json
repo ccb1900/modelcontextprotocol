@@ -1,0 +1,27 @@
+{
+  "id": "docs/learn/architecture",
+  "title": "Architecture Overview",
+  "description": "This overview of the Model Context Protocol (MCP) discusses its scope and core concepts, and provides an example demonstrating each core concept.",
+  "source": "@site/docs/docs/learn/architecture.mdx",
+  "sourceDirName": "docs/learn",
+  "slug": "/docs/learn/architecture",
+  "permalink": "/docs/docs/learn/architecture",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/docs/learn/architecture.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Architecture Overview",
+    "type": "docs"
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Introduction",
+    "permalink": "/docs/docs/getting-started/intro"
+  },
+  "next": {
+    "title": "Client Concepts",
+    "permalink": "/docs/docs/learn/client-concepts"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "id": "legacy/concepts/elicitation",
+  "title": "Elicitation",
+  "description": "Interactive information gathering in MCP",
+  "source": "@site/docs/legacy/concepts/elicitation.mdx",
+  "sourceDirName": "legacy/concepts",
+  "slug": "/legacy/concepts/elicitation",
+  "permalink": "/docs/legacy/concepts/elicitation",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/legacy/concepts/elicitation.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Elicitation",
+    "description": "Interactive information gathering in MCP"
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Core architecture",
+    "permalink": "/docs/legacy/concepts/architecture"
+  },
+  "next": {
+    "title": "Prompts",
+    "permalink": "/docs/legacy/concepts/prompts"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "id": "specification/draft/client/roots",
+  "title": "Roots",
+  "description": "Protocol Revision: draft",
+  "source": "@site/docs/specification/draft/client/roots.mdx",
+  "sourceDirName": "specification/draft/client",
+  "slug": "/specification/draft/client/roots",
+  "permalink": "/docs/specification/draft/client/roots",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/specification/draft/client/roots.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Roots"
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Elicitation",
+    "permalink": "/docs/specification/draft/client/elicitation"
+  },
+  "next": {
+    "title": "Sampling",
+    "permalink": "/docs/specification/draft/client/sampling"
+  }
+}
